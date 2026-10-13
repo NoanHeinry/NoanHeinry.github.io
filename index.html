@@ -3,74 +3,71 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NoanOS - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>NoanOS - Portfolio de Noan Heinry</title>
+    <meta name="description" content="Portfolio de Noan Heinry, étudiant en BUT Informatique : projets, compétences, suivi du BUT et contact." />
+    <meta name="author" content="Noan Heinry" />
+    <meta name="theme-color" content="#1a0b2e" />
+    <link rel="canonical" href="https://noanheinry.github.io/HeinryNoan.github.io/" />
+    <link rel="alternate" hreflang="fr" href="https://noanheinry.github.io/HeinryNoan.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://noanheinry.github.io/HeinryNoan.github.io/index_en.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NoanOS - Portfolio de Noan Heinry" />
+    <meta property="og:description" content="Portfolio de Noan Heinry, étudiant en BUT Informatique : projets, compétences, suivi du BUT et contact." />
+    <meta property="og:url" content="https://noanheinry.github.io/HeinryNoan.github.io/" />
+    <meta property="og:image" content="https://noanheinry.github.io/HeinryNoan.github.io/images/avatar.jpg" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0b2e'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd93f9'%3EN%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    
-    <style>
-        /* CSS AJOUTÉ POUR GÉRER LES NOUVELLES ICÔNES */
-        
-        /* Taille et couleur des icônes du bureau */
-        .icon-img i {
-            font-size: 3rem; /* Taille de l'icône */
-            color: #f8f8f2;  /* Blanc cassé */
-            text-shadow: 0 0 10px rgba(189, 147, 249, 0.5); /* Lueur violette */
-            margin-bottom: 5px;
-        }
-
-        /* Couleur des icônes dans le menu démarrer/barre des tâches */
-        .task-btn i {
-            margin-right: 8px;
-            color: #bd93f9; /* Violet Dracula */
-        }
-        
-        /* Icônes dans les titres de fenêtres */
-        .window-content h3 i, 
-        .project-item h3 i {
-            margin-right: 10px;
-            color: #bd93f9;
-        }
-        
-        /* Icône de recherche */
-        .search-icon i {
-            color: #6272a4;
-        }
-
-        /* Bouton démarrer */
-        .start-btn i {
-            margin-right: 8px;
-            color: #50fa7b; /* Vert */
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     
+    <div class="boot" id="boot" hidden>
+        <div class="boot-inner">
+            <div class="boot-logo">NOAN<span>OS</span></div>
+            <div class="boot-log" id="boot-log" aria-live="polite"></div>
+            <div class="boot-bar"><span></span></div>
+        </div>
+    </div>
+
     <div class="desktop">
+        <div class="bg-layer" aria-hidden="true">
+            <div class="bg-grid"></div>
+            <div class="bg-orb bg-orb-1"></div>
+            <div class="bg-orb bg-orb-2"></div>
+            <div class="bg-spot"></div>
+        </div>
         
         <div class="desktop-icons">
-            <div class="icon" onclick="openWindow('about')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('about')">
                 <div class="icon-img"><i class="fa-solid fa-user-astronaut"></i></div>
                 <span>À propos</span>
             </div>
-            <div class="icon" onclick="openWindow('projects')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('projects')">
                 <div class="icon-img"><i class="fa-solid fa-rocket"></i></div>
                 <span>Projets</span>
             </div>
-            <div class="icon" onclick="openWindow('skills')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('stage')">
+                <div class="icon-img"><i class="fa-solid fa-briefcase"></i></div>
+                <span>Stage</span>
+            </div>
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('skills')">
                 <div class="icon-img"><i class="fa-solid fa-laptop-code"></i></div>
                 <span>Compétences</span>
             </div>
-            <div class="icon" onclick="openWindow('but-info')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('but-info')">
                 <div class="icon-img"><i class="fa-solid fa-graduation-cap"></i></div>
                 <span>BUT Info</span>
             </div>
-            <div class="icon" onclick="openWindow('culture')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('culture')">
                 <div class="icon-img"><i class="fa-solid fa-building-columns"></i></div>
                 <span>Culture G</span>
             </div>
-            <div class="icon" onclick="openWindow('contact')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('contact')">
                 <div class="icon-img"><i class="fa-solid fa-envelope-open-text"></i></div>
                 <span>Contact</span>
             </div>
@@ -83,22 +80,23 @@
             <div class="hero-subtitle">System ready. Waiting for input...</div>
             
             <div class="search-bar">
-                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" placeholder="Rechercher une compétence, un projet..." disabled>
+                <span class="search-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="search" placeholder="Rechercher une compétence, un projet..." aria-label="Rechercher une compétence, un projet..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results" autocomplete="off" spellcheck="false">
                 <span class="command-hint">CTRL + K</span>
+                <ul class="search-results" id="search-results" role="listbox" hidden></ul>
             </div>
             <div class="language-switch">
-                <span class="flag">🇫🇷</span>
+                <span class="flag" aria-hidden="true">🇫🇷</span>
                 <label class="switch">
-                    <input type="checkbox" onchange="window.location.href='index_en.html'">
+                    <input type="checkbox" id="lang-toggle" data-href="index_en.html" aria-label="Switch to English">
                     <span class="slider round"></span>
                 </label>
-                <span class="flag">🇬🇧</span>
+                <span class="flag" aria-hidden="true">🇬🇧</span>
             </div>
         </div>
 
         <div class="system-widget">
-            <div class="widget-header">NOAN_OS v2.0 <span class="status-dot"></span></div>
+            <div class="widget-header">NOAN_OS v3.0 <span class="status-dot"></span></div>
             
             <div class="widget-time" id="widget-time">00:00</div>
             <div class="widget-date" id="widget-date">Chargement...</div>
@@ -123,16 +121,18 @@
             </div>
         </div>
 
-        <div id="about" class="window">
+        <div id="about" class="window" role="dialog" aria-labelledby="about-title">
             <div class="title-bar">
-                <div class="title-text">user_info.exe</div>
+                <div class="title-text" id="about-title">user_info.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('about')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('about')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
                 <div class="profile-header">
-                    <img src="images/avatar.jpg" alt="Noan" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
+                    <img src="images/avatar.jpg" alt="Noan Heinry" width="200" height="200" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
                     
                     <h2 style="text-align: center;">Noan HEINRY</h2>
                     <p class="tagline" style="text-align: center; color: #aaa;">Étudiant BUT Informatique | Recherche de stage (Avril 2026)</p>
@@ -161,11 +161,13 @@
             </div>
         </div>
 
-        <div id="projects" class="window" style="width: 800px;">
+        <div id="projects" class="window" role="dialog" aria-labelledby="projects-title" style="width: 800px;">
             <div class="title-bar">
-                <div class="title-text">projects_explorer.exe</div>
+                <div class="title-text" id="projects-title">projects_explorer.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('projects')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('projects')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
@@ -173,28 +175,28 @@
                     <div class="project-item">
                         <h3><i class="fa-solid fa-gamepad"></i> Morpion</h3>
                         <p>Java vs Robot logique.</p>
-                        <a href="documents/Morphalla.pdf" download="Morphalla.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                        <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
                             Présentation
                         </a>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-robot"></i> Robot EV3</h3>
                         <p>Navigation autonome.</p>
-                        <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
-                            Présentation
-                        </a>
+                        <span class="btn btn-disabled" aria-disabled="true" style="padding: 10px 20px; font-size: 1.1em;">
+                            Bientôt disponible
+                        </span>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-dna"></i> Jeu de la vie</h3>
                         <p>Simulation Python/Pygame.</p>
-                        <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
-                            Présentation
-                        </a>
+                        <span class="btn btn-disabled" aria-disabled="true" style="padding: 10px 20px; font-size: 1.1em;">
+                            Bientôt disponible
+                        </span>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
                         <p>Gestion utilisateurs.</p>
-                        <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                        <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
                             Présentation
                         </a>
                     </div>
@@ -202,11 +204,107 @@
             </div>
         </div>
 
-        <div id="skills" class="window" style="width: 700px;">
+        <div id="stage" class="window" role="dialog" aria-labelledby="stage-title" style="width: 850px;">
             <div class="title-bar">
-                <div class="title-text">system_modules.exe</div>
+                <div class="title-text" id="stage-title">internship_r2.log</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('skills')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('stage')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="stage-header">
+                    <h2>R2 Digital Agency — Stage de 2ème année</h2>
+                    <p class="tagline">Développement, refonte et optimisation d'applications web</p>
+                    <div class="stage-chips">
+                        <span class="stage-chip"><i class="fa-solid fa-location-dot"></i> Rennes</span>
+                        <span class="stage-chip"><i class="fa-solid fa-calendar"></i> 20 avril → 3 juillet 2026</span>
+                        <span class="stage-chip"><i class="fa-solid fa-hourglass-half"></i> 11 semaines</span>
+                        <span class="stage-chip"><i class="fa-solid fa-code"></i> Pôle Tech / Dev</span>
+                    </div>
+                </div>
+
+                <p>R2 est une agence créative et digitale (Paris & Rennes, ~30 collaborateurs) spécialisée en stratégie de marque, production vidéo et numérique. Intégré au pôle développement aux côtés de mon maître de stage, j'ai assuré la maintenance évolutive, l'optimisation et le développement de nouvelles fonctionnalités sur trois plateformes web, en autonomie et au rythme des tickets clients.</p>
+
+                <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
+                <div class="project-grid stage-missions">
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-gauge-high"></i> Spot — ERP interne</h3>
+                            <p>Application de gestion de plus de 1 800 projets, en architecture Headless (WordPress + React).</p>
+                            <ul class="stage-results">
+                                <li>Pagination côté serveur via une API REST sur-mesure : recherche et navigation devenues instantanées</li>
+                                <li>Module d'inventaire du matériel en React (CPT, statuts, attribution aux collaborateurs)</li>
+                                <li>Commande WP-CLI d'import massif d'appareils depuis un CSV</li>
+                            </ul>
+                        </div>
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Site de l'agence</h3>
+                            <p>Site vitrine WordPress, principal outil de communication de R2.</p>
+                            <ul class="stage-results">
+                                <li>Nouveaux blocs Gutenberg sur-mesure (ACF Blocks, architecture MVC)</li>
+                                <li>Refonte de la page Work : filtres par expertise, chargement « Voir plus », grille d'images 1:1</li>
+                                <li>Refactorisation SEO / accessibilité de la hiérarchie des titres</li>
+                            </ul>
+                        </div>
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-video"></i> Yao.bzh — Site associatif</h3>
+                            <p>Vitrine d'une association bretonne d'accompagnement de jeunes entrepreneurs.</p>
+                            <ul class="stage-results">
+                                <li>Section « Interviews » : Custom Post Type + champs ACF, administrable par l'association</li>
+                                <li>Page d'archive avec lecture vidéo en modale (JavaScript)</li>
+                                <li>Menu responsive corrigé, mise en production et purge du cache serveur</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-layer-group"></i> Stack technique</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
+                        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="skill-card"><i class="devicon-sass-original colored"></i><span>SCSS</span></div>
+                        <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
+                    </div>
+                </div>
+
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes & outils</h3>
+                <div class="stage-chips">
+                        <span class="stage-chip">Git / GitHub (branches preprod → main)</span>
+                        <span class="stage-chip">CI/CD GitHub Actions + rsync</span>
+                        <span class="stage-chip">Hébergement Kinsta</span>
+                        <span class="stage-chip">Composer, npm / Yarn</span>
+                        <span class="stage-chip">WP-CLI</span>
+                        <span class="stage-chip">Monday.com (tickets)</span>
+                        <span class="stage-chip">Slack</span>
+                        <span class="stage-chip">Recette en préproduction</span>
+                </div>
+
+                <h3><i class="fa-solid fa-graduation-cap"></i> Compétences du BUT mobilisées</h3>
+                <ul class="stage-comps">
+                        <li><span class="stage-comp-tag">C1</span><div><strong>Réaliser</strong><span>Intégration front-end responsive (SCSS, React), blocs Gutenberg, modale vidéo.</span></div></li>
+                        <li><span class="stage-comp-tag">C2</span><div><strong>Optimiser</strong><span>Pagination côté serveur pour 1 800 projets, traitements asynchrones (WP-Cron).</span></div></li>
+                        <li><span class="stage-comp-tag">C3</span><div><strong>Administrer</strong><span>Déploiement continu (GitHub Actions, rsync) vers Kinsta, gestion du cache serveur.</span></div></li>
+                        <li><span class="stage-comp-tag">C4</span><div><strong>Gérer des données</strong><span>Modélisation de CPT et champs ACF, routes d'API REST en JSON, import CSV.</span></div></li>
+                        <li><span class="stage-comp-tag">C5</span><div><strong>Conduire</strong><span>Analyse des besoins via tickets Monday.com, environnements local / préprod / prod.</span></div></li>
+                        <li><span class="stage-comp-tag">C6</span><div><strong>Collaborer</strong><span>Travail avec les chefs de projet et le pôle création, points d'équipe, Slack.</span></div></li>
+                </ul>
+
+                <h3><i class="fa-solid fa-seedling"></i> Ce que le stage m'a apporté</h3>
+                <p>Je suis passé d'une approche scolaire, avec un code conçu de manière isolée, à une méthodologie professionnelle : versioning rigoureux, environnements distincts, déploiement automatisé, suivi des tickets et priorisation. J'ai approfondi le cœur de WordPress (API REST, WP-Cron, WP-CLI) et découvert l'architecture Headless avec React.</p>
+            </div>
+        </div>
+
+        <div id="skills" class="window" role="dialog" aria-labelledby="skills-title" style="width: 700px;">
+            <div class="title-bar">
+                <div class="title-text" id="skills-title">system_modules.exe</div>
+                <div class="window-controls">
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('skills')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
@@ -252,6 +350,18 @@
                             <i class="devicon-nodejs-plain colored"></i>
                             <span>Node.js</span>
                         </div>
+                        <div class="skill-card">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-sass-original colored"></i>
+                            <span>SCSS</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-wordpress-plain colored"></i>
+                            <span>WordPress</span>
+                        </div>
                     </div>
                 </div>
 
@@ -271,6 +381,10 @@
                             <span>Git</span>
                         </div>
                         <div class="skill-card">
+                            <i class="devicon-githubactions-plain colored"></i>
+                            <span>GitHub Actions</span>
+                        </div>
+                        <div class="skill-card">
                             <i class="devicon-linux-plain"></i>
                             <span>Linux</span>
                         </div>
@@ -283,11 +397,13 @@
             </div>
         </div>
 
-        <div id="but-info" class="window" style="width: 90%; height: 85vh; max-width: 1200px; max-height: 85vh;">
+        <div id="but-info" class="window" role="dialog" aria-labelledby="but-info-title" style="width: 90%; height: 85vh; max-width: 1200px;">
             <div class="title-bar">
-                <div class="title-text">curriculum_tracker.xlsx</div>
+                <div class="title-text" id="but-info-title">curriculum_tracker.xlsx</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('but-info')">X</button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('but-info')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             
@@ -560,11 +676,13 @@
             </div>
         </div>
 
-        <div id="culture" class="window" style="width: 60%; height: 80vh; max-height: 80vh;">
+        <div id="culture" class="window" role="dialog" aria-labelledby="culture-title" style="width: 60%; height: 80vh;">
             <div class="title-bar">
-                <div class="title-text">culture_generale.exe</div>
+                <div class="title-text" id="culture-title">culture_generale.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             
@@ -575,10 +693,10 @@
                 </header>
 
                 <div style="text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #444;">
-                    <h2 style="margin-bottom: 15px; color: #50fa7b;"><i class="fa-solid fa-basketball"></i> Semestre 4 : L'Économie de la NBA</h2>
-                    <p style="margin-bottom: 20px;">Découverte du modèle économique unique de la ligue de basketball nord-américaine.</p>
-                    <a href="nbaEconomy.html" target="_blank" class="btn" style="padding: 12px 25px; font-size: 1.1em; text-decoration: none; border-radius: 5px; background-color: #bd93f9; color: #282a36; font-weight: bold; display: inline-block; box-shadow: 0 0 10px rgba(189, 147, 249, 0.4);">
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color: #282a36; margin-right: 8px;"></i> Ouvrir le projet NBA
+                    <h2 style="margin-bottom: 15px; color: #50fa7b;"><i class="fa-solid fa-basketball"></i> Semestre 4 : Ma NBA</h2>
+                    <p style="margin-bottom: 20px;">Fan des San Antonio Spurs : l'histoire de la franchise, Dennis Rodman, Victor Wembanyama et la folle saison 2026.</p>
+                    <a href="nba.html" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 12px 25px; font-size: 1.1em; text-decoration: none; border-radius: 5px; background-color: #bd93f9; color: #282a36; font-weight: bold; display: inline-block; box-shadow: 0 0 10px rgba(189, 147, 249, 0.4);">
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color: #282a36; margin-right: 8px;"></i> Ouvrir Ma NBA
                     </a>
                 </div>
                 <h2 style="text-align: center; color: #8be9fd; margin-bottom: 20px;"><i class="fa-solid fa-bolt"></i> Semestre 3 : L'Odyssée des Dieux</h2>
@@ -586,7 +704,7 @@
                     <div class="myth-card">
                         <div class="myth-number">I</div>
                         <h3>Le Chaos Originel</h3>
-                        <img src="images/chaos.jpg" alt="Le Chaos et la création" class="myth-img">
+                        <img src="images/myth-chaos.svg" alt="Illustration : la spirale du Chaos entre le ciel étoilé et la terre" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
                         <p>
                             Au commencement, il n'y avait que le <strong>Chaos</strong>. De ce vide insondable naquirent Gaia (la Terre) et Ouranos (le Ciel). 
                             Ensemble, ils engendrèrent les terribles Titans. Mais Ouranos, craignant la puissance de ses enfants, les enferma dans les entrailles de la Terre.
@@ -596,7 +714,7 @@
                     <div class="myth-card right">
                         <div class="myth-number">II</div>
                         <h3>La Révolte de Cronos</h3>
-                        <img src="images/cronos.jpg" alt="Cronos prenant le pouvoir" class="myth-img">
+                        <img src="images/myth-cronos.svg" alt="Illustration : la faucille de Cronos, un sablier et le soleil de l'Âge d'or" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
                         <p>
                             Gaia, furieuse, demanda de l'aide à ses enfants. Seul <strong>Cronos</strong>, le plus jeune des Titans, osa se dresser. 
                             Armé d'une faucille, il renversa son père et prit le pouvoir. L'Âge d'Or commença, mais une prophétie le hantait : 
@@ -606,32 +724,34 @@
                     <div class="myth-card">
                         <div class="myth-number">III</div>
                         <h3>La Titanomachie</h3>
-                        <img src="images/titanomachie.jpg" alt="La guerre des Titans" class="myth-img">
+                        <img src="images/myth-titanomachie.svg" alt="Illustration : la foudre de Zeus frappe les montagnes des Titans" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
                         <p>
-                            Pour déjouer le destin, Cronos dévorait ses enfants dès leur naissance. Mais sa femme, Rhéa, sauva le petit <strong>Zeus</strong>...
+                            Pour déjouer le destin, Cronos dévorait ses enfants dès leur naissance. Mais sa femme, Rhéa, sauva le petit <strong>Zeus</strong>. Devenu adulte, il libéra ses frères et sœurs : une guerre cosmique de dix ans éclata alors, les Dieux contre les Titans.
                         </p>
                     </div>
 
                     <div class="myth-card right">
                         <div class="myth-number">IV</div>
                         <h3>Le Règne de l'Olympe</h3>
-                        <img src="images/olympe.jpg" alt="Les Dieux de l'Olympe" class="myth-img">
-                        <p>Victorieux, les trois frères se partagèrent le monde...</p>
+                        <img src="images/myth-olympe.svg" alt="Illustration : le temple de l'Olympe et les attributs de Zeus, Poséidon et Hadès" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
+                        <p>Victorieux, les trois frères se partagèrent le monde :</p>
                         <ul class="gods-list">
-                            <li> <strong>Zeus</strong> : Roi des Dieux...</li>
-                            <li> <strong>Poséidon</strong> : Maître des Océans...</li>
-                            <li> <strong>Hadès</strong> : Gardien des Enfers...</li>
+                            <li> <strong>Zeus</strong> : Roi des Dieux, maître du Ciel et de la Foudre.</li>
+                            <li> <strong>Poséidon</strong> : Maître des Océans et des tremblements de terre.</li>
+                            <li> <strong>Hadès</strong> : Gardien des Enfers et du royaume des morts.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="contact" class="window" style="width: 500px;">
+        <div id="contact" class="window" role="dialog" aria-labelledby="contact-title" style="width: 500px;">
             <div class="title-bar">
-                <div class="title-text">msg_service.exe</div>
+                <div class="title-text" id="contact-title">msg_service.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('contact')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('contact')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content contact-content">
@@ -653,7 +773,7 @@
                         </div>
                     </a>
 
-                    <a href="https://github.com/NoanHeinry" target="_blank" class="action-card">
+                    <a href="https://github.com/NoanHeinry" target="_blank" rel="noopener noreferrer" class="action-card">
                         <div class="icon-box">
                             <i class="devicon-github-original"></i>
                         </div>
@@ -663,7 +783,7 @@
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" class="action-card">
+                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" target="_blank" rel="noopener noreferrer" class="action-card">
                         <div class="icon-box">
                             <i class="devicon-linkedin-plain"></i>
                         </div>
@@ -679,53 +799,38 @@
 
     </div>
 
+    <div class="start-menu" id="start-menu" role="dialog" aria-label="Menu" hidden>
+        <div class="start-profile">
+            <img src="images/avatar.jpg" alt="" width="56" height="56">
+            <div>
+                <strong>Noan Heinry</strong>
+                <span>Étudiant en BUT Informatique, IUT de Laval</span>
+                <span class="start-status"><span class="blink-dot"></span> Ouvert aux opportunités</span>
+            </div>
+        </div>
+        <p class="start-label">Applications</p>
+        <div class="start-apps" id="start-apps"></div>
+        <div class="start-actions">
+            <a href="documents/CV_Noan_HEINRY.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Télécharger mon CV</a>
+            <a href="mailto:heinry.noan16@gmail.com"><i class="fa-solid fa-envelope"></i> M'écrire</a>
+            <a href="index_en.html" data-lang-link><i class="fa-solid fa-language"></i> English version</a>
+        </div>
+    </div>
+
     <div class="taskbar">
-        <button class="start-btn"><i class="fa-brands fa-windows"></i> Start</button>
+        <button type="button" class="start-btn" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu"><i class="fa-brands fa-windows"></i> Start</button>
         <div class="taskbar-divider"></div>
-        <button class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i> Info</button>
-        <button class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i> Projets</button>
-        <button class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
-        <button class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> BUT</button>
-        <button class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
-        <button class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
+        <button type="button" class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i> Info</button>
+        <button type="button" class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i> Projets</button>
+        <button type="button" class="task-btn" onclick="openWindow('stage')"><i class="fa-solid fa-briefcase"></i> Stage</button>
+        <button type="button" class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
+        <button type="button" class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> BUT</button>
+        <button type="button" class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
+        <button type="button" class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
 
         <div class="clock" id="clock">12:00</div>
     </div>
 
-    <script>
-        function openWindow(id) {
-            const windows = document.querySelectorAll('.window');
-            windows.forEach(w => w.style.display = 'none');
-            const win = document.getElementById(id);
-            if(win) win.style.display = 'flex';
-        }
-
-        function closeWindow(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        function updateClock() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-            
-            // Détection de la langue pour la date
-            const toggle = document.getElementById('lang-toggle');
-            const lang = (toggle && toggle.checked) ? 'en-US' : 'fr-FR';
-            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateString = now.toLocaleDateString(lang, dateOptions);
-
-            const taskClock = document.getElementById('clock');
-            if(taskClock) taskClock.textContent = timeString;
-
-            const widgetTime = document.getElementById('widget-time');
-            const widgetDate = document.getElementById('widget-date');
-            
-            if(widgetTime) widgetTime.textContent = timeString;
-            if(widgetDate) widgetDate.textContent = dateString.charAt(0).toUpperCase() + dateString.slice(1);
-        }
-        
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

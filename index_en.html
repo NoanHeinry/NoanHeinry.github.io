@@ -3,81 +3,71 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NoanOS - Portfolio (EN)</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>NoanOS - Noan Heinry Portfolio (EN)</title>
+    <meta name="description" content="Portfolio of Noan Heinry, Computer Science student (BUT Informatique): projects, skills, competency tracking and contact." />
+    <meta name="author" content="Noan Heinry" />
+    <meta name="theme-color" content="#1a0b2e" />
+    <link rel="canonical" href="https://noanheinry.github.io/HeinryNoan.github.io/index_en.html" />
+    <link rel="alternate" hreflang="fr" href="https://noanheinry.github.io/HeinryNoan.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://noanheinry.github.io/HeinryNoan.github.io/index_en.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NoanOS - Noan Heinry Portfolio (EN)" />
+    <meta property="og:description" content="Portfolio of Noan Heinry, Computer Science student (BUT Informatique): projects, skills, competency tracking and contact." />
+    <meta property="og:url" content="https://noanheinry.github.io/HeinryNoan.github.io/index_en.html" />
+    <meta property="og:image" content="https://noanheinry.github.io/HeinryNoan.github.io/images/avatar.jpg" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0b2e'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd93f9'%3EN%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    
-    <style>
-        .language-switch {
-            margin-top: 25px;
-            display: flex; align-items: center; justify-content: center; gap: 15px;
-            background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 20px;
-            backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);
-            pointer-events: auto;
-        }
-        .flag { font-size: 1.5em; line-height: 1; cursor: default; }
-        .switch { position: relative; display: inline-block; width: 50px; height: 24px; }
-        .switch input { opacity: 0; width: 0; height: 0; }
-        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #2d1b4e; transition: .4s; border: 1px solid #bd93f9; }
-        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 3px; background-color: white; transition: .4s; box-shadow: 0 0 5px white; }
-        input:checked + .slider { background-color: #bd93f9; }
-        input:checked + .slider:before { transform: translateX(26px); background-color: #000; }
-        .slider.round { border-radius: 34px; }
-        .slider.round:before { border-radius: 50%; }
-
-        /* --- STYLES FOR ICONS (SAME AS FR VERSION) --- */
-        .icon-img i {
-            font-size: 3rem;
-            color: #f8f8f2;
-            text-shadow: 0 0 10px rgba(189, 147, 249, 0.5);
-            margin-bottom: 5px;
-        }
-        .task-btn i {
-            margin-right: 8px;
-            color: #bd93f9;
-        }
-        .window-content h3 i, 
-        .project-item h3 i {
-            margin-right: 10px;
-            color: #bd93f9;
-        }
-        .search-icon i {
-            color: #6272a4;
-        }
-        .start-btn i {
-            margin-right: 8px;
-            color: #50fa7b;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     
+    <div class="boot" id="boot" hidden>
+        <div class="boot-inner">
+            <div class="boot-logo">NOAN<span>OS</span></div>
+            <div class="boot-log" id="boot-log" aria-live="polite"></div>
+            <div class="boot-bar"><span></span></div>
+        </div>
+    </div>
+
     <div class="desktop">
+        <div class="bg-layer" aria-hidden="true">
+            <div class="bg-grid"></div>
+            <div class="bg-orb bg-orb-1"></div>
+            <div class="bg-orb bg-orb-2"></div>
+            <div class="bg-spot"></div>
+        </div>
         
         <div class="desktop-icons">
-            <div class="icon" onclick="openWindow('about')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('about')">
                 <div class="icon-img"><i class="fa-solid fa-user-astronaut"></i></div>
                 <span>About Me</span>
             </div>
-            <div class="icon" onclick="openWindow('projects')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('projects')">
                 <div class="icon-img"><i class="fa-solid fa-rocket"></i></div>
                 <span>Projects</span>
             </div>
-            <div class="icon" onclick="openWindow('skills')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('stage')">
+                <div class="icon-img"><i class="fa-solid fa-briefcase"></i></div>
+                <span>Internship</span>
+            </div>
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('skills')">
                 <div class="icon-img"><i class="fa-solid fa-laptop-code"></i></div>
                 <span>Skills</span>
             </div>
-            <div class="icon" onclick="openWindow('but-info')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('but-info')">
                 <div class="icon-img"><i class="fa-solid fa-graduation-cap"></i></div>
                 <span>Degree Info</span>
             </div>
-            <div class="icon" onclick="openWindow('culture')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('culture')">
                 <div class="icon-img"><i class="fa-solid fa-building-columns"></i></div>
                 <span>Culture</span>
             </div>
-            <div class="icon" onclick="openWindow('contact')">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('contact')">
                 <div class="icon-img"><i class="fa-solid fa-envelope-open-text"></i></div>
                 <span>Contact</span>
             </div>
@@ -88,23 +78,24 @@
             <div class="hero-subtitle">System ready. Waiting for input...</div>
             
             <div class="search-bar">
-                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" placeholder="Search for a skill, a project..." disabled>
+                <span class="search-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="search" placeholder="Search for a skill, a project..." aria-label="Search for a skill, a project..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results" autocomplete="off" spellcheck="false">
                 <span class="command-hint">CTRL + K</span>
+                <ul class="search-results" id="search-results" role="listbox" hidden></ul>
             </div>
             
             <div class="language-switch">
-                <span class="flag">🇫🇷</span>
+                <span class="flag" aria-hidden="true">🇫🇷</span>
                 <label class="switch">
-                    <input type="checkbox" checked onchange="window.location.href='index.html'">
+                    <input type="checkbox" id="lang-toggle" data-href="index.html" checked aria-label="Passer en français">
                     <span class="slider round"></span>
                 </label>
-                <span class="flag">🇬🇧</span>
+                <span class="flag" aria-hidden="true">🇬🇧</span>
             </div>
         </div>
 
         <div class="system-widget">
-            <div class="widget-header">NOAN_OS v2.0 <span class="status-dot"></span></div>
+            <div class="widget-header">NOAN_OS v3.0 <span class="status-dot"></span></div>
             <div class="widget-time" id="widget-time">00:00</div>
             <div class="widget-date" id="widget-date">Loading...</div>
             <div class="widget-separator"></div>
@@ -119,16 +110,18 @@
             </div>
         </div>
 
-        <div id="about" class="window">
+        <div id="about" class="window" role="dialog" aria-labelledby="about-title">
             <div class="title-bar">
-                <div class="title-text">user_info.exe</div>
+                <div class="title-text" id="about-title">user_info.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('about')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('about')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
                 <div class="profile-header">
-                    <img src="images/avatar.jpg" alt="Noan" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
+                    <img src="images/avatar.jpg" alt="Noan Heinry" width="200" height="200" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
                     <h2 style="text-align: center;">Noan HEINRY</h2>
                     <p class="tagline" style="text-align: center; color: #aaa;">CS Student (BUT) | Looking for internship (April 2026)</p>
                     <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
@@ -154,11 +147,13 @@
             </div>
         </div>
 
-        <div id="projects" class="window" style="width: 800px;">
+        <div id="projects" class="window" role="dialog" aria-labelledby="projects-title" style="width: 800px;">
             <div class="title-bar">
-                <div class="title-text">projects_explorer.exe</div>
+                <div class="title-text" id="projects-title">projects_explorer.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('projects')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('projects')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
@@ -166,32 +161,136 @@
                     <div class="project-item">
                         <h3><i class="fa-solid fa-gamepad"></i> Tic-Tac-Toe AI</h3>
                         <p>Java vs Logic Robot.</p>
-                        <a href="documents/Morphalla.pdf" download="Morphalla.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentation</a>
+                        <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                            Presentation
+                        </a>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-robot"></i> EV3 Robot</h3>
                         <p>Autonomous navigation.</p>
-                        <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentation</a>
+                        <span class="btn btn-disabled" aria-disabled="true" style="padding: 10px 20px; font-size: 1.1em;">
+                            Coming soon
+                        </span>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-dna"></i> Game of Life</h3>
                         <p>Python/Pygame simulation.</p>
-                        <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentation</a>
+                        <span class="btn btn-disabled" aria-disabled="true" style="padding: 10px 20px; font-size: 1.1em;">
+                            Coming soon
+                        </span>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
                         <p>User management.</p>
-                        <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentationy</a>
+                        <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                            Presentation
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="skills" class="window" style="width: 700px;">
+        <div id="stage" class="window" role="dialog" aria-labelledby="stage-title" style="width: 850px;">
             <div class="title-bar">
-                <div class="title-text">system_modules.exe</div>
+                <div class="title-text" id="stage-title">internship_r2.log</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('skills')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('stage')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="stage-header">
+                    <h2>R2 Digital Agency — 2nd-year internship</h2>
+                    <p class="tagline">Development, redesign and optimisation of web applications</p>
+                    <div class="stage-chips">
+                        <span class="stage-chip"><i class="fa-solid fa-location-dot"></i> Rennes, France</span>
+                        <span class="stage-chip"><i class="fa-solid fa-calendar"></i> April 20 → July 3, 2026</span>
+                        <span class="stage-chip"><i class="fa-solid fa-hourglass-half"></i> 11 weeks</span>
+                        <span class="stage-chip"><i class="fa-solid fa-code"></i> Tech / Dev team</span>
+                    </div>
+                </div>
+
+                <p>R2 is a creative and digital agency (Paris & Rennes, ~30 people) specialised in brand strategy, video production and digital. As part of the development team alongside my supervisor, I handled feature development, optimisation and maintenance on three web platforms, working autonomously through client tickets.</p>
+
+                <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
+                <div class="project-grid stage-missions">
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-gauge-high"></i> Spot — Internal ERP</h3>
+                            <p>Management app for 1,800+ projects, built on a Headless architecture (WordPress + React).</p>
+                            <ul class="stage-results">
+                                <li>Server-side pagination through a custom REST API: search and browsing became instant</li>
+                                <li>Hardware inventory module in React (custom post type, statuses, assignment to staff)</li>
+                                <li>WP-CLI command for bulk device import from CSV</li>
+                            </ul>
+                        </div>
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Agency website</h3>
+                            <p>WordPress showcase site, R2's main communication tool.</p>
+                            <ul class="stage-results">
+                                <li>New custom Gutenberg blocks (ACF Blocks, MVC structure)</li>
+                                <li>Work page redesign: expertise filters, "Load more", strict 1:1 image grid</li>
+                                <li>SEO / accessibility refactoring of heading hierarchy</li>
+                            </ul>
+                        </div>
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-video"></i> Yao.bzh — Non-profit website</h3>
+                            <p>Website of a Breton association supporting young entrepreneurs.</p>
+                            <ul class="stage-results">
+                                <li>"Interviews" section: custom post type + ACF fields, managed by the association itself</li>
+                                <li>Archive page with video playback in a modal (JavaScript)</li>
+                                <li>Responsive menu fixes, production release and server cache purge</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-layer-group"></i> Tech stack</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
+                        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="skill-card"><i class="devicon-sass-original colored"></i><span>SCSS</span></div>
+                        <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
+                    </div>
+                </div>
+
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Methods & tools</h3>
+                <div class="stage-chips">
+                        <span class="stage-chip">Git / GitHub (preprod → main branches)</span>
+                        <span class="stage-chip">CI/CD with GitHub Actions + rsync</span>
+                        <span class="stage-chip">Kinsta hosting</span>
+                        <span class="stage-chip">Composer, npm / Yarn</span>
+                        <span class="stage-chip">WP-CLI</span>
+                        <span class="stage-chip">Monday.com (tickets)</span>
+                        <span class="stage-chip">Slack</span>
+                        <span class="stage-chip">Staging QA</span>
+                </div>
+
+                <h3><i class="fa-solid fa-graduation-cap"></i> Degree competencies applied</h3>
+                <ul class="stage-comps">
+                        <li><span class="stage-comp-tag">C1</span><div><strong>Realize</strong><span>Responsive front-end (SCSS, React), Gutenberg blocks, video modal.</span></div></li>
+                        <li><span class="stage-comp-tag">C2</span><div><strong>Optimize</strong><span>Server-side pagination for 1,800 projects, background jobs (WP-Cron).</span></div></li>
+                        <li><span class="stage-comp-tag">C3</span><div><strong>Administer</strong><span>Continuous deployment (GitHub Actions, rsync) to Kinsta, server cache management.</span></div></li>
+                        <li><span class="stage-comp-tag">C4</span><div><strong>Manage Data</strong><span>Custom post types and ACF fields, JSON REST API routes, CSV import.</span></div></li>
+                        <li><span class="stage-comp-tag">C5</span><div><strong>Lead Project</strong><span>Requirements through Monday.com tickets, local / staging / production environments.</span></div></li>
+                        <li><span class="stage-comp-tag">C6</span><div><strong>Collaborate</strong><span>Work with project managers and the design team, team meetings, Slack.</span></div></li>
+                </ul>
+
+                <h3><i class="fa-solid fa-seedling"></i> What I learned</h3>
+                <p>I moved from a school approach, writing code in isolation, to a professional workflow: rigorous versioning, separate environments, automated deployment, ticket tracking and prioritisation. I deepened my knowledge of WordPress internals (REST API, WP-Cron, WP-CLI) and discovered Headless architecture with React.</p>
+            </div>
+        </div>
+
+        <div id="skills" class="window" role="dialog" aria-labelledby="skills-title" style="width: 700px;">
+            <div class="title-bar">
+                <div class="title-text" id="skills-title">system_modules.exe</div>
+                <div class="window-controls">
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('skills')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
@@ -211,6 +310,9 @@
                         <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
                         <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
                         <div class="skill-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+                        <div class="skill-card"><i class="devicon-sass-original colored"></i><span>SCSS</span></div>
+                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -219,6 +321,7 @@
                         <div class="skill-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
                         <div class="skill-card"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
                         <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
                         <div class="skill-card"><i class="devicon-linux-plain"></i><span>Linux</span></div>
                         <div class="skill-card"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
                     </div>
@@ -226,11 +329,13 @@
             </div>
         </div>
 
-        <div id="but-info" class="window" style="width: 90%; height: 85vh; max-width: 1200px; max-height: 85vh;">
+        <div id="but-info" class="window" role="dialog" aria-labelledby="but-info-title" style="width: 90%; height: 85vh; max-width: 1200px;">
             <div class="title-bar">
-                <div class="title-text">curriculum_tracker.xlsx</div>
+                <div class="title-text" id="but-info-title">curriculum_tracker.xlsx</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('but-info')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('but-info')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content but-container">
@@ -502,41 +607,52 @@
             </div>
         </div>
 
-        <div id="culture" class="window" style="width: 60%; height: 80vh; max-height: 80vh;">
+        <div id="culture" class="window" role="dialog" aria-labelledby="culture-title" style="width: 60%; height: 80vh;">
             <div class="title-bar">
-                <div class="title-text">greek_mythology.db</div>
+                <div class="title-text" id="culture-title">general_culture.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content myth-container">
-                <header class="myth-header">
-                    <h1>The Odyssey of Gods</h1>
-                    <p>A dive into the original chaos and the rise of Olympus.</p>
+                <header class="myth-header" style="text-align: center; margin-bottom: 20px;">
+                    <h1 style="color: #bd93f9; margin-bottom: 10px;">General Culture</h1>
+                    <p>Exploration and continuous learning.</p>
                 </header>
+
+                <div style="text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #444;">
+                    <h2 style="margin-bottom: 15px; color: #50fa7b;"><i class="fa-solid fa-basketball"></i> Semester 4: My NBA</h2>
+                    <p style="margin-bottom: 20px;">A San Antonio Spurs fan page: the franchise, Dennis Rodman, Victor Wembanyama and the wild 2026 season (in French).</p>
+                    <a href="nba.html" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 12px 25px; font-size: 1.1em; text-decoration: none; border-radius: 5px; background-color: #bd93f9; color: #282a36; font-weight: bold; display: inline-block; box-shadow: 0 0 10px rgba(189, 147, 249, 0.4);">
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color: #282a36; margin-right: 8px;"></i> Open My NBA
+                    </a>
+                </div>
+                <h2 style="text-align: center; color: #8be9fd; margin-bottom: 20px;"><i class="fa-solid fa-bolt"></i> Semester 3: The Odyssey of Gods</h2>
                 <div class="timeline">
                     <div class="myth-card">
                         <div class="myth-number">I</div>
                         <h2>The Original Chaos</h2>
-                        <img src="images/chaos.jpg" alt="Chaos" class="myth-img">
+                        <img src="images/myth-chaos.svg" alt="Illustration: the spiral of Chaos between the starry sky and the earth" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
                         <p>In the beginning, there was only <strong>Chaos</strong>. From this void were born Gaia (Earth) and Ouranos (Sky). Together, they fathered the Titans.</p>
                     </div>
                     <div class="myth-card right">
                         <div class="myth-number">II</div>
                         <h2>The Revolt of Cronos</h2>
-                        <img src="images/cronos.jpg" alt="Cronos" class="myth-img">
+                        <img src="images/myth-cronos.svg" alt="Illustration: Cronos's sickle, an hourglass and the sun of the Golden Age" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
                         <p>Gaia, furious, asked for help. Only <strong>Cronos</strong> dared to stand up. He overthrew his father and took power, starting the Golden Age.</p>
                     </div>
                     <div class="myth-card">
                         <div class="myth-number">III</div>
                         <h2>The Titanomachy</h2>
-                        <img src="images/titanomachie.jpg" alt="Titans" class="myth-img">
+                        <img src="images/myth-titanomachie.svg" alt="Illustration: Zeus's thunderbolt strikes the Titans' mountains" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
                         <p>To thwart destiny, Cronos devoured his children. But his wife Rhea saved little <strong>Zeus</strong>. A ten-year cosmic war broke out: Gods vs Titans.</p>
                     </div>
                     <div class="myth-card right">
                         <div class="myth-number">IV</div>
                         <h2>The Reign of Olympus</h2>
-                        <img src="images/olympe.jpg" alt="Olympus" class="myth-img">
+                        <img src="images/myth-olympe.svg" alt="Illustration: the temple of Olympus and the symbols of Zeus, Poseidon and Hades" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
                         <p>Victorious, the three brothers shared the world:</p>
                         <ul class="gods-list">
                             <li> <strong>Zeus</strong>: King of Gods, master of Sky and Thunder.</li>
@@ -548,11 +664,13 @@
             </div>
         </div>
 
-        <div id="contact" class="window" style="width: 500px;">
+        <div id="contact" class="window" role="dialog" aria-labelledby="contact-title" style="width: 500px;">
             <div class="title-bar">
-                <div class="title-text">msg_service.exe</div>
+                <div class="title-text" id="contact-title">msg_service.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('contact')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('contact')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content contact-content">
@@ -563,11 +681,11 @@
                         <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
                         <div class="action-details"><span class="action-title">Send an Email</span><span class="action-desc">heinry.noan16@gmail.com</span></div>
                     </a>
-                    <a href="https://github.com/NoanHeinry" target="_blank" class="action-card">
+                    <a href="https://github.com/NoanHeinry" target="_blank" rel="noopener noreferrer" class="action-card">
                         <div class="icon-box"><i class="devicon-github-original"></i></div>
                         <div class="action-details"><span class="action-title">GitHub Profile</span><span class="action-desc">Explore my repositories</span></div>
                     </a>
-                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" class="action-card">
+                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" target="_blank" rel="noopener noreferrer" class="action-card">
                         <div class="icon-box"><i class="devicon-linkedin-plain"></i></div>
                         <div class="action-details"><span class="action-title">LinkedIn</span><span class="action-desc">Professional Network</span></div>
                     </a>
@@ -577,51 +695,37 @@
 
     </div>
 
+    <div class="start-menu" id="start-menu" role="dialog" aria-label="Menu" hidden>
+        <div class="start-profile">
+            <img src="images/avatar.jpg" alt="" width="56" height="56">
+            <div>
+                <strong>Noan Heinry</strong>
+                <span>Computer Science student (BUT), IUT de Laval</span>
+                <span class="start-status"><span class="blink-dot"></span> Open to opportunities</span>
+            </div>
+        </div>
+        <p class="start-label">Apps</p>
+        <div class="start-apps" id="start-apps"></div>
+        <div class="start-actions">
+            <a href="documents/CV_Noan_EN.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Download my resume</a>
+            <a href="mailto:heinry.noan16@gmail.com"><i class="fa-solid fa-envelope"></i> Email me</a>
+            <a href="index.html" data-lang-link><i class="fa-solid fa-language"></i> Version française</a>
+        </div>
+    </div>
+
     <div class="taskbar">
-        <button class="start-btn"><i class="fa-brands fa-windows"></i> Start</button>
+        <button type="button" class="start-btn" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu"><i class="fa-brands fa-windows"></i> Start</button>
         <div class="taskbar-divider"></div>
-        <button class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i> Info</button>
-        <button class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i> Projects</button>
-        <button class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
-        <button class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> Degree</button>
-        <button class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
-        <button class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
+        <button type="button" class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i> Info</button>
+        <button type="button" class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i> Projects</button>
+        <button type="button" class="task-btn" onclick="openWindow('stage')"><i class="fa-solid fa-briefcase"></i> Internship</button>
+        <button type="button" class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
+        <button type="button" class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> Degree</button>
+        <button type="button" class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
+        <button type="button" class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
         <div class="clock" id="clock">12:00</div>
     </div>
 
-    <script>
-        function openWindow(id) {
-            const windows = document.querySelectorAll('.window');
-            windows.forEach(w => w.style.display = 'none');
-            const win = document.getElementById(id);
-            if(win) win.style.display = 'flex';
-        }
-
-        function closeWindow(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        function updateClock() {
-            const now = new Date();
-            // English format
-            const timeString = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
-            
-            // English date format
-            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateString = now.toLocaleDateString('en-US', dateOptions);
-
-            const taskClock = document.getElementById('clock');
-            if(taskClock) taskClock.textContent = timeString;
-
-            const widgetTime = document.getElementById('widget-time');
-            const widgetDate = document.getElementById('widget-date');
-            
-            if(widgetTime) widgetTime.textContent = timeString;
-            if(widgetDate) widgetDate.textContent = dateString;
-        }
-        
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
