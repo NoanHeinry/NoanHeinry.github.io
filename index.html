@@ -19,7 +19,7 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0b2e'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd93f9'%3EN%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
     <link rel="stylesheet" href="style.css" />
@@ -101,8 +101,8 @@
 
             <div class="typewriter-container">
                 <p>> Initializing portfolio...</p>
-                <p>> User: <span style="color: #bd93f9;">Recruiter</span> detected.</p>
-                <p>> Status: <span style="color: #50fa7b;">Ready to work</span>.</p>
+                <p>> User: <span class="t-accent">Recruiter</span> detected.</p>
+                <p>> Status: <span class="t-ok">Ready to work</span>.</p>
             </div>
 
             <div class="sys-stats">
@@ -128,13 +128,13 @@
             </div>
             <div class="window-content">
                 <div class="profile-header">
-                    <img src="images/avatar.jpg" alt="Noan Heinry" width="200" height="200" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
+                    <img src="images/avatar.jpg" alt="Avatar de Noan : illustration de Dennis Rodman" class="profile-avatar" width="160" height="160">
                     
-                    <h2 style="text-align: center;">Noan HEINRY</h2>
-                    <p class="tagline" style="text-align: center; color: #aaa;">Étudiant BUT Informatique | Recherche de stage (Avril 2026)</p>
+                    <h2 class="profile-name">Noan Heinry</h2>
+                    <p class="tagline">Étudiant BUT Informatique | Recherche de stage (Avril 2026)</p>
                     
-                    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
-                        <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                    <div class="profile-actions">
+                        <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn">
                             <i class="fa-solid fa-file-pdf"></i> Télécharger mon CV
                         </a>
                     </div>
@@ -144,9 +144,9 @@
                 
                 <h3>Qualités & Atouts</h3>
                 <ul>
-                    <li><i class="fa-solid fa-bolt" style="color:#f1fa8c;"></i> Dynamisme & Curiosité</li>
-                    <li><i class="fa-solid fa-users" style="color:#ff79c6;"></i> Esprit d'équipe & Autonomie</li>
-                    <li><i class="fa-solid fa-brain" style="color:#bd93f9;"></i> Esprit d'analyse & Organisation</li>
+                    <li><i class="fa-solid fa-bolt"></i> Dynamisme & Curiosité</li>
+                    <li><i class="fa-solid fa-users"></i> Esprit d'équipe & Autonomie</li>
+                    <li><i class="fa-solid fa-brain"></i> Esprit d'analyse & Organisation</li>
                 </ul>
 
                 <h3>Centres d'intérêt</h3>
@@ -171,28 +171,28 @@
                     <div class="project-item">
                         <h3><i class="fa-solid fa-gamepad"></i> Morpion</h3>
                         <p>Java vs Robot logique.</p>
-                        <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                        <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn">
                             Présentation
                         </a>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-robot"></i> Robot EV3</h3>
                         <p>Navigation autonome.</p>
-                        <span class="btn btn-disabled" aria-disabled="true" style="padding: 10px 20px; font-size: 1.1em;">
+                        <span class="btn btn-disabled" aria-disabled="true">
                             Bientôt disponible
                         </span>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-dna"></i> Jeu de la vie</h3>
                         <p>Simulation Python/Pygame.</p>
-                        <span class="btn btn-disabled" aria-disabled="true" style="padding: 10px 20px; font-size: 1.1em;">
+                        <span class="btn btn-disabled" aria-disabled="true">
                             Bientôt disponible
                         </span>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
                         <p>Gestion utilisateurs.</p>
-                        <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                        <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn">
                             Présentation
                         </a>
                     </div>
@@ -404,7 +404,7 @@
             </div>
             
             <div class="window-content but-container">
-                <h2 style="text-align: center; margin-bottom: 30px;">🎓 BUT Informatique - Suivi de Compétences</h2>
+                <h2 class="doc-title"><i class="fa-solid fa-graduation-cap"></i> BUT Informatique : suivi des compétences</h2>
 
                 <div class="but-section">
                     <h3>Compétence 1 : Réaliser</h3>
@@ -413,10 +413,10 @@
                         <thead>
                             <tr>
                                 <th>Apprentissage Critique (AC)</th>
-                                <th class="col-non-acquis">❌ Non acquis</th>
-                                <th class="col-en-cours">⚠️ En cours</th>
-                                <th class="col-acquis">✅ Acquis</th>
-                                <th class="col-preuves">➡️ Preuves</th>
+                                <th class="col-non-acquis">Non acquis</th>
+                                <th class="col-en-cours">En cours</th>
+                                <th class="col-acquis">Acquis</th>
+                                <th class="col-preuves">Preuves</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -459,10 +459,10 @@
                         <thead>
                             <tr>
                                 <th>AC</th>
-                                <th class="col-non-acquis">❌ Non acquis</th>
-                                <th class="col-en-cours">⚠️ En cours</th>
-                                <th class="col-acquis">✅ Acquis</th>
-                                <th class="col-preuves">➡️ Preuves</th>
+                                <th class="col-non-acquis">Non acquis</th>
+                                <th class="col-en-cours">En cours</th>
+                                <th class="col-acquis">Acquis</th>
+                                <th class="col-preuves">Preuves</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -505,10 +505,10 @@
                         <thead>
                             <tr>
                                 <th>AC</th>
-                                <th class="col-non-acquis">❌ Non acquis</th>
-                                <th class="col-en-cours">⚠️ En cours</th>
-                                <th class="col-acquis">✅ Acquis</th>
-                                <th class="col-preuves">➡️ Preuves</th>
+                                <th class="col-non-acquis">Non acquis</th>
+                                <th class="col-en-cours">En cours</th>
+                                <th class="col-acquis">Acquis</th>
+                                <th class="col-preuves">Preuves</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -544,10 +544,10 @@
                         <thead>
                             <tr>
                                 <th>AC</th>
-                                <th class="col-non-acquis">❌ Non acquis</th>
-                                <th class="col-en-cours">⚠️ En cours</th>
-                                <th class="col-acquis">✅ Acquis</th>
-                                <th class="col-preuves">➡️ Preuves</th>
+                                <th class="col-non-acquis">Non acquis</th>
+                                <th class="col-en-cours">En cours</th>
+                                <th class="col-acquis">Acquis</th>
+                                <th class="col-preuves">Preuves</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -590,10 +590,10 @@
                         <thead>
                             <tr>
                                 <th>AC</th>
-                                <th class="col-non-acquis">❌ Non acquis</th>
-                                <th class="col-en-cours">⚠️ En cours</th>
-                                <th class="col-acquis">✅ Acquis</th>
-                                <th class="col-preuves">➡️ Preuves</th>
+                                <th class="col-non-acquis">Non acquis</th>
+                                <th class="col-en-cours">En cours</th>
+                                <th class="col-acquis">Acquis</th>
+                                <th class="col-preuves">Preuves</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -636,9 +636,9 @@
                         <thead>
                             <tr>
                                 <th>AC</th>
-                                <th class="col-non-acquis">❌ Non acquis</th>
-                                <th class="col-en-cours">⚠️ En cours</th>
-                                <th class="col-acquis">✅ Acquis</th>
+                                <th class="col-non-acquis">Non acquis</th>
+                                <th class="col-en-cours">En cours</th>
+                                <th class="col-acquis">Acquis</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -687,7 +687,7 @@
                     <span class="blink-dot"></span> CONNEXION SÉCURISÉE ÉTABLIE
                 </div>
                 
-                <p style="text-align: center; color: #ddd; font-style: italic;">
+                <p class="contact-intro">
                     Protocole de transmission prêt. Sélectionnez un canal :
                 </p>
 
