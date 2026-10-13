@@ -219,135 +219,6 @@ body {
     font-weight: bold;
 }
 
-/* --- STYLE SPÉCIFIQUE CULTURE G (MYTHOLOGIE) --- */
-
-.myth-container {
-    background: linear-gradient(to bottom, rgba(16, 16, 24, 0.95), rgba(45, 27, 78, 0.4));
-    color: #eee;
-    padding: 3vh 1.5vw;    /* remplace 30px */
-}
-
-.myth-header {
-    text-align: center;
-    margin-bottom: 4vh;    /* remplace 40px */
-    border-bottom: 2px solid #bd93f9;
-    padding-bottom: 2vh;   /* remplace 20px */
-}
-
-.myth-header h1 {
-    font-family: 'Orbitron', sans-serif;
-    color: #ffd700;
-    text-shadow: 0 0 0.5vw rgba(255, 215, 0, 0.5); /* remplace 10px */
-    font-size: 2.5em;
-    margin: 0;
-}
-
-.myth-header p {
-    font-style: italic;
-    color: #ff79c6;
-}
-
-.timeline {
-    position: relative;
-    max-width: 42vw;       /* remplace 800px */
-    margin: 0 auto;
-    padding-left: 1vw;     /* remplace 20px */
-    border-left: 2px dashed #444;
-}
-
-.myth-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid #bd93f9;
-    border-radius: 0.4vw;  /* remplace 8px */
-    padding: 2vh 1vw;      /* remplace 20px */
-    margin-bottom: 3vh;    /* remplace 30px */
-    margin-left: 1vw;      /* remplace 20px */
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.myth-card:hover {
-    transform: translateX(0.25vw); /* remplace 5px */
-    box-shadow: -0.25vw 0.5vh 0px rgba(189, 147, 249, 0.3); /* remplace -5px 5px */
-    background: rgba(255, 255, 255, 0.07);
-}
-
-/* Style des images locales */
-.myth-img {
-    width: 100%;
-    height: auto;
-    max-height: 46vh;      /* remplace 500px */
-    object-fit: cover;
-    border-radius: 0.2vw;  /* remplace 4px */
-    margin: 1.5vh 0;       /* remplace 15px */
-    border: 2px solid #ffd700;
-    box-shadow: 0 0 0.5vw rgba(255, 215, 0, 0.2); /* remplace 10px */
-    opacity: 0.9;
-    transition: all 0.3s ease;
-}
-
-.myth-card:hover .myth-img {
-    opacity: 1;
-    box-shadow: 0 0 1vw rgba(255, 215, 0, 0.6); /* remplace 20px */
-    transform: scale(1.05);
-}
-
-.myth-number {
-    position: absolute;
-    top: -1.5vh;           /* remplace -15px */
-    left: -1.5vh;          /* remplace -15px (pour garder le ratio proche du cercle) */
-    background: #000;
-    border: 2px solid #ffd700;
-    color: #ffd700;
-    width: max(2vw, 26px);   /* remplace 40px */
-    height: max(2vw, 26px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
-    border-radius: 50%;
-    box-shadow: 0 0 0.5vw rgba(255, 215, 0, 0.3); /* remplace 10px */
-}
-
-.myth-card h2 {
-    color: #ffd700;
-    font-family: 'Orbitron', sans-serif;
-    margin-top: 1vh;       /* remplace 10px */
-    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-}
-
-.myth-card p {
-    line-height: 1.6;
-    font-size: 1.05em;
-    color: #dcdcdc;
-}
-
-.myth-card strong {
-    color: #ff79c6;
-}
-
-.gods-list {
-    list-style: none;
-    padding: 0;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1.5vh;        /* remplace 15px */
-    border-radius: 0.25vw; /* remplace 5px */
-    border-left: 3px solid #ffd700;
-}
-
-.gods-list li {
-    margin-bottom: 1vh;    /* remplace 10px */
-    font-family: 'Courier New', monospace;
-}
-
-.myth-footer {
-    text-align: center;
-    margin-top: 5vh;       /* remplace 50px */
-    color: #444;
-    font-family: 'Courier New', monospace;
-}
-
 /* --- STYLE SPÉCIFIQUE BUT INFORMATIQUE (TABLEAUX) --- */
 
 .but-container {
@@ -1253,28 +1124,6 @@ input:checked + .slider:before {
         padding-left: 14px;
     }
 
-    .myth-container {
-        padding: 16px 12px;
-    }
-
-    .myth-header h1 {
-        font-size: 1.8em;
-    }
-
-    .timeline {
-        max-width: 100%;
-        padding-left: 12px;
-    }
-
-    .myth-card {
-        margin-left: 12px;
-        padding: 14px;
-        border-radius: 8px;
-    }
-
-    .myth-img {
-        max-height: 40vh;
-    }
 
     .action-card {
         padding: 12px;
@@ -1863,15 +1712,6 @@ body {
     overflow: hidden;
 }
 
-.myth-card {
-    border-radius: 12px;
-    border-color: rgba(189, 147, 249, 0.35);
-}
-
-.myth-card:hover .myth-img {
-    transform: scale(1.02);
-}
-
 /* ---------- BARRE DES TÂCHES ---------- */
 
 .taskbar {
@@ -2400,12 +2240,3 @@ body.is-ready .taskbar {
     }
 }
 
-/* Illustrations de mythologie (SVG, format paysage) */
-.myth-img {
-    aspect-ratio: 8 / 5;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    background: #140b22;
-    opacity: 1;
-}

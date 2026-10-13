@@ -63,10 +63,6 @@
                 <div class="icon-img"><i class="fa-solid fa-graduation-cap"></i></div>
                 <span>BUT Info</span>
             </div>
-            <div class="icon" role="button" tabindex="0" onclick="openWindow('culture')">
-                <div class="icon-img"><i class="fa-solid fa-building-columns"></i></div>
-                <span>Culture G</span>
-            </div>
             <div class="icon" role="button" tabindex="0" onclick="openWindow('contact')">
                 <div class="icon-img"><i class="fa-solid fa-envelope-open-text"></i></div>
                 <span>Contact</span>
@@ -676,75 +672,6 @@
             </div>
         </div>
 
-        <div id="culture" class="window" role="dialog" aria-labelledby="culture-title" style="width: 60%; height: 80vh;">
-            <div class="title-bar">
-                <div class="title-text" id="culture-title">culture_generale.exe</div>
-                <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-            </div>
-            
-            <div class="window-content myth-container">
-                <header class="myth-header" style="text-align: center; margin-bottom: 20px;">
-                    <h1 style="color: #bd93f9; margin-bottom: 10px;">Culture Générale</h1>
-                    <p>Exploration et apprentissage continu.</p>
-                </header>
-
-                <div style="text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #444;">
-                    <h2 style="margin-bottom: 15px; color: #50fa7b;"><i class="fa-solid fa-basketball"></i> Semestre 4 : Ma NBA</h2>
-                    <p style="margin-bottom: 20px;">Fan des San Antonio Spurs : l'histoire de la franchise, Dennis Rodman, Victor Wembanyama et la folle saison 2026.</p>
-                    <a href="nba.html" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 12px 25px; font-size: 1.1em; text-decoration: none; border-radius: 5px; background-color: #bd93f9; color: #282a36; font-weight: bold; display: inline-block; box-shadow: 0 0 10px rgba(189, 147, 249, 0.4);">
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color: #282a36; margin-right: 8px;"></i> Ouvrir Ma NBA
-                    </a>
-                </div>
-                <h2 style="text-align: center; color: #8be9fd; margin-bottom: 20px;"><i class="fa-solid fa-bolt"></i> Semestre 3 : L'Odyssée des Dieux</h2>
-                <div class="timeline">
-                    <div class="myth-card">
-                        <div class="myth-number">I</div>
-                        <h3>Le Chaos Originel</h3>
-                        <img src="images/myth-chaos.svg" alt="Illustration : la spirale du Chaos entre le ciel étoilé et la terre" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>
-                            Au commencement, il n'y avait que le <strong>Chaos</strong>. De ce vide insondable naquirent Gaia (la Terre) et Ouranos (le Ciel). 
-                            Ensemble, ils engendrèrent les terribles Titans. Mais Ouranos, craignant la puissance de ses enfants, les enferma dans les entrailles de la Terre.
-                        </p>
-                    </div>
-
-                    <div class="myth-card right">
-                        <div class="myth-number">II</div>
-                        <h3>La Révolte de Cronos</h3>
-                        <img src="images/myth-cronos.svg" alt="Illustration : la faucille de Cronos, un sablier et le soleil de l'Âge d'or" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>
-                            Gaia, furieuse, demanda de l'aide à ses enfants. Seul <strong>Cronos</strong>, le plus jeune des Titans, osa se dresser. 
-                            Armé d'une faucille, il renversa son père et prit le pouvoir. L'Âge d'Or commença, mais une prophétie le hantait : 
-                            il serait à son tour détrôné par l'un de ses fils.
-                        </p>
-                    </div>
-                    <div class="myth-card">
-                        <div class="myth-number">III</div>
-                        <h3>La Titanomachie</h3>
-                        <img src="images/myth-titanomachie.svg" alt="Illustration : la foudre de Zeus frappe les montagnes des Titans" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>
-                            Pour déjouer le destin, Cronos dévorait ses enfants dès leur naissance. Mais sa femme, Rhéa, sauva le petit <strong>Zeus</strong>. Devenu adulte, il libéra ses frères et sœurs : une guerre cosmique de dix ans éclata alors, les Dieux contre les Titans.
-                        </p>
-                    </div>
-
-                    <div class="myth-card right">
-                        <div class="myth-number">IV</div>
-                        <h3>Le Règne de l'Olympe</h3>
-                        <img src="images/myth-olympe.svg" alt="Illustration : le temple de l'Olympe et les attributs de Zeus, Poséidon et Hadès" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>Victorieux, les trois frères se partagèrent le monde :</p>
-                        <ul class="gods-list">
-                            <li> <strong>Zeus</strong> : Roi des Dieux, maître du Ciel et de la Foudre.</li>
-                            <li> <strong>Poséidon</strong> : Maître des Océans et des tremblements de terre.</li>
-                            <li> <strong>Hadès</strong> : Gardien des Enfers et du royaume des morts.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div id="contact" class="window" role="dialog" aria-labelledby="contact-title" style="width: 500px;">
             <div class="title-bar">
                 <div class="title-text" id="contact-title">msg_service.exe</div>
@@ -825,7 +752,6 @@
         <button type="button" class="task-btn" onclick="openWindow('stage')"><i class="fa-solid fa-briefcase"></i> Stage</button>
         <button type="button" class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
         <button type="button" class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> BUT</button>
-        <button type="button" class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
         <button type="button" class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
 
         <div class="clock" id="clock">12:00</div>

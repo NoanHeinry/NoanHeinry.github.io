@@ -529,7 +529,6 @@
             stage: 'stage internship r2 agence agency entreprise company experience wordpress react spot yao alternance',
             skills: 'competences skills langages languages outils tools',
             'but-info': 'but iut diplome degree competences ac apprentissages',
-            culture: 'culture generale mythologie mythology grece greek dieux gods nba basket spurs rodman wembanyama wemby',
             contact: 'contact email mail linkedin github message'
         };
         Object.keys(windowTitles).forEach(function (win) { add(windowTitles[win], win, aliases[win]); });
@@ -540,8 +539,6 @@
             ['#skills .skill-card', 'skills', 'span', ''],
             ['#skills .skill-category', 'skills', 'h3', ''],
             ['#but-info .but-section', 'but-info', 'h3', '.but-subtitle'],
-            ['#culture .myth-card', 'culture', 'h3, h2', 'p'],
-            ['#culture h2', 'culture', null, ''],
             ['#contact .action-card', 'contact', '.action-title', '.action-desc'],
             ['#about h3', 'about', null, '']
         ];
@@ -637,7 +634,7 @@
                 function (el) { return el.textContent.replace(/\s+/g, ' ').trim() === m.label; }
             );
             if (target) {
-                const block = target.closest('.skill-card, .project-item, .stage-mission, .myth-card, .but-section, .action-card, .skill-category') || target;
+                const block = target.closest('.skill-card, .project-item, .stage-mission, .but-section, .action-card, .skill-category') || target;
                 setTimeout(function () {
                     block.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
                     block.classList.remove('search-hit');

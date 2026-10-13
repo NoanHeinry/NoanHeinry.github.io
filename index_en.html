@@ -63,10 +63,6 @@
                 <div class="icon-img"><i class="fa-solid fa-graduation-cap"></i></div>
                 <span>Degree Info</span>
             </div>
-            <div class="icon" role="button" tabindex="0" onclick="openWindow('culture')">
-                <div class="icon-img"><i class="fa-solid fa-building-columns"></i></div>
-                <span>Culture</span>
-            </div>
             <div class="icon" role="button" tabindex="0" onclick="openWindow('contact')">
                 <div class="icon-img"><i class="fa-solid fa-envelope-open-text"></i></div>
                 <span>Contact</span>
@@ -607,63 +603,6 @@
             </div>
         </div>
 
-        <div id="culture" class="window" role="dialog" aria-labelledby="culture-title" style="width: 60%; height: 80vh;">
-            <div class="title-bar">
-                <div class="title-text" id="culture-title">general_culture.exe</div>
-                <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-            </div>
-            <div class="window-content myth-container">
-                <header class="myth-header" style="text-align: center; margin-bottom: 20px;">
-                    <h1 style="color: #bd93f9; margin-bottom: 10px;">General Culture</h1>
-                    <p>Exploration and continuous learning.</p>
-                </header>
-
-                <div style="text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #444;">
-                    <h2 style="margin-bottom: 15px; color: #50fa7b;"><i class="fa-solid fa-basketball"></i> Semester 4: My NBA</h2>
-                    <p style="margin-bottom: 20px;">A San Antonio Spurs fan page: the franchise, Dennis Rodman, Victor Wembanyama and the wild 2026 season (in French).</p>
-                    <a href="nba.html" target="_blank" rel="noopener noreferrer" class="btn" style="padding: 12px 25px; font-size: 1.1em; text-decoration: none; border-radius: 5px; background-color: #bd93f9; color: #282a36; font-weight: bold; display: inline-block; box-shadow: 0 0 10px rgba(189, 147, 249, 0.4);">
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color: #282a36; margin-right: 8px;"></i> Open My NBA
-                    </a>
-                </div>
-                <h2 style="text-align: center; color: #8be9fd; margin-bottom: 20px;"><i class="fa-solid fa-bolt"></i> Semester 3: The Odyssey of Gods</h2>
-                <div class="timeline">
-                    <div class="myth-card">
-                        <div class="myth-number">I</div>
-                        <h2>The Original Chaos</h2>
-                        <img src="images/myth-chaos.svg" alt="Illustration: the spiral of Chaos between the starry sky and the earth" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>In the beginning, there was only <strong>Chaos</strong>. From this void were born Gaia (Earth) and Ouranos (Sky). Together, they fathered the Titans.</p>
-                    </div>
-                    <div class="myth-card right">
-                        <div class="myth-number">II</div>
-                        <h2>The Revolt of Cronos</h2>
-                        <img src="images/myth-cronos.svg" alt="Illustration: Cronos's sickle, an hourglass and the sun of the Golden Age" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>Gaia, furious, asked for help. Only <strong>Cronos</strong> dared to stand up. He overthrew his father and took power, starting the Golden Age.</p>
-                    </div>
-                    <div class="myth-card">
-                        <div class="myth-number">III</div>
-                        <h2>The Titanomachy</h2>
-                        <img src="images/myth-titanomachie.svg" alt="Illustration: Zeus's thunderbolt strikes the Titans' mountains" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>To thwart destiny, Cronos devoured his children. But his wife Rhea saved little <strong>Zeus</strong>. A ten-year cosmic war broke out: Gods vs Titans.</p>
-                    </div>
-                    <div class="myth-card right">
-                        <div class="myth-number">IV</div>
-                        <h2>The Reign of Olympus</h2>
-                        <img src="images/myth-olympe.svg" alt="Illustration: the temple of Olympus and the symbols of Zeus, Poseidon and Hades" class="myth-img" width="480" height="300" loading="lazy" decoding="async">
-                        <p>Victorious, the three brothers shared the world:</p>
-                        <ul class="gods-list">
-                            <li> <strong>Zeus</strong>: King of Gods, master of Sky and Thunder.</li>
-                            <li> <strong>Poseidon</strong>: Master of Oceans and earthquakes.</li>
-                            <li> <strong>Hades</strong>: Guardian of the Underworld.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div id="contact" class="window" role="dialog" aria-labelledby="contact-title" style="width: 500px;">
             <div class="title-bar">
                 <div class="title-text" id="contact-title">msg_service.exe</div>
@@ -721,7 +660,6 @@
         <button type="button" class="task-btn" onclick="openWindow('stage')"><i class="fa-solid fa-briefcase"></i> Internship</button>
         <button type="button" class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
         <button type="button" class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> Degree</button>
-        <button type="button" class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
         <button type="button" class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
         <div class="clock" id="clock">12:00</div>
     </div>
