@@ -1101,6 +1101,12 @@ button {
     font-size: 2.2rem;
 }
 
+/* Technologies sans logo Devicon : icône Font Awesome aux couleurs du site */
+.skill-card .skill-fa {
+    font-size: 1.9rem;
+    color: var(--accent);
+}
+
 .skill-card span {
     font-size: var(--fs-xs);
     font-weight: 600;
