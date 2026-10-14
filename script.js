@@ -545,6 +545,74 @@
         });
     }
 
+    /* ---------- WIDGET : DERNIERS DÉPÔTS GITHUB ---------- */
+
+    const ghFeed = document.getElementById('gh-feed');
+    const ghList = document.getElementById('gh-list');
+
+    function timeAgo(date) {
+        const days = Math.round((Date.now() - date.getTime()) / 86400000);
+        if (!window.Intl || !Intl.RelativeTimeFormat) return date.toLocaleDateString(LOCALE);
+        const rtf = new Intl.RelativeTimeFormat(LOCALE, { numeric: 'auto' });
+        if (days < 1) return rtf.format(0, 'day');
+        if (days < 30) return rtf.format(-days, 'day');
+        if (days < 365) return rtf.format(-Math.round(days / 30), 'month');
+        return rtf.format(-Math.round(days / 365), 'year');
+    }
+
+    function renderRepos(repos) {
+        if (!repos.length) return;
+        ghList.textContent = '';
+        repos.forEach(function (r) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = r.url;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.textContent = r.name;
+            const meta = document.createElement('small');
+            meta.textContent = [r.language, timeAgo(new Date(r.pushed))].filter(Boolean).join(' · ');
+            a.appendChild(meta);
+            li.appendChild(a);
+            ghList.appendChild(li);
+        });
+    }
+
+    function loadRepos() {
+        if (!ghFeed || !ghList || !window.fetch) return;
+        const cached = storage.get('noanos-gh');
+        if (cached) {
+            try {
+                const data = JSON.parse(cached);
+                if (Date.now() - data.at < 30 * 60000) { renderRepos(data.repos); return; }
+            } catch (e) { /* cache illisible : on recharge */ }
+        }
+        fetch('https://api.github.com/users/' + ghFeed.dataset.user + '/repos?sort=pushed&per_page=10', {
+            headers: { Accept: 'application/vnd.github+json' }
+        })
+            .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
+            .then(function (list) {
+                const repos = list
+                    .filter(function (r) { return !r.fork && !r.archived; })
+                    .slice(0, 3)
+                    .map(function (r) { return { name: r.name, url: r.html_url, language: r.language, pushed: r.pushed_at }; });
+                storage.set('noanos-gh', JSON.stringify({ at: Date.now(), repos: repos }));
+                renderRepos(repos);
+            })
+            .catch(function () { /* hors ligne ou limite atteinte : le lien vers GitHub reste affiché */ });
+    }
+
+    // Le widget est masqué sur les petits écrans : on ne charge qu'une fois visible
+    const widgetQuery = window.matchMedia('(min-width: 1181px)');
+    if (widgetQuery.matches) loadRepos();
+    else if (widgetQuery.addEventListener) {
+        widgetQuery.addEventListener('change', function onChange(e) {
+            if (!e.matches) return;
+            widgetQuery.removeEventListener('change', onChange);
+            loadRepos();
+        });
+    }
+
     /* ---------- DÉMARRAGE ---------- */
 
     const boot = document.getElementById('boot');

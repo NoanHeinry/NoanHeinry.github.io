@@ -558,41 +558,67 @@ button {
     to { clip-path: inset(0 0 0 0); }
 }
 
-.sys-stats {
+/* Derniers dépôts GitHub, chargés en direct depuis l'API publique */
+.gh-feed {
     margin-top: 18px;
 }
 
-.stat-row {
+.gh-head {
     display: flex;
     align-items: center;
+    gap: 8px;
     margin-bottom: 8px;
     font-family: var(--mono);
     font-size: 0.72rem;
+    letter-spacing: 0.04em;
     color: var(--text-3);
 }
 
-.stat-row span {
-    width: 40px;
+.gh-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.stat-bar {
-    flex: 1;
-    height: 5px;
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.08);
-    overflow: hidden;
+.gh-list a {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin: 0 -8px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    color: var(--text);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s;
 }
 
-.stat-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+.gh-list a:hover {
+    background: rgba(255, 255, 255, 0.05);
 }
 
-.cpu-anim { width: 45%; animation: cpuFluctuate 3s infinite ease-in-out; }
-.ram-anim { width: 60%; animation: ramFluctuate 5s infinite ease-in-out; }
+.gh-list small {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--text-3);
+}
 
-@keyframes cpuFluctuate { 0%, 100% { width: 45%; } 50% { width: 70%; } }
-@keyframes ramFluctuate { 0%, 100% { width: 60%; } 50% { width: 65%; } }
+.gh-list .gh-fallback a {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.gh-fallback i {
+    font-size: 0.75em;
+}
 
 /* ---------- 6. FENÊTRES ---------- */
 
