@@ -1046,6 +1046,32 @@ button {
     }
 }
 
+/* Fenêtre Projets : Parquet en tête, puis les autres projets en deux colonnes */
+#projects .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-badge {
+    white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+    #projects .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Projet à venir */
+.project-upcoming {
+    border-style: dashed;
+    border-color: var(--border-strong);
+    background: transparent;
+}
+
+.project-upcoming .project-tags {
+    margin-bottom: 14px;
+}
+
 /* Compétences */
 .skill-category h3 {
     margin-top: 24px;
