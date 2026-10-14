@@ -1,4 +1,4 @@
-/* Jeu de la vie de Conway — version jouable, look écran cathodique */
+/* Jeu de la vie de Conway — version jouable, style sobre (grille grise, cellules blanches) */
 (function () {
     'use strict';
 
@@ -10,9 +10,10 @@
         ? { play: '▶ Run', pause: '❚❚ Pause' }
         : { play: '▶ Lancer', pause: '❚❚ Pause' };
 
-    const COLS = 64;
-    const ROWS = 40;
-    const COLORS = { bg: '#031a0b', grid: '#0a3418', cell: '#41ff7f', born: '#c8ffd9' };
+    const COLS = 48;
+    const ROWS = 30;
+    const COLORS = { bg: '#1f1f1e', grid: '#323231', gridMajor: '#3f3f3e', cell: '#f5f5f4' };
+    const MAJOR = 8; // une ligne un peu plus marquée toutes les 8 cases
 
     // Motifs classiques (O = cellule vivante)
     const PATTERNS = {
@@ -47,7 +48,6 @@
 
     let grid = new Uint8Array(COLS * ROWS);
     let next = new Uint8Array(COLS * ROWS);
-    let born = new Uint8Array(COLS * ROWS);
     let running = false;
     let generation = 0;
     let lastTick = 0;
@@ -71,7 +71,6 @@
                 const alive = grid[mid + x];
                 const live = n === 3 || (alive && n === 2) ? 1 : 0;
                 next[mid + x] = live;
-                born[mid + x] = live && !alive ? 1 : 0;
             }
         }
         const tmp = grid; grid = next; next = tmp;
@@ -86,7 +85,6 @@
 
     function clear() {
         grid.fill(0);
-        born.fill(0);
         generation = 0;
     }
 
@@ -132,30 +130,34 @@
         ctx.fillStyle = COLORS.bg;
         ctx.fillRect(0, 0, w, h);
 
-        // Quadrillage discret
-        ctx.strokeStyle = COLORS.grid;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        for (let x = 1; x < COLS; x++) {
-            const px = Math.round(x * cellSize) + 0.5;
-            ctx.moveTo(px, 0); ctx.lineTo(px, h);
-        }
-        for (let y = 1; y < ROWS; y++) {
-            const py = Math.round(y * cellSize) + 0.5;
-            ctx.moveTo(0, py); ctx.lineTo(w, py);
-        }
-        ctx.stroke();
-
-        // Cellules : les nouvelles naissances brillent un peu plus
-        const pad = Math.max(1, cellSize * 0.12);
+        // Cellules vivantes : carrés blancs pleins
+        ctx.fillStyle = COLORS.cell;
         for (let y = 0; y < ROWS; y++) {
             for (let x = 0; x < COLS; x++) {
-                const i = idx(x, y);
-                if (!grid[i]) continue;
-                ctx.fillStyle = born[i] ? COLORS.born : COLORS.cell;
-                ctx.fillRect(x * cellSize + pad, y * cellSize + pad, cellSize - pad * 2, cellSize - pad * 2);
+                if (!grid[idx(x, y)]) continue;
+                const x0 = Math.round(x * cellSize);
+                const y0 = Math.round(y * cellSize);
+                ctx.fillRect(x0, y0, Math.round((x + 1) * cellSize) - x0, Math.round((y + 1) * cellSize) - y0);
             }
         }
+
+        // Quadrillage fin par-dessus, avec un repère toutes les 8 cases
+        ctx.lineWidth = 1;
+        [false, true].forEach(function (major) {
+            ctx.strokeStyle = major ? COLORS.gridMajor : COLORS.grid;
+            ctx.beginPath();
+            for (let x = 1; x < COLS; x++) {
+                if ((x % MAJOR === 0) !== major) continue;
+                const px = Math.round(x * cellSize) + 0.5;
+                ctx.moveTo(px, 0); ctx.lineTo(px, h);
+            }
+            for (let y = 1; y < ROWS; y++) {
+                if ((y % MAJOR === 0) !== major) continue;
+                const py = Math.round(y * cellSize) + 0.5;
+                ctx.moveTo(0, py); ctx.lineTo(w, py);
+            }
+            ctx.stroke();
+        });
 
         genOut.textContent = String(generation).padStart(4, '0');
         popOut.textContent = String(population()).padStart(4, '0');
@@ -181,7 +183,6 @@
         running = on;
         toggleBtn.textContent = on ? TXT.pause : TXT.play;
         toggleBtn.setAttribute('aria-pressed', String(on));
-        win.classList.toggle('life-running', on);
         cancelAnimationFrame(rafId);
         if (on) {
             lastTick = 0;
@@ -224,7 +225,6 @@
         painting = true;
         paintValue = grid[i] ? 0 : 1;
         grid[i] = paintValue;
-        born[i] = 0;
         canvas.setPointerCapture(e.pointerId);
         draw();
     });
@@ -234,7 +234,6 @@
         const i = cellAt(e);
         if (i < 0 || grid[i] === paintValue) return;
         grid[i] = paintValue;
-        born[i] = 0;
         draw();
     });
 
