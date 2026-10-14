@@ -1208,6 +1208,33 @@ button {
     color: var(--accent);
 }
 
+/* Lien vers le site en ligne, en bas de chaque mission */
+.window-content .mission-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: auto 0 0;
+    padding-top: 12px;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.mission-link i {
+    font-size: 0.8em;
+}
+
+a.mission-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.window-content .mission-link.is-private {
+    font-weight: 500;
+    color: var(--text-3);
+}
+
 .window-content .stage-comps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
