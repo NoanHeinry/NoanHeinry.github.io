@@ -8,12 +8,16 @@
         fr: {
             noResult: 'Aucun résultat',
             boot: ['Démarrage de NoanOS v3.0', 'Chargement du profil… ok', 'Montage des projets… ok', 'Connexion au réseau… ok', 'Bienvenue.'],
-            restore: 'Restaurer', maximize: 'Agrandir'
+            restore: 'Restaurer', maximize: 'Agrandir',
+            usedIn: 'utilisé dans :', stage: 'Stage chez R2', inStage: ' (stage)',
+            coursework: 'Cours et TP du BUT', portfolio: 'Ce portfolio'
         },
         en: {
             noResult: 'No result',
             boot: ['Booting NoanOS v3.0', 'Loading profile… ok', 'Mounting projects… ok', 'Connecting to network… ok', 'Welcome.'],
-            restore: 'Restore', maximize: 'Maximize'
+            restore: 'Restore', maximize: 'Maximize',
+            usedIn: 'used in:', stage: 'R2 internship', inStage: ' (internship)',
+            coursework: 'Degree coursework and labs', portfolio: 'This portfolio'
         }
     }[LANG];
 
@@ -355,6 +359,78 @@
         e.preventDefault();
         openWindow(id, link);
         if (link.dataset.focus) revealIn(document.getElementById(link.dataset.focus));
+    });
+
+    /* ---------- COMPÉTENCES : OÙ CHAQUE TECHNOLOGIE A SERVI ---------- */
+
+    function usageItem(token) {
+        if (token === 'stage') return { text: TXT.stage, icon: 'fa-solid fa-briefcase', open: 'stage' };
+        if (token === 'cours') return { text: TXT.coursework, icon: 'fa-solid fa-graduation-cap' };
+        if (token === 'portfolio') return { text: TXT.portfolio, icon: 'fa-solid fa-display' };
+        const el = document.getElementById(token);
+        const win = el && el.closest('.window');
+        if (!win) return null;
+        const h = el.querySelector('h3');
+        let text = (h ? h.textContent : token).replace(/\s+/g, ' ').trim().split(/ — |, /)[0];
+        if (win.id === 'stage') text += TXT.inStage;
+        return { text: text, icon: win.id === 'stage' ? 'fa-solid fa-briefcase' : 'fa-solid fa-rocket', open: win.id, focus: token };
+    }
+
+    function fillUsage(panel, card) {
+        panel.textContent = '';
+        const title = document.createElement('p');
+        title.className = 'skill-usage-title';
+        const name = document.createElement('strong');
+        name.textContent = card.querySelector('span').textContent;
+        title.appendChild(name);
+        title.appendChild(document.createTextNode(' ' + TXT.usedIn));
+        const list = document.createElement('ul');
+        list.className = 'proof-list';
+        card.dataset.used.split(/\s+/).forEach(function (token) {
+            const item = usageItem(token);
+            if (!item) return;
+            const li = document.createElement('li');
+            const el = document.createElement(item.open ? 'a' : 'span');
+            el.className = item.open ? 'proof' : 'proof is-static';
+            if (item.open) {
+                el.href = '#' + item.open;
+                el.dataset.open = item.open;
+                if (item.focus) el.dataset.focus = item.focus;
+            }
+            const icon = document.createElement('i');
+            icon.className = item.icon;
+            el.appendChild(icon);
+            el.appendChild(document.createTextNode(' ' + item.text));
+            li.appendChild(el);
+            list.appendChild(li);
+        });
+        panel.appendChild(title);
+        panel.appendChild(list);
+    }
+
+    const usageCards = document.querySelectorAll('#skills .skill-card[data-used]');
+    usageCards.forEach(function (card) {
+        const category = card.closest('.skill-category');
+        let panel = category.querySelector('.skill-usage');
+        if (!panel) {
+            panel = document.createElement('div');
+            panel.className = 'skill-usage';
+            panel.id = 'skill-usage-' + document.querySelectorAll('.skill-usage').length;
+            panel.hidden = true;
+            category.appendChild(panel);
+        }
+        card.setAttribute('aria-expanded', 'false');
+        card.setAttribute('aria-controls', panel.id);
+        card.addEventListener('click', function () {
+            const wasOpen = card.getAttribute('aria-expanded') === 'true';
+            usageCards.forEach(function (c) { c.setAttribute('aria-expanded', 'false'); });
+            document.querySelectorAll('#skills .skill-usage').forEach(function (pn) { pn.hidden = true; });
+            if (wasOpen) return;
+            card.setAttribute('aria-expanded', 'true');
+            fillUsage(panel, card);
+            panel.hidden = false;
+            if (panel.scrollIntoView) panel.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+        });
     });
 
     /* ---------- MENU DÉMARRER ---------- */

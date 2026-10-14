@@ -1251,6 +1251,70 @@ button {
     transform: translateY(-2px);
 }
 
+/* Compétences cliquables : un clic montre où la technologie a servi */
+button.skill-card {
+    width: 100%;
+    font: inherit;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.skill-card[aria-expanded="true"] {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.window-content .skills-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 18px;
+    font-size: var(--fs-sm);
+    color: var(--text-3);
+}
+
+.skills-hint i {
+    color: var(--accent);
+}
+
+.skills-hint + .skill-category h3 {
+    margin-top: 0;
+}
+
+.skill-usage {
+    margin-top: 10px;
+    padding: 12px 14px;
+    border-radius: var(--r-md);
+    background: var(--card);
+    border: 1px solid var(--accent-line);
+    animation: usageIn 0.25s var(--ease);
+}
+
+.skill-usage[hidden] {
+    display: none;
+}
+
+.window-content .skill-usage-title {
+    margin: 0 0 8px;
+    font-size: var(--fs-sm);
+    color: var(--text-2);
+}
+
+.window-content .skill-usage .proof-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.proof.is-static {
+    background: var(--raised);
+    color: var(--text-2);
+}
+
+@keyframes usageIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: none; }
+}
+
 /* Stage */
 .stage-header h2 {
     margin-bottom: 4px;
