@@ -413,10 +413,43 @@ button {
     100% { box-shadow: 0 0 0 2px transparent; }
 }
 
+/* Accès direct au résumé, pour les recruteurs pressés */
+.quick-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-line);
+    background: rgba(23, 18, 31, 0.6);
+    color: var(--text);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    cursor: pointer;
+    pointer-events: auto;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.quick-btn i {
+    color: var(--accent);
+}
+
+.quick-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.quick-btn:active {
+    transform: scale(0.97);
+}
+
 /* Interrupteur de langue */
 .language-switch {
     width: fit-content;
-    margin: 18px auto 0;
+    margin: 14px auto 0;
     padding: 6px 14px;
     display: flex;
     align-items: center;
@@ -1745,6 +1778,81 @@ a.mission-link:hover {
     overflow-wrap: anywhere;
 }
 
+/* Résumé en 30 secondes */
+.summary-kicker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px !important;
+    font-family: var(--mono);
+    font-size: var(--fs-xs);
+    color: var(--ok);
+}
+
+.summary-content .tagline {
+    margin: 0 0 18px !important;
+}
+
+.summary-seek {
+    padding: 14px 16px;
+    border-radius: var(--r-md);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+}
+
+.summary-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.window-content .summary-seek p {
+    margin: 0;
+}
+
+.window-content .summary-points li {
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+}
+
+.window-content .summary-points li i {
+    margin-top: 4px;
+}
+
+.summary-points a {
+    white-space: nowrap;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.summary-points a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.window-content .summary-tags {
+    margin-bottom: 22px;
+}
+
+.summary-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media (max-width: 560px) {
+    .summary-actions .btn {
+        flex: 1 1 100%;
+    }
+}
+
 /* Jeu de la vie : style sobre, grille grise et cellules blanches */
 .window-content.life-content {
     padding: 18px;
@@ -2204,6 +2312,8 @@ body.is-ready .desktop-icons .icon:nth-child(3) { animation-delay: 0.1s; }
 body.is-ready .desktop-icons .icon:nth-child(4) { animation-delay: 0.15s; }
 body.is-ready .desktop-icons .icon:nth-child(5) { animation-delay: 0.2s; }
 body.is-ready .desktop-icons .icon:nth-child(6) { animation-delay: 0.25s; }
+body.is-ready .desktop-icons .icon:nth-child(7) { animation-delay: 0.3s; }
+body.is-ready .desktop-icons .icon:nth-child(8) { animation-delay: 0.35s; }
 
 body.is-ready .center-screen > * {
     animation: heroIn 0.7s var(--ease) both;
@@ -2212,6 +2322,7 @@ body.is-ready .center-screen > * {
 body.is-ready .center-screen > :nth-child(2) { animation-delay: 0.1s; }
 body.is-ready .center-screen > :nth-child(3) { animation-delay: 0.2s; }
 body.is-ready .center-screen > :nth-child(4) { animation-delay: 0.3s; }
+body.is-ready .center-screen > :nth-child(5) { animation-delay: 0.4s; }
 
 body.is-ready .taskbar {
     animation: taskbarIn 0.5s var(--ease) both;
@@ -2252,6 +2363,18 @@ body.is-ready .taskbar {
     .icon-img {
         width: 46px;
         height: 46px;
+    }
+}
+
+/* Écrans moyens : la barre des tâches ne garde que les icônes */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .task-btn {
+        padding: 0 12px;
+        font-size: 0;
+    }
+
+    .task-btn i {
+        font-size: 1rem;
     }
 }
 
@@ -2308,6 +2431,11 @@ body.is-ready .taskbar {
 
     .command-hint {
         display: none;
+    }
+
+    .quick-btn {
+        margin-top: 12px;
+        padding: 7px 14px;
     }
 
     /* Fenêtres : panneaux qui montent depuis le bas */

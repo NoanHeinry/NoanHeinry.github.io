@@ -50,6 +50,10 @@
         </div>
 
         <div class="desktop-icons">
+            <div class="icon" role="button" tabindex="0" onclick="openWindow('summary')">
+                <div class="icon-img"><i class="fa-solid fa-bolt"></i></div>
+                <span>Résumé</span>
+            </div>
             <div class="icon" role="button" tabindex="0" onclick="openWindow('about')">
                 <div class="icon-img"><i class="fa-solid fa-user-astronaut"></i></div>
                 <span>À propos</span>
@@ -90,6 +94,7 @@
                 <span class="command-hint">CTRL + K</span>
                 <ul class="search-results" id="search-results" role="listbox" hidden></ul>
             </div>
+            <button type="button" class="quick-btn" data-open="summary"><i class="fa-solid fa-bolt"></i> Recruteur pressé ? Le résumé en 30 s</button>
             <div class="language-switch">
                 <span class="flag" aria-hidden="true">🇫🇷</span>
                 <label class="switch">
@@ -119,6 +124,42 @@
                 <ul class="gh-list" id="gh-list">
                     <li class="gh-fallback"><a href="https://github.com/NoanHeinry" target="_blank" rel="noopener noreferrer">Voir mes dépôts sur GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 </ul>
+            </div>
+        </div>
+
+        <div id="summary" class="window" role="dialog" aria-labelledby="summary-title" style="width: 600px;">
+            <div class="title-bar">
+                <div class="title-text" id="summary-title">quick_summary.txt</div>
+                <div class="window-controls">
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('summary')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="window-content summary-content">
+                <p class="summary-kicker"><span class="blink-dot"></span> Ouvert aux opportunités</p>
+                <h2>Noan Heinry</h2>
+                <p class="tagline">Étudiant en 3e année de BUT Informatique à l'IUT de Laval</p>
+                <div class="summary-seek">
+                    <span class="summary-label">Je recherche</span>
+                    <p>Un <strong>stage de développement de 12 à 16 semaines</strong> à partir du <strong>22 mars 2027</strong>, à <strong>Rennes, à Laval ou dans les alentours</strong>.</p>
+                </div>
+
+                <h3><i class="fa-solid fa-bolt"></i> En bref</h3>
+                <ul class="summary-points">
+                    <li><i class="fa-solid fa-briefcase"></i><div><strong>Stage de 11 semaines chez R2</strong>, agence créative à Rennes : WordPress, React, API REST et déploiement continu sur trois plateformes web en production. <a href="#stage" data-open="stage">Voir le stage</a></div></li>
+                    <li><i class="fa-solid fa-basketball"></i><div><strong>Parquet</strong>, projet personnel : tableau de bord NBA en direct avec serveur Python, cache SQLite et graphiques faits main. <a href="#projects" data-open="projects" data-focus="proj-parquet">Voir le projet</a></div></li>
+                    <li><i class="fa-solid fa-leaf"></i><div><strong>EcoGest UM</strong>, projet en équipe de quatre : plateforme web en PHP (MVC) et MySQL, dont j'ai conçu la plus grande part de la base de données. <a href="#projects" data-open="projects" data-focus="proj-ecogest">Voir le projet</a></div></li>
+                </ul>
+
+                <h3><i class="fa-solid fa-layer-group"></i> Technologies principales</h3>
+                <ul class="project-tags summary-tags"><li>PHP</li><li>JavaScript</li><li>React</li><li>WordPress</li><li>Python</li><li>Java</li><li>SQL</li><li>Git</li></ul>
+
+                <div class="summary-actions">
+                    <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn"><i class="fa-solid fa-file-pdf"></i> Télécharger mon CV</a>
+                    <a href="mailto:heinry.noan16@gmail.com" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> M'écrire</a>
+                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
         </div>
 
@@ -993,6 +1034,7 @@
         <button type="button" class="start-btn" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu"><i
                 class="fa-brands fa-windows"></i> Start</button>
         <div class="taskbar-divider"></div>
+        <button type="button" class="task-btn" onclick="openWindow('summary')"><i class="fa-solid fa-bolt"></i> Résumé</button>
         <button type="button" class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i>
             Info</button>
         <button type="button" class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i>
