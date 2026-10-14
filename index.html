@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NoanOS - Portfolio de Noan Heinry</title>
-    <meta name="description" content="Portfolio de Noan Heinry, étudiant en BUT Informatique : projets, compétences, suivi du BUT et contact." />
+    <meta name="description"
+        content="Portfolio de Noan Heinry, étudiant en BUT Informatique : projets, compétences, suivi du BUT et contact." />
     <meta name="author" content="Noan Heinry" />
     <meta name="theme-color" content="#1a0b2e" />
     <link rel="canonical" href="https://noanheinry.github.io/HeinryNoan.github.io/" />
@@ -12,20 +14,25 @@
     <link rel="alternate" hreflang="en" href="https://noanheinry.github.io/HeinryNoan.github.io/index_en.html" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="NoanOS - Portfolio de Noan Heinry" />
-    <meta property="og:description" content="Portfolio de Noan Heinry, étudiant en BUT Informatique : projets, compétences, suivi du BUT et contact." />
+    <meta property="og:description"
+        content="Portfolio de Noan Heinry, étudiant en BUT Informatique : projets, compétences, suivi du BUT et contact." />
     <meta property="og:url" content="https://noanheinry.github.io/HeinryNoan.github.io/" />
     <meta property="og:image" content="https://noanheinry.github.io/HeinryNoan.github.io/images/avatar.jpg" />
     <meta property="og:locale" content="fr_FR" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0b2e'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd93f9'%3EN%3C/text%3E%3C/svg%3E" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0b2e'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd93f9'%3EN%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
+
     <div class="boot" id="boot" hidden>
         <div class="boot-inner">
             <div class="boot-logo">NOAN<span>OS</span></div>
@@ -41,7 +48,7 @@
             <div class="bg-orb bg-orb-2"></div>
             <div class="bg-spot"></div>
         </div>
-        
+
         <div class="desktop-icons">
             <div class="icon" role="button" tabindex="0" onclick="openWindow('about')">
                 <div class="icon-img"><i class="fa-solid fa-user-astronaut"></i></div>
@@ -74,10 +81,12 @@
                 NOAN<span class="highlight">OS</span>
             </div>
             <div class="hero-subtitle">System ready. Waiting for input...</div>
-            
+
             <div class="search-bar">
                 <span class="search-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="search" placeholder="Rechercher une compétence, un projet..." aria-label="Rechercher une compétence, un projet..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results" autocomplete="off" spellcheck="false">
+                <input type="search" placeholder="Rechercher une compétence, un projet..."
+                    aria-label="Rechercher une compétence, un projet..." role="combobox" aria-autocomplete="list"
+                    aria-expanded="false" aria-controls="search-results" autocomplete="off" spellcheck="false">
                 <span class="command-hint">CTRL + K</span>
                 <ul class="search-results" id="search-results" role="listbox" hidden></ul>
             </div>
@@ -93,10 +102,10 @@
 
         <div class="system-widget">
             <div class="widget-header">NOAN_OS v3.0 <span class="status-dot"></span></div>
-            
+
             <div class="widget-time" id="widget-time">00:00</div>
             <div class="widget-date" id="widget-date">Chargement...</div>
-            
+
             <div class="widget-separator"></div>
 
             <div class="typewriter-container">
@@ -108,11 +117,15 @@
             <div class="sys-stats">
                 <div class="stat-row">
                     <span>CPU</span>
-                    <div class="stat-bar"><div class="stat-fill cpu-anim"></div></div>
+                    <div class="stat-bar">
+                        <div class="stat-fill cpu-anim"></div>
+                    </div>
                 </div>
                 <div class="stat-row">
                     <span>RAM</span>
-                    <div class="stat-bar"><div class="stat-fill ram-anim"></div></div>
+                    <div class="stat-bar">
+                        <div class="stat-fill ram-anim"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,18 +134,22 @@
             <div class="title-bar">
                 <div class="title-text" id="about-title">user_info.exe</div>
                 <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('about')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i
+                            class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir"
+                        aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('about')"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
                 <div class="profile-header">
-                    <img src="images/avatar.jpg" alt="Avatar de Noan : illustration de Dennis Rodman" class="profile-avatar" width="160" height="160">
-                    
+                    <img src="images/avatar.jpg" alt="Avatar de Noan : illustration de Dennis Rodman"
+                        class="profile-avatar" width="160" height="160">
+
                     <h2 class="profile-name">Noan Heinry</h2>
-                    <p class="tagline">Étudiant BUT Informatique | Recherche de stage (Avril 2026)</p>
-                    
+                    <p class="tagline">Étudiant BUT Informatique | Recherche de stage (Mars 2027)</p>
+
                     <div class="profile-actions">
                         <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn">
                             <i class="fa-solid fa-file-pdf"></i> Télécharger mon CV
@@ -140,8 +157,9 @@
                     </div>
                 </div>
 
-                <p>Actuellement en 2ème année de BUT Informatique, je suis à la recherche d'un <strong>stage de 8 à 12 semaines</strong> en développement informatique à partir du <strong>13 avril 2026</strong>.</p>
-                
+                <p>Actuellement en 3ème année de BUT Informatique, je suis à la recherche d'un <strong>stage de 12 à 16
+                        semaines</strong> en développement informatique à partir du <strong>22 mars 2027</strong>.</p>
+
                 <h3>Qualités & Atouts</h3>
                 <ul>
                     <li><i class="fa-solid fa-bolt"></i> Dynamisme & Curiosité</li>
@@ -161,9 +179,12 @@
             <div class="title-bar">
                 <div class="title-text" id="projects-title">projects_explorer.exe</div>
                 <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('projects')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i
+                            class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir"
+                        aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('projects')"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
@@ -204,9 +225,12 @@
             <div class="title-bar">
                 <div class="title-text" id="stage-title">internship_r2.log</div>
                 <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('stage')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i
+                            class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir"
+                        aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('stage')"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
@@ -221,76 +245,108 @@
                     </div>
                 </div>
 
-                <p>R2 est une agence créative et digitale (Paris & Rennes, ~30 collaborateurs) spécialisée en stratégie de marque, production vidéo et numérique. Intégré au pôle développement aux côtés de mon maître de stage, j'ai assuré la maintenance évolutive, l'optimisation et le développement de nouvelles fonctionnalités sur trois plateformes web, en autonomie et au rythme des tickets clients.</p>
+                <p>R2 est une agence créative et digitale (Paris & Rennes, ~30 collaborateurs) spécialisée en stratégie
+                    de marque, production vidéo et numérique. Intégré au pôle développement aux côtés de mon maître de
+                    stage, j'ai assuré la maintenance évolutive, l'optimisation et le développement de nouvelles
+                    fonctionnalités sur trois plateformes web, en autonomie et au rythme des tickets clients.</p>
 
                 <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
                 <div class="project-grid stage-missions">
-                        <div class="project-item stage-mission">
-                            <h3><i class="fa-solid fa-gauge-high"></i> Spot — ERP interne</h3>
-                            <p>Application de gestion de plus de 1 800 projets, en architecture Headless (WordPress + React).</p>
-                            <ul class="stage-results">
-                                <li>Pagination côté serveur via une API REST sur-mesure : recherche et navigation devenues instantanées</li>
-                                <li>Module d'inventaire du matériel en React (CPT, statuts, attribution aux collaborateurs)</li>
-                                <li>Commande WP-CLI d'import massif d'appareils depuis un CSV</li>
-                            </ul>
-                        </div>
-                        <div class="project-item stage-mission">
-                            <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Site de l'agence</h3>
-                            <p>Site vitrine WordPress, principal outil de communication de R2.</p>
-                            <ul class="stage-results">
-                                <li>Nouveaux blocs Gutenberg sur-mesure (ACF Blocks, architecture MVC)</li>
-                                <li>Refonte de la page Work : filtres par expertise, chargement « Voir plus », grille d'images 1:1</li>
-                                <li>Refactorisation SEO / accessibilité de la hiérarchie des titres</li>
-                            </ul>
-                        </div>
-                        <div class="project-item stage-mission">
-                            <h3><i class="fa-solid fa-video"></i> Yao.bzh — Site associatif</h3>
-                            <p>Vitrine d'une association bretonne d'accompagnement de jeunes entrepreneurs.</p>
-                            <ul class="stage-results">
-                                <li>Section « Interviews » : Custom Post Type + champs ACF, administrable par l'association</li>
-                                <li>Page d'archive avec lecture vidéo en modale (JavaScript)</li>
-                                <li>Menu responsive corrigé, mise en production et purge du cache serveur</li>
-                            </ul>
-                        </div>
+                    <div class="project-item stage-mission">
+                        <h3><i class="fa-solid fa-gauge-high"></i> Spot — ERP interne</h3>
+                        <p>Application de gestion de plus de 1 800 projets, en architecture Headless (WordPress +
+                            React).</p>
+                        <ul class="stage-results">
+                            <li>Pagination côté serveur via une API REST sur-mesure : recherche et navigation devenues
+                                instantanées</li>
+                            <li>Module d'inventaire du matériel en React (CPT, statuts, attribution aux collaborateurs)
+                            </li>
+                            <li>Commande WP-CLI d'import massif d'appareils depuis un CSV</li>
+                        </ul>
+                    </div>
+                    <div class="project-item stage-mission">
+                        <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Site de l'agence</h3>
+                        <p>Site vitrine WordPress, principal outil de communication de R2.</p>
+                        <ul class="stage-results">
+                            <li>Nouveaux blocs Gutenberg sur-mesure (ACF Blocks, architecture MVC)</li>
+                            <li>Refonte de la page Work : filtres par expertise, chargement « Voir plus », grille
+                                d'images 1:1</li>
+                            <li>Refactorisation SEO / accessibilité de la hiérarchie des titres</li>
+                        </ul>
+                    </div>
+                    <div class="project-item stage-mission">
+                        <h3><i class="fa-solid fa-video"></i> Yao.bzh — Site associatif</h3>
+                        <p>Vitrine d'une association bretonne d'accompagnement de jeunes entrepreneurs.</p>
+                        <ul class="stage-results">
+                            <li>Section « Interviews » : Custom Post Type + champs ACF, administrable par l'association
+                            </li>
+                            <li>Page d'archive avec lecture vidéo en modale (JavaScript)</li>
+                            <li>Menu responsive corrigé, mise en production et purge du cache serveur</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-layer-group"></i> Stack technique</h3>
                     <div class="skill-grid">
-                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
+                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span>
+                        </div>
                         <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
                         <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
-                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span>
+                        </div>
                         <div class="skill-card"><i class="devicon-sass-original colored"></i><span>SCSS</span></div>
                         <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
+                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub
+                                Actions</span></div>
                     </div>
                 </div>
 
                 <h3><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes & outils</h3>
                 <div class="stage-chips">
-                        <span class="stage-chip">Git / GitHub (branches preprod → main)</span>
-                        <span class="stage-chip">CI/CD GitHub Actions + rsync</span>
-                        <span class="stage-chip">Hébergement Kinsta</span>
-                        <span class="stage-chip">Composer, npm / Yarn</span>
-                        <span class="stage-chip">WP-CLI</span>
-                        <span class="stage-chip">Monday.com (tickets)</span>
-                        <span class="stage-chip">Slack</span>
-                        <span class="stage-chip">Recette en préproduction</span>
+                    <span class="stage-chip">Git / GitHub (branches preprod → main)</span>
+                    <span class="stage-chip">CI/CD GitHub Actions + rsync</span>
+                    <span class="stage-chip">Hébergement Kinsta</span>
+                    <span class="stage-chip">Composer, npm / Yarn</span>
+                    <span class="stage-chip">WP-CLI</span>
+                    <span class="stage-chip">Monday.com (tickets)</span>
+                    <span class="stage-chip">Slack</span>
+                    <span class="stage-chip">Recette en préproduction</span>
                 </div>
 
                 <h3><i class="fa-solid fa-graduation-cap"></i> Compétences du BUT mobilisées</h3>
                 <ul class="stage-comps">
-                        <li><span class="stage-comp-tag">C1</span><div><strong>Réaliser</strong><span>Intégration front-end responsive (SCSS, React), blocs Gutenberg, modale vidéo.</span></div></li>
-                        <li><span class="stage-comp-tag">C2</span><div><strong>Optimiser</strong><span>Pagination côté serveur pour 1 800 projets, traitements asynchrones (WP-Cron).</span></div></li>
-                        <li><span class="stage-comp-tag">C3</span><div><strong>Administrer</strong><span>Déploiement continu (GitHub Actions, rsync) vers Kinsta, gestion du cache serveur.</span></div></li>
-                        <li><span class="stage-comp-tag">C4</span><div><strong>Gérer des données</strong><span>Modélisation de CPT et champs ACF, routes d'API REST en JSON, import CSV.</span></div></li>
-                        <li><span class="stage-comp-tag">C5</span><div><strong>Conduire</strong><span>Analyse des besoins via tickets Monday.com, environnements local / préprod / prod.</span></div></li>
-                        <li><span class="stage-comp-tag">C6</span><div><strong>Collaborer</strong><span>Travail avec les chefs de projet et le pôle création, points d'équipe, Slack.</span></div></li>
+                    <li><span class="stage-comp-tag">C1</span>
+                        <div><strong>Réaliser</strong><span>Intégration front-end responsive (SCSS, React), blocs
+                                Gutenberg, modale vidéo.</span></div>
+                    </li>
+                    <li><span class="stage-comp-tag">C2</span>
+                        <div><strong>Optimiser</strong><span>Pagination côté serveur pour 1 800 projets, traitements
+                                asynchrones (WP-Cron).</span></div>
+                    </li>
+                    <li><span class="stage-comp-tag">C3</span>
+                        <div><strong>Administrer</strong><span>Déploiement continu (GitHub Actions, rsync) vers Kinsta,
+                                gestion du cache serveur.</span></div>
+                    </li>
+                    <li><span class="stage-comp-tag">C4</span>
+                        <div><strong>Gérer des données</strong><span>Modélisation de CPT et champs ACF, routes d'API
+                                REST en JSON, import CSV.</span></div>
+                    </li>
+                    <li><span class="stage-comp-tag">C5</span>
+                        <div><strong>Conduire</strong><span>Analyse des besoins via tickets Monday.com, environnements
+                                local / préprod / prod.</span></div>
+                    </li>
+                    <li><span class="stage-comp-tag">C6</span>
+                        <div><strong>Collaborer</strong><span>Travail avec les chefs de projet et le pôle création,
+                                points d'équipe, Slack.</span></div>
+                    </li>
                 </ul>
 
                 <h3><i class="fa-solid fa-seedling"></i> Ce que le stage m'a apporté</h3>
-                <p>Je suis passé d'une approche scolaire, avec un code conçu de manière isolée, à une méthodologie professionnelle : versioning rigoureux, environnements distincts, déploiement automatisé, suivi des tickets et priorisation. J'ai approfondi le cœur de WordPress (API REST, WP-Cron, WP-CLI) et découvert l'architecture Headless avec React.</p>
+                <p>Je suis passé d'une approche scolaire, avec un code conçu de manière isolée, à une méthodologie
+                    professionnelle : versioning rigoureux, environnements distincts, déploiement automatisé, suivi des
+                    tickets et priorisation. J'ai approfondi le cœur de WordPress (API REST, WP-Cron, WP-CLI) et
+                    découvert l'architecture Headless avec React.</p>
             </div>
         </div>
 
@@ -298,13 +354,16 @@
             <div class="title-bar">
                 <div class="title-text" id="skills-title">system_modules.exe</div>
                 <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('skills')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i
+                            class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir"
+                        aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('skills')"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
-                
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-code"></i> Langages de programmation</h3>
                     <div class="skill-grid">
@@ -393,18 +452,23 @@
             </div>
         </div>
 
-        <div id="but-info" class="window" role="dialog" aria-labelledby="but-info-title" style="width: 90%; height: 85vh; max-width: 1200px;">
+        <div id="but-info" class="window" role="dialog" aria-labelledby="but-info-title"
+            style="width: 90%; height: 85vh; max-width: 1200px;">
             <div class="title-bar">
                 <div class="title-text" id="but-info-title">curriculum_tracker.xlsx</div>
                 <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('but-info')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i
+                            class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir"
+                        aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('but-info')"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
-            
+
             <div class="window-content but-container">
-                <h2 class="doc-title"><i class="fa-solid fa-graduation-cap"></i> BUT Informatique : suivi des compétences</h2>
+                <h2 class="doc-title"><i class="fa-solid fa-graduation-cap"></i> BUT Informatique : suivi des
+                    compétences</h2>
 
                 <div class="but-section">
                     <h3>Compétence 1 : Réaliser</h3>
@@ -422,31 +486,111 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Spécifications</td>
-                                <td><ul><li>Exigences non comprises</li><li>Manque de documents</li></ul></td>
-                                <td><ul><li>Spécifications partielles</li><li>Critères incomplets</li></ul></td>
-                                <td class="my-level"><ul><li>Spécifications structurées</li><li>Besoins traduits</li></ul></td>
-                                <td><ul><li>User stories / UML</li><li>Tableau traçabilité</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Exigences non comprises</li>
+                                        <li>Manque de documents</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Spécifications partielles</li>
+                                        <li>Critères incomplets</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Spécifications structurées</li>
+                                        <li>Besoins traduits</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>User stories / UML</li>
+                                        <li>Tableau traçabilité</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC2 — Accessibilité & Ergo</td>
-                                <td><ul><li>Interface inutilisable</li><li>Illisible</li></ul></td>
-                                <td><ul><li>Peu intuitif</li><li>Accessibilité partielle</li></ul></td>
-                                <td class="my-level"><ul><li>Interface fluide</li><li>Normes respectées (ARIA)</li></ul></td>
-                                <td><ul><li>Checklist ergonomique</li><li>Tests utilisateurs</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Interface inutilisable</li>
+                                        <li>Illisible</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Peu intuitif</li>
+                                        <li>Accessibilité partielle</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Interface fluide</li>
+                                        <li>Normes respectées (ARIA)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Checklist ergonomique</li>
+                                        <li>Tests utilisateurs</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC3 — Conception</td>
-                                <td><ul><li>Code confus</li><li>Tout dans un fichier</li></ul></td>
-                                <td class="my-level"><ul><li>Architecture améliorable</li><li>Git désorganisé</li></ul></td>
-                                <td><ul><li>Architecture propre</li><li>Code documenté</li></ul></td>
-                                <td><ul><li>Diagramme d'archi</li><li>Code modulaire</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Code confus</li>
+                                        <li>Tout dans un fichier</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Architecture améliorable</li>
+                                        <li>Git désorganisé</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Architecture propre</li>
+                                        <li>Code documenté</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Diagramme d'archi</li>
+                                        <li>Code modulaire</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC4 — Tests</td>
-                                <td><ul><li>Aucun test</li><li>Bugs non vus</li></ul></td>
-                                <td class="my-level"><ul><li>Tests partiels</li><li>Pas d'automatisation</li></ul></td>
-                                <td><ul><li>Tests complets</li><li>Analysés et automatisés</li></ul></td>
-                                <td><ul><li>Rapport de tests</li><li>Pipeline CI/CD</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Aucun test</li>
+                                        <li>Bugs non vus</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Tests partiels</li>
+                                        <li>Pas d'automatisation</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Tests complets</li>
+                                        <li>Analysés et automatisés</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Rapport de tests</li>
+                                        <li>Pipeline CI/CD</li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -468,31 +612,111 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Structures de données</td>
-                                <td class="my-level"><ul><li>Structure inadaptée</li><li>Choix par habitude</li></ul></td>
-                                <td><ul><li>Choix cohérent non justifié</li><li>Structures avancées utilisées</li></ul></td>
-                                <td><ul><li>Comparaison des structures</li><li>Optimisation mémoire/perf</li></ul></td>
-                                <td><ul><li>Analyse dans README</li><li>Extraits code</li></ul></td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Structure inadaptée</li>
+                                        <li>Choix par habitude</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Choix cohérent non justifié</li>
+                                        <li>Structures avancées utilisées</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Comparaison des structures</li>
+                                        <li>Optimisation mémoire/perf</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Analyse dans README</li>
+                                        <li>Extraits code</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC2 — Algorithmes</td>
-                                <td><ul><li>Résultats faux</li><li>Algo inadapté</li></ul></td>
-                                <td class="my-level"><ul><li>Fonctionnel mais lent</li><li>Optimisations mineures</li></ul></td>
-                                <td><ul><li>Choix selon contraintes</li><li>Analyse complexité Big-O</li></ul></td>
-                                <td><ul><li>Benchmarks</li><li>Schéma algo</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Résultats faux</li>
+                                        <li>Algo inadapté</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Fonctionnel mais lent</li>
+                                        <li>Optimisations mineures</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Choix selon contraintes</li>
+                                        <li>Analyse complexité Big-O</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Benchmarks</li>
+                                        <li>Schéma algo</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC3 — Sécurité algo</td>
-                                <td ><ul><li>Données non vérifiées</li><li>Plantages exploitables</li></ul></td>
-                                <td class="my-level"><ul><li>Filtrage partiel</li><li>Gestion erreur partielle</li></ul></td>
-                                <td><ul><li>Vérification complète</li><li>Anti-injection/overflow</li></ul></td>
-                                <td><ul><li>Tests d'attaques</li><li>Logs</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Données non vérifiées</li>
+                                        <li>Plantages exploitables</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Filtrage partiel</li>
+                                        <li>Gestion erreur partielle</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Vérification complète</li>
+                                        <li>Anti-injection/overflow</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Tests d'attaques</li>
+                                        <li>Logs</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC4 — Eco-conception</td>
-                                <td class="my-level"><ul><li>Gaspillage ressources</li><li>Pas de réflexion impact</li></ul></td>
-                                <td><ul><li>Optimisations sans justification</li><li>Impact évoqué après coup</li></ul></td>
-                                <td><ul><li>Optimisation dès conception</li><li>Solution économe</li></ul></td>
-                                <td><ul><li>Profiling conso</li><li>Rapport éco-conception</li></ul></td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Gaspillage ressources</li>
+                                        <li>Pas de réflexion impact</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Optimisations sans justification</li>
+                                        <li>Impact évoqué après coup</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Optimisation dès conception</li>
+                                        <li>Solution économe</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Profiling conso</li>
+                                        <li>Rapport éco-conception</li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -514,24 +738,84 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Apps communicantes</td>
-                                <td><ul><li>Pas de communication</li><li>Mauvais protocole</li></ul></td>
-                                <td class="my-level"><ul><li>Instable</li><li>Protocole non justifié</li></ul></td>
-                                <td><ul><li>Communication fiable</li><li>Protocole adapté</li></ul></td>
-                                <td><ul><li>Wireshark / Postman</li><li>Schéma échanges</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Pas de communication</li>
+                                        <li>Mauvais protocole</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Instable</li>
+                                        <li>Protocole non justifié</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Communication fiable</li>
+                                        <li>Protocole adapté</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Wireshark / Postman</li>
+                                        <li>Schéma échanges</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC2 — Déploiement</td>
-                                <td><ul><li>Non déployé</li><li>Mauvaise config réseau</li></ul></td>
-                                <td class="my-level"><ul><li>Fonctionnel mais instable</li><li>Accessible localement</li></ul></td>
-                                <td><ul><li>Service en ligne stable</li><li>Déploiement structuré (Docker)</li></ul></td>
-                                <td><ul><li>Dockerfile</li><li>Manuel install</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Non déployé</li>
+                                        <li>Mauvaise config réseau</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Fonctionnel mais instable</li>
+                                        <li>Accessible localement</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Service en ligne stable</li>
+                                        <li>Déploiement structuré (Docker)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Dockerfile</li>
+                                        <li>Manuel install</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC3 — Sécurité services</td>
-                                <td><ul><li>Ports ouverts</li><li>En clair</li></ul></td>
-                                <td class="my-level"><ul><li>Auth basique</li><li>Firewall partiel</li></ul></td>
-                                <td><ul><li>Permissions précises</li><li>TLS/HTTPS</li></ul></td>
-                                <td><ul><li>Rapport nmap</li><li>Certificats SSL</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Ports ouverts</li>
+                                        <li>En clair</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Auth basique</li>
+                                        <li>Firewall partiel</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Permissions précises</li>
+                                        <li>TLS/HTTPS</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Rapport nmap</li>
+                                        <li>Certificats SSL</li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -553,37 +837,117 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Conception BDD</td>
-                                <td><ul><li>Relations erronées</li><li>Redondances</li></ul></td>
-                                <td><ul><li>Modèle correct</li><li>Normalisation partielle</li></ul></td>
-                                <td class="my-level"><ul><li>Modèle normalisé</li><li>Contraintes intégrité</li></ul></td>
-                                <td><ul><li>MCD / MLD</li><li>Script SQL</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Relations erronées</li>
+                                        <li>Redondances</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Modèle correct</li>
+                                        <li>Normalisation partielle</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Modèle normalisé</li>
+                                        <li>Contraintes intégrité</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>MCD / MLD</li>
+                                        <li>Script SQL</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC2 — SQL</td>
-                                <td><ul><li>Requêtes fausses</li><li>Jointures ratées</li></ul></td>
-                                <td><ul><li>Correct mais lent</li><li>Fonctions avancées floues</li></ul></td>
-                                <td class="my-level"><ul><li>Requêtes efficaces</li><li>Agrégations maîtrisées</li></ul></td>
-                                <td><ul><li>Comparaison requêtes</li><li>Résultats</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Requêtes fausses</li>
+                                        <li>Jointures ratées</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Correct mais lent</li>
+                                        <li>Fonctions avancées floues</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Requêtes efficaces</li>
+                                        <li>Agrégations maîtrisées</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Comparaison requêtes</li>
+                                        <li>Résultats</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC3 — Connexion App</td>
-                                <td><ul><li>Pas de lien BDD</li><li>Requêtes dans l'interface</li></ul></td>
-                                <td><ul><li>Connexion ok</li><li>Archi floue</li></ul></td>
-                                <td class="my-level"><ul><li>Archi claire (DAO/ORM)</li><li>Config externe (.env)</li></ul></td>
-                                <td><ul><li>Code DAO</li><li>Schéma archi</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Pas de lien BDD</li>
+                                        <li>Requêtes dans l'interface</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Connexion ok</li>
+                                        <li>Archi floue</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Archi claire (DAO/ORM)</li>
+                                        <li>Config externe (.env)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Code DAO</li>
+                                        <li>Schéma archi</li>
+                                    </ul>
+                                </td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>AC4 — Sécurité BDD</td>
-                                <td><ul><li>Mots de passe clair</li><li>Injections SQL possibles</li></ul></td>
-                                <td><ul><li>Requêtes préparées (partiel)</li><li>Rôles partiels</li></ul></td>
-                                <td class="my-level"><ul><li>Requêtes préparées</li><li>Gestion droits/rôles</li></ul></td>
-                                <td><ul><li>Tests injections</li><li>Config Rôles</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Mots de passe clair</li>
+                                        <li>Injections SQL possibles</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Requêtes préparées (partiel)</li>
+                                        <li>Rôles partiels</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Requêtes préparées</li>
+                                        <li>Gestion droits/rôles</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Tests injections</li>
+                                        <li>Config Rôles</li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                 <div class="but-section">
+                <div class="but-section">
                     <h3>Compétence 5 : Conduire</h3>
                     <span class="but-subtitle">Gestion de projet et besoins métier</span>
                     <table class="but-table">
@@ -599,31 +963,111 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Besoins</td>
-                                <td><ul><li>Incompréhension</li><li>Hors-sujet</li></ul></td>
-                                <td><ul><li>Compréhension globale</li><li>Hypothèses non validées</li></ul></td>
-                                <td class="my-level"><ul><li>Attentes claires</li><li>Validation client</li></ul></td>
-                                <td><ul><li>User stories</li><li>Notes entretien</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Incompréhension</li>
+                                        <li>Hors-sujet</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Compréhension globale</li>
+                                        <li>Hypothèses non validées</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Attentes claires</li>
+                                        <li>Validation client</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>User stories</li>
+                                        <li>Notes entretien</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC2 — Planification</td>
-                                <td><ul><li>Aucune orga</li><li>Délais dépassés</li></ul></td>
-                                <td class="my-level"><ul><li>Orga peu maintenue</li><li>Réaction lente</li></ul></td>
-                                <td><ul><li>Planification à jour</li><li>Suivi transparent</li></ul></td>
-                                <td><ul><li>Trello / Jira</li><li>Gantt</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Aucune orga</li>
+                                        <li>Délais dépassés</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Orga peu maintenue</li>
+                                        <li>Réaction lente</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Planification à jour</li>
+                                        <li>Suivi transparent</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Trello / Jira</li>
+                                        <li>Gantt</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC3 — Communication</td>
-                                <td><ul><li>Pas d'info transmise</li><li>Quiproquos</li></ul></td>
-                                <td class="my-level"><ul><li>Info peu claire</li><li>CR incomplets</li></ul></td>
-                                <td><ul><li>Com régulière</li><li>Adaptée au public</li></ul></td>
-                                <td><ul><li>CR réunion</li><li>Slides</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Pas d'info transmise</li>
+                                        <li>Quiproquos</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Info peu claire</li>
+                                        <li>CR incomplets</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Com régulière</li>
+                                        <li>Adaptée au public</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>CR réunion</li>
+                                        <li>Slides</li>
+                                    </ul>
+                                </td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>AC4 — Qualité</td>
-                                <td><ul><li>Pas de vérif</li><li>Pas de retour</li></ul></td>
-                                <td class="my-level"><ul><li>Vérif sans méthode</li><li>Améliorations ignorées</li></ul></td>
-                                <td ><ul><li>Mesure conformité</li><li>Améliorations concrètes</li></ul></td>
-                                <td><ul><li>Rapport qualité</li><li>Analyse métriques</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Pas de vérif</li>
+                                        <li>Pas de retour</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Vérif sans méthode</li>
+                                        <li>Améliorations ignorées</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Mesure conformité</li>
+                                        <li>Améliorations concrètes</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Rapport qualité</li>
+                                        <li>Analyse métriques</li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -644,27 +1088,87 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Positionnement</td>
-                                <td><ul><li>Absent réunions</li><li>Décisions ignorées</li></ul></td>
-                                <td><ul><li>Tâches isolées</li><li>Adaptation difficile</li></ul></td>
-                                <td class="my-level"><ul><li>Compréhension globale</li><li>Respect du cadre</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Absent réunions</li>
+                                        <li>Décisions ignorées</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Tâches isolées</li>
+                                        <li>Adaptation difficile</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Compréhension globale</li>
+                                        <li>Respect du cadre</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC2 — Com équipe</td>
-                                <td class="my-level"><ul><li>Problèmes tus</li><li>Messages ignorés</li></ul></td>
-                                <td><ul><li>Irrégulier</li><li>Info peu utile</li></ul></td>
-                                <td><ul><li>Partage utile</li><li>Contribution active</li></ul></td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Problèmes tus</li>
+                                        <li>Messages ignorés</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Irrégulier</li>
+                                        <li>Info peu utile</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Partage utile</li>
+                                        <li>Contribution active</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
                                 <td>AC3 — Orga perso</td>
-                                <td><ul><li>Retards</li><li>Tâches non finies</li></ul></td>
-                                <td class="my-level"><ul><li>Délais parfois ok</li><li>Manque cohérence</li></ul></td>
-                                <td><ul><li>Planification efficace</li><li>Délais respectés</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Retards</li>
+                                        <li>Tâches non finies</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Délais parfois ok</li>
+                                        <li>Manque cohérence</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Planification efficace</li>
+                                        <li>Délais respectés</li>
+                                    </ul>
+                                </td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>AC4 — Attitude</td>
-                                <td><ul><li>Remarques ignorées</li><li>Perturbation</li></ul></td>
-                                <td class="my-level"><ul><li>Manque initiative</li><li>Implication variable</li></ul></td>
-                                <td><ul><li>Constructif</li><li>Responsable</li></ul></td>
+                                <td>
+                                    <ul>
+                                        <li>Remarques ignorées</li>
+                                        <li>Perturbation</li>
+                                    </ul>
+                                </td>
+                                <td class="my-level">
+                                    <ul>
+                                        <li>Manque initiative</li>
+                                        <li>Implication variable</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Constructif</li>
+                                        <li>Responsable</li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -676,17 +1180,20 @@
             <div class="title-bar">
                 <div class="title-text" id="contact-title">msg_service.exe</div>
                 <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('contact')"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i
+                            class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir"
+                        aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('contact')"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content contact-content">
-                
+
                 <div class="comm-status">
                     <span class="blink-dot"></span> CONNEXION SÉCURISÉE ÉTABLIE
                 </div>
-                
+
                 <p class="contact-intro">
                     Protocole de transmission prêt. Sélectionnez un canal :
                 </p>
@@ -700,7 +1207,8 @@
                         </div>
                     </a>
 
-                    <a href="https://github.com/NoanHeinry" target="_blank" rel="noopener noreferrer" class="action-card">
+                    <a href="https://github.com/NoanHeinry" target="_blank" rel="noopener noreferrer"
+                        class="action-card">
                         <div class="icon-box">
                             <i class="devicon-github-original"></i>
                         </div>
@@ -710,7 +1218,8 @@
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" target="_blank" rel="noopener noreferrer" class="action-card">
+                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" target="_blank"
+                        rel="noopener noreferrer" class="action-card">
                         <div class="icon-box">
                             <i class="devicon-linkedin-plain"></i>
                         </div>
@@ -738,25 +1247,34 @@
         <p class="start-label">Applications</p>
         <div class="start-apps" id="start-apps"></div>
         <div class="start-actions">
-            <a href="documents/CV_Noan_HEINRY.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Télécharger mon CV</a>
+            <a href="documents/CV_Noan_HEINRY.pdf" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-solid fa-file-pdf"></i> Télécharger mon CV</a>
             <a href="mailto:heinry.noan16@gmail.com"><i class="fa-solid fa-envelope"></i> M'écrire</a>
             <a href="index_en.html" data-lang-link><i class="fa-solid fa-language"></i> English version</a>
         </div>
     </div>
 
     <div class="taskbar">
-        <button type="button" class="start-btn" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu"><i class="fa-brands fa-windows"></i> Start</button>
+        <button type="button" class="start-btn" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu"><i
+                class="fa-brands fa-windows"></i> Start</button>
         <div class="taskbar-divider"></div>
-        <button type="button" class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i> Info</button>
-        <button type="button" class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i> Projets</button>
-        <button type="button" class="task-btn" onclick="openWindow('stage')"><i class="fa-solid fa-briefcase"></i> Stage</button>
-        <button type="button" class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
-        <button type="button" class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> BUT</button>
-        <button type="button" class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
+        <button type="button" class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i>
+            Info</button>
+        <button type="button" class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i>
+            Projets</button>
+        <button type="button" class="task-btn" onclick="openWindow('stage')"><i class="fa-solid fa-briefcase"></i>
+            Stage</button>
+        <button type="button" class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i>
+            Skills</button>
+        <button type="button" class="task-btn" onclick="openWindow('but-info')"><i
+                class="fa-solid fa-graduation-cap"></i> BUT</button>
+        <button type="button" class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i>
+            Contact</button>
 
         <div class="clock" id="clock">12:00</div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
