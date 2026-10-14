@@ -218,6 +218,100 @@
             </div>
         </div>
 
+        <div id="stage" class="window" role="dialog" aria-labelledby="stage-title" style="width: 850px;">
+            <div class="title-bar">
+                <div class="title-text" id="stage-title">internship_r2.log</div>
+                <div class="window-controls">
+                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('stage')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="stage-header">
+                    <h2>R2 Digital Agency — 2nd-year internship</h2>
+                    <p class="tagline">Development, redesign and optimisation of web applications</p>
+                    <div class="stage-chips">
+                        <span class="stage-chip"><i class="fa-solid fa-location-dot"></i> Rennes, France</span>
+                        <span class="stage-chip"><i class="fa-solid fa-calendar"></i> April 20 → July 3, 2026</span>
+                        <span class="stage-chip"><i class="fa-solid fa-hourglass-half"></i> 11 weeks</span>
+                        <span class="stage-chip"><i class="fa-solid fa-code"></i> Tech / Dev team</span>
+                    </div>
+                </div>
+
+                <p>R2 is a creative and digital agency (Paris & Rennes, ~30 people) specialised in brand strategy, video production and digital. As part of the development team alongside my supervisor, I handled feature development, optimisation and maintenance on three web platforms, working autonomously through client tickets.</p>
+
+                <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
+                <div class="project-grid stage-missions">
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-gauge-high"></i> Spot — Internal ERP</h3>
+                            <p>Management app for 1,800+ projects, built on a Headless architecture (WordPress + React).</p>
+                            <ul class="stage-results">
+                                <li>Server-side pagination through a custom REST API: search and browsing became instant</li>
+                                <li>Hardware inventory module in React (custom post type, statuses, assignment to staff)</li>
+                                <li>WP-CLI command for bulk device import from CSV</li>
+                            </ul>
+                        </div>
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Agency website</h3>
+                            <p>WordPress showcase site, R2's main communication tool.</p>
+                            <ul class="stage-results">
+                                <li>New custom Gutenberg blocks (ACF Blocks, MVC structure)</li>
+                                <li>Work page redesign: expertise filters, "Load more", strict 1:1 image grid</li>
+                                <li>SEO / accessibility refactoring of heading hierarchy</li>
+                            </ul>
+                        </div>
+                        <div class="project-item stage-mission">
+                            <h3><i class="fa-solid fa-video"></i> Yao.bzh — Non-profit website</h3>
+                            <p>Website of a Breton association supporting young entrepreneurs.</p>
+                            <ul class="stage-results">
+                                <li>"Interviews" section: custom post type + ACF fields, managed by the association itself</li>
+                                <li>Archive page with video playback in a modal (JavaScript)</li>
+                                <li>Responsive menu fixes, production release and server cache purge</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-layer-group"></i> Tech stack</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
+                        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="skill-card"><i class="devicon-sass-original colored"></i><span>SCSS</span></div>
+                        <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
+                    </div>
+                </div>
+
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Methods & tools</h3>
+                <div class="stage-chips">
+                        <span class="stage-chip">Git / GitHub (preprod → main branches)</span>
+                        <span class="stage-chip">CI/CD with GitHub Actions + rsync</span>
+                        <span class="stage-chip">Kinsta hosting</span>
+                        <span class="stage-chip">Composer, npm / Yarn</span>
+                        <span class="stage-chip">WP-CLI</span>
+                        <span class="stage-chip">Monday.com (tickets)</span>
+                        <span class="stage-chip">Slack</span>
+                        <span class="stage-chip">Staging QA</span>
+                </div>
+
+                <h3><i class="fa-solid fa-graduation-cap"></i> Degree competencies applied</h3>
+                <ul class="stage-comps">
+                        <li><span class="stage-comp-tag">C1</span><div><strong>Realize</strong><span>Responsive front-end (SCSS, React), Gutenberg blocks, video modal.</span></div></li>
+                        <li><span class="stage-comp-tag">C2</span><div><strong>Optimize</strong><span>Server-side pagination for 1,800 projects, background jobs (WP-Cron).</span></div></li>
+                        <li><span class="stage-comp-tag">C3</span><div><strong>Administer</strong><span>Continuous deployment (GitHub Actions, rsync) to Kinsta, server cache management.</span></div></li>
+                        <li><span class="stage-comp-tag">C4</span><div><strong>Manage Data</strong><span>Custom post types and ACF fields, JSON REST API routes, CSV import.</span></div></li>
+                        <li><span class="stage-comp-tag">C5</span><div><strong>Lead Project</strong><span>Requirements through Monday.com tickets, local / staging / production environments.</span></div></li>
+                        <li><span class="stage-comp-tag">C6</span><div><strong>Collaborate</strong><span>Work with project managers and the design team, team meetings, Slack.</span></div></li>
+                </ul>
+
+                <h3><i class="fa-solid fa-seedling"></i> What I learned</h3>
+                <p>I moved from a school approach, writing code in isolation, to a professional workflow: rigorous versioning, separate environments, automated deployment, ticket tracking and prioritisation. I deepened my knowledge of WordPress internals (REST API, WP-Cron, WP-CLI) and discovered Headless architecture with React.</p>
+            </div>
+        </div>
+
         <div id="life" class="window" role="dialog" aria-labelledby="life-title" style="width: 760px;">
             <div class="title-bar">
                 <div class="title-text" id="life-title">game_of_life.exe</div>
