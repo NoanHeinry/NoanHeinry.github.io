@@ -704,7 +704,8 @@
             skills: 'competences skills langages languages outils tools',
             'but-info': 'but iut diplome degree competences ac apprentissages',
             contact: 'contact email mail linkedin github message',
-            summary: 'resume summary recruteur recruiter rapide quick essentiel cv'
+            summary: 'resume summary recruteur recruiter rapide quick essentiel cv',
+            terminal: 'terminal console shell commande command ligne'
         };
         Object.keys(windowTitles).forEach(function (win) { add(windowTitles[win], win, aliases[win]); });
 

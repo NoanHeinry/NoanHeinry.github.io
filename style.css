@@ -1853,6 +1853,89 @@ a.mission-link:hover {
     }
 }
 
+/* Terminal */
+.window-content.term-content {
+    padding: 14px 16px 16px;
+    background: #0c0912;
+    font-family: var(--mono);
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    color: var(--text-2);
+    cursor: text;
+}
+
+#terminal {
+    height: 420px;
+}
+
+.term-row {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.term-echo {
+    margin-top: 8px;
+    color: var(--text);
+}
+
+.term-prompt {
+    color: var(--ok);
+    white-space: nowrap;
+}
+
+.term-key {
+    color: var(--accent);
+}
+
+.term-accent {
+    color: var(--accent-2);
+}
+
+.term-muted {
+    color: var(--text-3);
+}
+
+.term-error {
+    color: var(--bad);
+}
+
+.term-row a {
+    color: var(--accent-2);
+}
+
+.term-fetch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin-top: 4px;
+}
+
+.term-logo {
+    margin: 0;
+    font: inherit;
+    line-height: 1.35;
+    color: var(--accent);
+}
+
+.term-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.term-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    caret-color: var(--accent);
+}
+
 /* Jeu de la vie : style sobre, grille grise et cellules blanches */
 .window-content.life-content {
     padding: 18px;
@@ -2542,8 +2625,13 @@ body.is-ready .taskbar {
     }
 
     .taskbar-divider,
-    .clock {
+    .clock,
+    .task-btn.is-desktop-only {
         display: none;
+    }
+
+    #terminal {
+        height: calc(100dvh - var(--taskbar-h) - 14px);
     }
 
     .start-btn,
