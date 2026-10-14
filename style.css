@@ -1143,6 +1143,33 @@ button {
     flex-shrink: 0;
 }
 
+.window-content .project-role {
+    margin: -4px 0 12px;
+    max-width: none;
+    padding-left: 10px;
+    border-left: 2px solid var(--accent-line);
+    font-size: var(--fs-sm);
+    line-height: 1.55;
+    color: var(--text-2);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Bouton secondaire : contour, pour une action à côté d'un bouton principal */
+.btn-ghost {
+    background: transparent;
+    border-color: var(--accent-line);
+    color: var(--accent);
+}
+
+.btn-ghost:hover {
+    background: var(--accent-soft);
+}
+
 @media (max-width: 560px) {
     .project-row {
         grid-template-columns: minmax(0, 1fr);
@@ -1165,8 +1192,14 @@ button {
         font-size: 1.4rem;
     }
 
-    .project-foot .btn {
+    .project-foot .btn,
+    .project-actions {
         width: 100%;
+    }
+
+    .project-actions .btn {
+        flex: 1 1 0;
+        width: auto;
     }
 }
 
