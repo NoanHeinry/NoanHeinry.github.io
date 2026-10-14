@@ -19,7 +19,7 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0b2e'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd93f9'%3EN%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;800&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
     <link rel="stylesheet" href="style.css" />
@@ -180,10 +180,10 @@
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-dna"></i> Game of Life</h3>
-                        <p>Python/Pygame simulation.</p>
-                        <span class="btn btn-disabled" aria-disabled="true">
-                            Coming soon
-                        </span>
+                        <p>Conway's cellular automaton, originally built in Python/Pygame. Playable right here.</p>
+                        <button type="button" class="btn" onclick="openWindow('life')">
+                            <i class="fa-solid fa-play"></i> Play
+                        </button>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
@@ -287,6 +287,44 @@
 
                 <h3><i class="fa-solid fa-seedling"></i> What I learned</h3>
                 <p>I moved from a school approach, writing code in isolation, to a professional workflow: rigorous versioning, separate environments, automated deployment, ticket tracking and prioritisation. I deepened my knowledge of WordPress internals (REST API, WP-Cron, WP-CLI) and discovered Headless architecture with React.</p>
+            </div>
+        </div>
+
+        <div id="life" class="window" role="dialog" aria-labelledby="life-title" style="width: 760px;">
+            <div class="title-bar">
+                <div class="title-text" id="life-title">game_of_life.exe</div>
+                <div class="window-controls">
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('life')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="window-content life-content">
+                <div class="life-screen">
+                    <div class="life-head">
+                        <span class="life-name">CONWAY'S GAME OF LIFE</span>
+                        <span class="life-stats">GEN <b data-life-gen>0000</b> &nbsp; POP <b data-life-pop>0000</b></span>
+                    </div>
+                    <canvas class="life-canvas" role="img" aria-label="Game of Life grid. Click or drag to turn cells on or off."></canvas>
+                </div>
+                <div class="life-controls">
+                    <button type="button" class="life-btn life-primary" data-life="toggle" aria-pressed="false">▶ Run</button>
+                    <button type="button" class="life-btn" data-life="step">Step</button>
+                    <button type="button" class="life-btn" data-life="random">Random</button>
+                    <button type="button" class="life-btn" data-life="clear">Clear</button>
+                    <label class="life-field">Pattern
+                        <select data-life-pattern>
+                            <option value="gun">Gosper glider gun</option>
+                            <option value="glider">Glider</option>
+                            <option value="lwss">Lightweight spaceship</option>
+                            <option value="pulsar">Pulsar</option>
+                            <option value="random">Random</option>
+                        </select>
+                    </label>
+                    <label class="life-field">Speed
+                        <input type="range" min="1" max="30" value="10" data-life-speed>
+                    </label>
+                </div>
+                <p class="life-help">Click or drag on the grid to draw. Each generation, a cell is born with 3 neighbours and survives with 2 or 3. Shortcuts: Space to run or pause, N to step one generation, R for random, C to clear.</p>
             </div>
         </div>
 
@@ -675,5 +713,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="life.js"></script>
 </body>
 </html>

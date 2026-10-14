@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700;800&family=VT323&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
@@ -215,10 +215,10 @@
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-dna"></i> Jeu de la vie</h3>
-                        <p>Simulation Python/Pygame.</p>
-                        <span class="btn btn-disabled" aria-disabled="true">
-                            Bientôt disponible
-                        </span>
+                        <p>L'automate cellulaire de Conway, à l'origine en Python/Pygame. Jouable ici même.</p>
+                        <button type="button" class="btn" onclick="openWindow('life')">
+                            <i class="fa-solid fa-play"></i> Jouer
+                        </button>
                     </div>
                     <div class="project-item">
                         <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
@@ -357,6 +357,44 @@
                     professionnelle : versioning rigoureux, environnements distincts, déploiement automatisé, suivi des
                     tickets et priorisation. J'ai approfondi le cœur de WordPress (API REST, WP-Cron, WP-CLI) et
                     découvert l'architecture Headless avec React.</p>
+            </div>
+        </div>
+
+        <div id="life" class="window" role="dialog" aria-labelledby="life-title" style="width: 760px;">
+            <div class="title-bar">
+                <div class="title-text" id="life-title">game_of_life.exe</div>
+                <div class="window-controls">
+                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
+                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('life')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="window-content life-content">
+                <div class="life-screen">
+                    <div class="life-head">
+                        <span class="life-name">CONWAY'S GAME OF LIFE</span>
+                        <span class="life-stats">GEN <b data-life-gen>0000</b> &nbsp; POP <b data-life-pop>0000</b></span>
+                    </div>
+                    <canvas class="life-canvas" role="img" aria-label="Grille du jeu de la vie. Cliquez ou glissez pour allumer ou éteindre des cellules."></canvas>
+                </div>
+                <div class="life-controls">
+                    <button type="button" class="life-btn life-primary" data-life="toggle" aria-pressed="false">▶ Lancer</button>
+                    <button type="button" class="life-btn" data-life="step">Pas à pas</button>
+                    <button type="button" class="life-btn" data-life="random">Aléatoire</button>
+                    <button type="button" class="life-btn" data-life="clear">Effacer</button>
+                    <label class="life-field">Motif
+                        <select data-life-pattern>
+                            <option value="gun">Canon de Gosper</option>
+                            <option value="glider">Planeur</option>
+                            <option value="lwss">Vaisseau léger</option>
+                            <option value="pulsar">Pulsar</option>
+                            <option value="random">Aléatoire</option>
+                        </select>
+                    </label>
+                    <label class="life-field">Vitesse
+                        <input type="range" min="1" max="30" value="10" data-life-speed>
+                    </label>
+                </div>
+                <p class="life-help">Cliquez ou glissez sur la grille pour dessiner. Chaque génération, une cellule naît avec 3 voisines et survit avec 2 ou 3. Raccourcis : Espace pour lancer ou mettre en pause, N pour avancer d'une génération, R pour aléatoire, C pour effacer.</p>
             </div>
         </div>
 
@@ -1285,6 +1323,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="life.js"></script>
 </body>
 
 </html>

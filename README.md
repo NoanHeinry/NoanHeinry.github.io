@@ -10,6 +10,7 @@ Portfolio en ligne au style « système d'exploitation » : **https://noanheinry
 | `index_en.html` | Version anglaise |
 | `style.css` | Styles communs aux deux versions du portfolio |
 | `script.js` | Fenêtres, horloge, recherche (`Ctrl + K`), changement de langue |
+| `life.js` | Jeu de la vie jouable (fenêtre « game_of_life.exe ») |
 | `documents/` | CV et présentations de projets (PDF) |
 | `images/` | Photos et illustrations |
 
@@ -21,7 +22,7 @@ Portfolio en ligne au style « système d'exploitation » : **https://noanheinry
 - Bouton **Start** : profil, toutes les sections, CV, contact et changement de langue.
 - La séquence de démarrage n'apparaît qu'une fois par session (désactivée si l'utilisateur préfère réduire les animations).
 - Lien direct vers une fenêtre : ajouter son identifiant après `#`, par exemple `index.html#projects`
-  (`about`, `projects`, `stage`, `skills`, `but-info`, `contact`).
+  (`about`, `projects`, `life`, `stage`, `skills`, `but-info`, `contact`).
 
 ## Développement
 
