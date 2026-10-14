@@ -327,6 +327,36 @@
         });
     });
 
+    /* ---------- LIENS INTERNES : ouvrir une fenêtre et y montrer un élément ---------- */
+
+    function revealIn(target) {
+        if (!target) return;
+        const content = target.closest('.window-content');
+        setTimeout(function () {
+            if (content) {
+                // La fenêtre peut encore être en train de s'agrandir : on corrige l'échelle de l'animation
+                const box = content.getBoundingClientRect();
+                const scale = content.offsetHeight ? box.height / content.offsetHeight : 1;
+                const top = content.scrollTop + (target.getBoundingClientRect().top - box.top) / (scale || 1) - 16;
+                content.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
+            }
+            target.classList.remove('search-hit');
+            void target.offsetWidth;
+            target.classList.add('search-hit');
+        }, 220);
+    }
+
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('[data-open]');
+        if (!link || link.closest('.desktop-icons, .taskbar')) return;
+        const id = link.dataset.open;
+        const win = document.getElementById(id);
+        if (!win || !win.classList.contains('window')) return;
+        e.preventDefault();
+        openWindow(id, link);
+        if (link.dataset.focus) revealIn(document.getElementById(link.dataset.focus));
+    });
+
     /* ---------- MENU DÉMARRER ---------- */
 
     const startBtn = document.querySelector('.start-btn');

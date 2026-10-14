@@ -189,7 +189,7 @@
             </div>
             <div class="window-content">
                 <div class="project-list">
-                    <article class="project-row">
+                    <article class="project-row" id="proj-parquet">
                         <div class="project-visual"><img src="images/parquet.jpg" alt="Capture de Parquet : la page des matchs du jour avec les scores en direct et le classement" width="880" height="556" loading="lazy" decoding="async"></div>
                         <div class="project-info">
                             <p class="project-meta"><span class="project-badge">Nouveau</span> Projet personnel, 2026</p>
@@ -201,7 +201,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row">
+                    <article class="project-row" id="proj-life">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-dna"></i></div>
                         <div class="project-info">
                             <p class="project-meta"><span class="project-badge">Jouable</span> Projet personnel</p>
@@ -213,7 +213,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row">
+                    <article class="project-row" id="proj-morphalla">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-gamepad"></i></div>
                         <div class="project-info">
                             <p class="project-meta">Projet universitaire, 2025</p>
@@ -225,7 +225,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row">
+                    <article class="project-row" id="proj-ecogest">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
                         <div class="project-info">
                             <p class="project-meta">Projet universitaire en équipe de 4, 2025</p>
@@ -237,7 +237,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row is-upcoming">
+                    <article class="project-row is-upcoming" id="proj-trachvr">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-vr-cardboard"></i></div>
                         <div class="project-info">
                             <p class="project-meta"><span class="project-badge">À venir</span> Projet universitaire</p>
@@ -284,7 +284,7 @@
 
                 <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
                 <div class="project-grid stage-missions">
-                    <div class="project-item stage-mission">
+                    <div class="project-item stage-mission" id="mission-spot">
                         <h3><i class="fa-solid fa-gauge-high"></i> Spot — ERP interne</h3>
                         <p>Application de gestion de plus de 1 800 projets, en architecture Headless (WordPress +
                             React).</p>
@@ -297,7 +297,7 @@
                         </ul>
                         <p class="mission-link is-private"><i class="fa-solid fa-lock"></i> Outil interne, non public</p>
                     </div>
-                    <div class="project-item stage-mission">
+                    <div class="project-item stage-mission" id="mission-r2">
                         <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Site de l'agence</h3>
                         <p>Site vitrine WordPress, principal outil de communication de R2.</p>
                         <ul class="stage-results">
@@ -308,7 +308,7 @@
                         </ul>
                         <a class="mission-link" href="https://r2.fr/" target="_blank" rel="noopener noreferrer">Voir le site r2.fr <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                    <div class="project-item stage-mission">
+                    <div class="project-item stage-mission" id="mission-yao">
                         <h3><i class="fa-solid fa-video"></i> Yao.bzh — Site associatif</h3>
                         <p>Vitrine d'une association bretonne d'accompagnement de jeunes entrepreneurs.</p>
                         <ul class="stage-results">
@@ -337,16 +337,18 @@
                     </div>
                 </div>
 
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes & outils</h3>
-                <div class="stage-chips">
-                    <span class="stage-chip">Git / GitHub (branches preprod → main)</span>
-                    <span class="stage-chip">CI/CD GitHub Actions + rsync</span>
-                    <span class="stage-chip">Hébergement Kinsta</span>
-                    <span class="stage-chip">Composer, npm / Yarn</span>
-                    <span class="stage-chip">WP-CLI</span>
-                    <span class="stage-chip">Monday.com (tickets)</span>
-                    <span class="stage-chip">Slack</span>
-                    <span class="stage-chip">Recette en préproduction</span>
+                <div class="stage-methods" id="stage-methods">
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes & outils</h3>
+                    <div class="stage-chips">
+                        <span class="stage-chip">Git / GitHub (branches preprod → main)</span>
+                        <span class="stage-chip">CI/CD GitHub Actions + rsync</span>
+                        <span class="stage-chip">Hébergement Kinsta</span>
+                        <span class="stage-chip">Composer, npm / Yarn</span>
+                        <span class="stage-chip">WP-CLI</span>
+                        <span class="stage-chip">Monday.com (tickets)</span>
+                        <span class="stage-chip">Slack</span>
+                        <span class="stage-chip">Recette en préproduction</span>
+                    </div>
                 </div>
 
                 <h3><i class="fa-solid fa-graduation-cap"></i> Compétences du BUT mobilisées</h3>
@@ -509,712 +511,349 @@
             </div>
 
             <div class="window-content but-container">
-                <h2 class="doc-title"><i class="fa-solid fa-graduation-cap"></i> BUT Informatique : suivi des
-                    compétences</h2>
+                <h2 class="doc-title"><i class="fa-solid fa-graduation-cap"></i> BUT Informatique : suivi des compétences</h2>
+                <p class="but-intro">Auto-évaluation de début de 3e année (octobre 2026), après mon stage chez R2. Chaque apprentissage critique est relié à ce qui le prouve : cliquez sur une preuve pour l’ouvrir.</p>
+                <p class="but-legend" aria-label="Niveaux"><span class="lvl lvl-ok">Acquis</span> je le fais seul et je peux le montrer<span class="but-legend-sep"></span><span class="lvl lvl-wip">En cours</span> déjà pratiqué, à consolider</p>
 
-                <div class="but-section">
-                    <h3>Compétence 1 : Réaliser</h3>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Compétence 1 : Réaliser</h3>
+                        <span class="but-score">3 acquis · 1 en cours</span>
+                    </div>
                     <span class="but-subtitle">Partir des exigences et aller jusqu’à une application complète</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>Apprentissage Critique (AC)</th>
-                                <th class="col-non-acquis">Non acquis</th>
-                                <th class="col-en-cours">En cours</th>
-                                <th class="col-acquis">Acquis</th>
-                                <th class="col-preuves">Preuves</th>
-                            </tr>
+                            <tr><th scope="col">Apprentissage critique</th><th scope="col">Niveau</th><th scope="col">Ce que je sais faire</th><th scope="col">Preuves</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Spécifications</td>
-                                <td>
-                                    <ul>
-                                        <li>Exigences non comprises</li>
-                                        <li>Manque de documents</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Spécifications partielles</li>
-                                        <li>Critères incomplets</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Spécifications structurées</li>
-                                        <li>Besoins traduits</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>User stories / UML</li>
-                                        <li>Tableau traçabilité</li>
+                                <th scope="row">AC1 — Spécifications</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Traduire un besoin en spécifications : cahier des charges d’EcoGest UM rédigé selon la norme IEEE 830, tickets clients analysés et découpés pendant le stage.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> Stage chez R2</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Accessibilité & Ergo</td>
-                                <td>
-                                    <ul>
-                                        <li>Interface inutilisable</li>
-                                        <li>Illisible</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Peu intuitif</li>
-                                        <li>Accessibilité partielle</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Interface fluide</li>
-                                        <li>Normes respectées (ARIA)</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Checklist ergonomique</li>
-                                        <li>Tests utilisateurs</li>
+                                <th scope="row">AC2 — Accessibilité et ergonomie</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Concevoir des interfaces claires et accessibles : hiérarchie des titres de r2.fr refaite, menu responsive de Yao.bzh, critères ergonomiques appliqués à EcoGest UM.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-r2"><i class="fa-solid fa-briefcase"></i> r2.fr (stage)</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-yao"><i class="fa-solid fa-video"></i> Yao.bzh (stage)</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Conception</td>
-                                <td>
-                                    <ul>
-                                        <li>Code confus</li>
-                                        <li>Tout dans un fichier</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Architecture améliorable</li>
-                                        <li>Git désorganisé</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Architecture propre</li>
-                                        <li>Code documenté</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Diagramme d'archi</li>
-                                        <li>Code modulaire</li>
+                                <th scope="row">AC3 — Conception</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Organiser le code en couches : architecture MVC d’EcoGest UM (routeur, contrôleurs, modèles, vues) et blocs Gutenberg structurés en MVC chez R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-r2"><i class="fa-solid fa-briefcase"></i> r2.fr (stage)</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Tests</td>
-                                <td>
-                                    <ul>
-                                        <li>Aucun test</li>
-                                        <li>Bugs non vus</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Tests partiels</li>
-                                        <li>Pas d'automatisation</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Tests complets</li>
-                                        <li>Analysés et automatisés</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Rapport de tests</li>
-                                        <li>Pipeline CI/CD</li>
+                                <th scope="row">AC4 — Tests</th>
+                                <td class="but-level"><span class="lvl lvl-wip">En cours</span></td>
+                                <td class="but-what">Tests automatisés sur Parquet et recette en préproduction avant chaque mise en ligne chez R2. Prochaine étape : mesurer la couverture et lancer les tests en intégration continue.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="https://github.com/NoanHeinry/parquet-nba" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code de Parquet</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes du stage</a></li>
                                     </ul>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Compétence 2 : Optimiser</h3>
-                    <span class="but-subtitle">Sélectionner les algorithmes adéquats (Semestre 3)</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Compétence 2 : Optimiser</h3>
+                        <span class="but-score">4 en cours</span>
+                    </div>
+                    <span class="but-subtitle">Sélectionner les algorithmes adéquats pour répondre à un problème donné</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>AC</th>
-                                <th class="col-non-acquis">Non acquis</th>
-                                <th class="col-en-cours">En cours</th>
-                                <th class="col-acquis">Acquis</th>
-                                <th class="col-preuves">Preuves</th>
-                            </tr>
+                            <tr><th scope="col">Apprentissage critique</th><th scope="col">Niveau</th><th scope="col">Ce que je sais faire</th><th scope="col">Preuves</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Structures de données</td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Structure inadaptée</li>
-                                        <li>Choix par habitude</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Choix cohérent non justifié</li>
-                                        <li>Structures avancées utilisées</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Comparaison des structures</li>
-                                        <li>Optimisation mémoire/perf</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Analyse dans README</li>
-                                        <li>Extraits code</li>
+                                <th scope="row">AC1 — Structures de données</th>
+                                <td class="but-level"><span class="lvl lvl-wip">En cours</span></td>
+                                <td class="but-what">Choisir la structure selon l’usage : représentation de la grille du Jeu de la vie, cache SQLite des données NBA dans Parquet.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-life"><i class="fa-solid fa-dna"></i> Jeu de la vie</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Algorithmes</td>
-                                <td>
-                                    <ul>
-                                        <li>Résultats faux</li>
-                                        <li>Algo inadapté</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Fonctionnel mais lent</li>
-                                        <li>Optimisations mineures</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Choix selon contraintes</li>
-                                        <li>Analyse complexité Big-O</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Benchmarks</li>
-                                        <li>Schéma algo</li>
+                                <th scope="row">AC2 — Algorithmes</th>
+                                <td class="but-level"><span class="lvl lvl-wip">En cours</span></td>
+                                <td class="but-what">Pagination côté serveur pour plus de 1 800 projets sur Spot : recherche et navigation devenues instantanées. Prochaine étape : formaliser l’analyse de complexité.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (stage)</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Sécurité algo</td>
-                                <td>
-                                    <ul>
-                                        <li>Données non vérifiées</li>
-                                        <li>Plantages exploitables</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Filtrage partiel</li>
-                                        <li>Gestion erreur partielle</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Vérification complète</li>
-                                        <li>Anti-injection/overflow</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Tests d'attaques</li>
-                                        <li>Logs</li>
+                                <th scope="row">AC3 — Sécurité</th>
+                                <td class="but-level"><span class="lvl lvl-wip">En cours</span></td>
+                                <td class="but-what">Authentification sécurisée sur EcoGest UM : mots de passe hachés, sessions propres à chaque rôle.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Eco-conception</td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Gaspillage ressources</li>
-                                        <li>Pas de réflexion impact</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Optimisations sans justification</li>
-                                        <li>Impact évoqué après coup</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Optimisation dès conception</li>
-                                        <li>Solution économe</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Profiling conso</li>
-                                        <li>Rapport éco-conception</li>
+                                <th scope="row">AC4 — Éco-conception</th>
+                                <td class="but-level"><span class="lvl lvl-wip">En cours</span></td>
+                                <td class="but-what">Limiter les ressources consommées : cache SQLite pour éviter les appels répétés à l’API dans Parquet, pagination côté serveur chez R2, portfolio sans framework ni étape de build.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (stage)</a></li>
+                                        <li><a class="proof" href="https://github.com/NoanHeinry/HeinryNoan.github.io" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Ce portfolio</a></li>
                                     </ul>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Compétence 3 : Administrer</h3>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Compétence 3 : Administrer</h3>
+                        <span class="but-score">2 acquis · 1 en cours</span>
+                    </div>
                     <span class="but-subtitle">Déployer des services dans une architecture réseau</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>AC</th>
-                                <th class="col-non-acquis">Non acquis</th>
-                                <th class="col-en-cours">En cours</th>
-                                <th class="col-acquis">Acquis</th>
-                                <th class="col-preuves">Preuves</th>
-                            </tr>
+                            <tr><th scope="col">Apprentissage critique</th><th scope="col">Niveau</th><th scope="col">Ce que je sais faire</th><th scope="col">Preuves</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Apps communicantes</td>
-                                <td>
-                                    <ul>
-                                        <li>Pas de communication</li>
-                                        <li>Mauvais protocole</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Instable</li>
-                                        <li>Protocole non justifié</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Communication fiable</li>
-                                        <li>Protocole adapté</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Wireshark / Postman</li>
-                                        <li>Schéma échanges</li>
+                                <th scope="row">AC1 — Applications communicantes</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">API REST sur mesure entre WordPress et React pour Spot (architecture headless), serveur Python de Parquet qui interroge une API externe et sert les données au navigateur.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (stage)</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Déploiement</td>
-                                <td>
-                                    <ul>
-                                        <li>Non déployé</li>
-                                        <li>Mauvaise config réseau</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Fonctionnel mais instable</li>
-                                        <li>Accessible localement</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Service en ligne stable</li>
-                                        <li>Déploiement structuré (Docker)</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Dockerfile</li>
-                                        <li>Manuel install</li>
+                                <th scope="row">AC2 — Déploiement</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Déploiement continu avec GitHub Actions et rsync vers Kinsta, environnements local, préproduction et production chez R2 ; ce portfolio publié avec GitHub Pages ; conteneurs Docker en TP.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes du stage</a></li>
+                                        <li><a class="proof" href="https://github.com/NoanHeinry/HeinryNoan.github.io" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Ce portfolio</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Sécurité services</td>
-                                <td>
-                                    <ul>
-                                        <li>Ports ouverts</li>
-                                        <li>En clair</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Auth basique</li>
-                                        <li>Firewall partiel</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Permissions précises</li>
-                                        <li>TLS/HTTPS</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Rapport nmap</li>
-                                        <li>Certificats SSL</li>
+                                <th scope="row">AC3 — Sécurité des services</th>
+                                <td class="but-level"><span class="lvl lvl-wip">En cours</span></td>
+                                <td class="but-what">EcoGest UM déployé sur une machine virtuelle Linux configurée (utilisateurs, droits) ; accès encadrés aux environnements de préproduction pendant le stage. Prochaine étape : durcir un serveur (pare-feu, HTTPS).</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Présentation EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> Stage chez R2</a></li>
                                     </ul>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Compétence 4 : Gérer des données</h3>
-                    <span class="but-subtitle">Optimiser une BDD, interagir et sécuriser</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Compétence 4 : Gérer des données</h3>
+                        <span class="but-score">4 acquis</span>
+                    </div>
+                    <span class="but-subtitle">Optimiser une base de données, interagir avec une application et la sécuriser</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>AC</th>
-                                <th class="col-non-acquis">Non acquis</th>
-                                <th class="col-en-cours">En cours</th>
-                                <th class="col-acquis">Acquis</th>
-                                <th class="col-preuves">Preuves</th>
-                            </tr>
+                            <tr><th scope="col">Apprentissage critique</th><th scope="col">Niveau</th><th scope="col">Ce que je sais faire</th><th scope="col">Preuves</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Conception BDD</td>
-                                <td>
-                                    <ul>
-                                        <li>Relations erronées</li>
-                                        <li>Redondances</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Modèle correct</li>
-                                        <li>Normalisation partielle</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Modèle normalisé</li>
-                                        <li>Contraintes intégrité</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>MCD / MLD</li>
-                                        <li>Script SQL</li>
+                                <th scope="row">AC1 — Conception de la base</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Modèles conceptuel et logique (MCD, MLD) de la base d’EcoGest UM, dont j’ai assuré la plus grande part ; types de contenus et champs ACF modélisés chez R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-yao"><i class="fa-solid fa-video"></i> Yao.bzh (stage)</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC2 — SQL</td>
-                                <td>
-                                    <ul>
-                                        <li>Requêtes fausses</li>
-                                        <li>Jointures ratées</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Correct mais lent</li>
-                                        <li>Fonctions avancées floues</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Requêtes efficaces</li>
-                                        <li>Agrégations maîtrisées</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Comparaison requêtes</li>
-                                        <li>Résultats</li>
+                                <th scope="row">AC2 — SQL</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Requêtes MySQL pour les réservations, l’inventaire et les tableaux de bord d’EcoGest UM ; requêtes SQLite pour le cache de Parquet.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Connexion App</td>
-                                <td>
-                                    <ul>
-                                        <li>Pas de lien BDD</li>
-                                        <li>Requêtes dans l'interface</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Connexion ok</li>
-                                        <li>Archi floue</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Archi claire (DAO/ORM)</li>
-                                        <li>Config externe (.env)</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Code DAO</li>
-                                        <li>Schéma archi</li>
+                                <th scope="row">AC3 — Connexion à l’application</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Accès aux données isolé dans les modèles MVC d’EcoGest UM ; routes d’API REST en JSON et import CSV en ligne de commande (WP-CLI) chez R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (stage)</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Sécurité BDD</td>
-                                <td>
-                                    <ul>
-                                        <li>Mots de passe clair</li>
-                                        <li>Injections SQL possibles</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Requêtes préparées (partiel)</li>
-                                        <li>Rôles partiels</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Requêtes préparées</li>
-                                        <li>Gestion droits/rôles</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Tests injections</li>
-                                        <li>Config Rôles</li>
+                                <th scope="row">AC4 — Sécurité des données</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Mots de passe hachés, sessions et droits distincts pour les trois rôles d’EcoGest UM : étudiant, enseignant et chef de département.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
                                     </ul>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Compétence 5 : Conduire</h3>
-                    <span class="but-subtitle">Gestion de projet et besoins métier</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Compétence 5 : Conduire</h3>
+                        <span class="but-score">3 acquis · 1 en cours</span>
+                    </div>
+                    <span class="but-subtitle">Gérer un projet selon les besoins métier des clients et des utilisateurs</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>AC</th>
-                                <th class="col-non-acquis">Non acquis</th>
-                                <th class="col-en-cours">En cours</th>
-                                <th class="col-acquis">Acquis</th>
-                                <th class="col-preuves">Preuves</th>
-                            </tr>
+                            <tr><th scope="col">Apprentissage critique</th><th scope="col">Niveau</th><th scope="col">Ce que je sais faire</th><th scope="col">Preuves</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Besoins</td>
-                                <td>
-                                    <ul>
-                                        <li>Incompréhension</li>
-                                        <li>Hors-sujet</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Compréhension globale</li>
-                                        <li>Hypothèses non validées</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Attentes claires</li>
-                                        <li>Validation client</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>User stories</li>
-                                        <li>Notes entretien</li>
+                                <th scope="row">AC1 — Besoins</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Analyse des besoins des trois publics d’EcoGest UM ; demandes clients clarifiées avec les chefs de projet chez R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Présentation EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> Stage chez R2</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Planification</td>
-                                <td>
-                                    <ul>
-                                        <li>Aucune orga</li>
-                                        <li>Délais dépassés</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Orga peu maintenue</li>
-                                        <li>Réaction lente</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Planification à jour</li>
-                                        <li>Suivi transparent</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Trello / Jira</li>
-                                        <li>Gantt</li>
+                                <th scope="row">AC2 — Planification</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Tickets priorisés et suivis sur Monday.com pendant le stage ; itérations courtes et suivi des tâches sur EcoGest UM (méthode agile).</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes du stage</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Communication</td>
-                                <td>
-                                    <ul>
-                                        <li>Pas d'info transmise</li>
-                                        <li>Quiproquos</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Info peu claire</li>
-                                        <li>CR incomplets</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Com régulière</li>
-                                        <li>Adaptée au public</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>CR réunion</li>
-                                        <li>Slides</li>
+                                <th scope="row">AC3 — Communication</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Soutenance d’EcoGest UM avec support, rapport final de MorpHalla et rapport de stage, échanges avec des interlocuteurs non techniques chez R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Présentation EcoGest UM</a></li>
+                                        <li><a class="proof" href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Rapport MorpHalla</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Qualité</td>
-                                <td>
-                                    <ul>
-                                        <li>Pas de vérif</li>
-                                        <li>Pas de retour</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Vérif sans méthode</li>
-                                        <li>Améliorations ignorées</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Mesure conformité</li>
-                                        <li>Améliorations concrètes</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Rapport qualité</li>
-                                        <li>Analyse métriques</li>
+                                <th scope="row">AC4 — Qualité</th>
+                                <td class="but-level"><span class="lvl lvl-wip">En cours</span></td>
+                                <td class="but-what">Recette en préproduction avant chaque mise en ligne et refactorisation SEO de r2.fr. Prochaine étape : suivre des indicateurs de qualité dans la durée.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-r2"><i class="fa-solid fa-briefcase"></i> r2.fr (stage)</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes du stage</a></li>
                                     </ul>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Compétence 6 : Collaborer</h3>
-                    <span class="but-subtitle">Travailler en équipe informatique</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Compétence 6 : Collaborer</h3>
+                        <span class="but-score">4 acquis</span>
+                    </div>
+                    <span class="but-subtitle">Travailler dans une équipe informatique</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>AC</th>
-                                <th class="col-non-acquis">Non acquis</th>
-                                <th class="col-en-cours">En cours</th>
-                                <th class="col-acquis">Acquis</th>
-                            </tr>
+                            <tr><th scope="col">Apprentissage critique</th><th scope="col">Niveau</th><th scope="col">Ce que je sais faire</th><th scope="col">Preuves</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Positionnement</td>
-                                <td>
-                                    <ul>
-                                        <li>Absent réunions</li>
-                                        <li>Décisions ignorées</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Tâches isolées</li>
-                                        <li>Adaptation difficile</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Compréhension globale</li>
-                                        <li>Respect du cadre</li>
+                                <th scope="row">AC1 — Positionnement</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Trouver sa place dans une équipe : conception de la base de données dans l’équipe de quatre d’EcoGest UM, développeur au sein du pôle tech de R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> Stage chez R2</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Com équipe</td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Problèmes tus</li>
-                                        <li>Messages ignorés</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Irrégulier</li>
-                                        <li>Info peu utile</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Partage utile</li>
-                                        <li>Contribution active</li>
+                                <th scope="row">AC2 — Communication en équipe</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Points d’équipe et échanges sur Slack avec les chefs de projet et le pôle création pendant onze semaines ; travail partagé avec Git et GitHub.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> Stage chez R2</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Orga perso</td>
-                                <td>
-                                    <ul>
-                                        <li>Retards</li>
-                                        <li>Tâches non finies</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Délais parfois ok</li>
-                                        <li>Manque cohérence</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Planification efficace</li>
-                                        <li>Délais respectés</li>
+                                <th scope="row">AC3 — Organisation</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Gestion autonome de mes tickets au rythme des demandes clients ; branches Git et livraisons organisées (préproduction puis production).</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes du stage</a></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Attitude</td>
-                                <td>
-                                    <ul>
-                                        <li>Remarques ignorées</li>
-                                        <li>Perturbation</li>
-                                    </ul>
-                                </td>
-                                <td class="my-level">
-                                    <ul>
-                                        <li>Manque initiative</li>
-                                        <li>Implication variable</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Constructif</li>
-                                        <li>Responsable</li>
+                                <th scope="row">AC4 — Attitude</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquis</span></td>
+                                <td class="but-what">Autonomie et initiative sur trois plateformes en production, à l’écoute des retours de mon maître de stage.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> Stage chez R2</a></li>
                                     </ul>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
             </div>
         </div>
 

@@ -154,7 +154,7 @@
             </div>
             <div class="window-content">
                 <div class="project-list">
-                    <article class="project-row">
+                    <article class="project-row" id="proj-parquet">
                         <div class="project-visual"><img src="images/parquet.jpg" alt="Parquet screenshot: today's games page with live scores and standings" width="880" height="556" loading="lazy" decoding="async"></div>
                         <div class="project-info">
                             <p class="project-meta"><span class="project-badge">New</span> Personal project, 2026</p>
@@ -166,7 +166,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row">
+                    <article class="project-row" id="proj-life">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-dna"></i></div>
                         <div class="project-info">
                             <p class="project-meta"><span class="project-badge">Playable</span> Personal project</p>
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row">
+                    <article class="project-row" id="proj-morphalla">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-gamepad"></i></div>
                         <div class="project-info">
                             <p class="project-meta">University project, 2025</p>
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row">
+                    <article class="project-row" id="proj-ecogest">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
                         <div class="project-info">
                             <p class="project-meta">University team project (4 people), 2025</p>
@@ -202,7 +202,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="project-row is-upcoming">
+                    <article class="project-row is-upcoming" id="proj-trachvr">
                         <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-vr-cardboard"></i></div>
                         <div class="project-info">
                             <p class="project-meta"><span class="project-badge">Upcoming</span> University project</p>
@@ -243,7 +243,7 @@
 
                 <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
                 <div class="project-grid stage-missions">
-                        <div class="project-item stage-mission">
+                        <div class="project-item stage-mission" id="mission-spot">
                             <h3><i class="fa-solid fa-gauge-high"></i> Spot — Internal ERP</h3>
                             <p>Management app for 1,800+ projects, built on a Headless architecture (WordPress + React).</p>
                             <ul class="stage-results">
@@ -253,7 +253,7 @@
                             </ul>
                             <p class="mission-link is-private"><i class="fa-solid fa-lock"></i> Internal tool, not public</p>
                         </div>
-                        <div class="project-item stage-mission">
+                        <div class="project-item stage-mission" id="mission-r2">
                             <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Agency website</h3>
                             <p>WordPress showcase site, R2's main communication tool.</p>
                             <ul class="stage-results">
@@ -263,7 +263,7 @@
                             </ul>
                             <a class="mission-link" href="https://r2.fr/" target="_blank" rel="noopener noreferrer">Visit r2.fr <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
-                        <div class="project-item stage-mission">
+                        <div class="project-item stage-mission" id="mission-yao">
                             <h3><i class="fa-solid fa-video"></i> Yao.bzh — Non-profit website</h3>
                             <p>Website of a Breton association supporting young entrepreneurs.</p>
                             <ul class="stage-results">
@@ -288,16 +288,18 @@
                     </div>
                 </div>
 
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Methods & tools</h3>
-                <div class="stage-chips">
-                        <span class="stage-chip">Git / GitHub (preprod → main branches)</span>
-                        <span class="stage-chip">CI/CD with GitHub Actions + rsync</span>
-                        <span class="stage-chip">Kinsta hosting</span>
-                        <span class="stage-chip">Composer, npm / Yarn</span>
-                        <span class="stage-chip">WP-CLI</span>
-                        <span class="stage-chip">Monday.com (tickets)</span>
-                        <span class="stage-chip">Slack</span>
-                        <span class="stage-chip">Staging QA</span>
+                <div class="stage-methods" id="stage-methods">
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Methods & tools</h3>
+                    <div class="stage-chips">
+                            <span class="stage-chip">Git / GitHub (preprod → main branches)</span>
+                            <span class="stage-chip">CI/CD with GitHub Actions + rsync</span>
+                            <span class="stage-chip">Kinsta hosting</span>
+                            <span class="stage-chip">Composer, npm / Yarn</span>
+                            <span class="stage-chip">WP-CLI</span>
+                            <span class="stage-chip">Monday.com (tickets)</span>
+                            <span class="stage-chip">Slack</span>
+                            <span class="stage-chip">Staging QA</span>
+                    </div>
                 </div>
 
                 <h3><i class="fa-solid fa-graduation-cap"></i> Degree competencies applied</h3>
@@ -432,270 +434,348 @@
             </div>
             <div class="window-content but-container">
                 <h2 class="doc-title"><i class="fa-solid fa-graduation-cap"></i> Computer Science degree: skills assessment</h2>
+                <p class="but-intro">Self-assessment at the start of third year (October 2026), after my internship at R2. Each learning outcome links to what proves it: click a proof to open it.</p>
+                <p class="but-legend" aria-label="Levels"><span class="lvl lvl-ok">Acquired</span> I do it on my own and can show it<span class="but-legend-sep"></span><span class="lvl lvl-wip">In progress</span> already practised, still to strengthen</p>
 
-                <div class="but-section">
-                    <h3>Competency 1: Realize</h3>
-                    <span class="but-subtitle">Develop applications from requirements</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Competency 1: Develop</h3>
+                        <span class="but-score">3 acquired · 1 in progress</span>
+                    </div>
+                    <span class="but-subtitle">Go from requirements to a complete application</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>CL</th>
-                                <th class="col-non-acquis">Not Acquired</th>
-                                <th class="col-en-cours">In Progress</th>
-                                <th class="col-acquis">Acquired</th>
-                                <th class="col-preuves">Proofs</th>
-                            </tr>
+                            <tr><th scope="col">Learning outcome</th><th scope="col">Level</th><th scope="col">What I can do</th><th scope="col">Proof</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Specifications</td>
-                                <td><ul><li>Requirements not understood</li><li>Missing docs</li></ul></td>
-                                <td><ul><li>Partial specifications</li><li>Incomplete criteria</li></ul></td>
-                                <td class="my-level"><ul><li>Structured specifications</li><li>Needs translated</li></ul></td>
-                                <td><ul><li>User stories / UML</li><li>Traceability matrix</li></ul></td>
+                                <th scope="row">AC1 — Specifications</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Turn a need into specifications: EcoGest UM requirements document following IEEE 830, client tickets analysed and broken down during the internship.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> R2 internship</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC2 — UX/UI & Access.</td>
-                                <td><ul><li>Unusable UI</li><li>Unreadable</li></ul></td>
-                                <td><ul><li>Not intuitive</li><li>Partial accessibility</li></ul></td>
-                                <td class="my-level"><ul><li>Fluid Interface</li><li>ARIA Standards respected</li></ul></td>
-                                <td><ul><li>UX Checklist</li><li>User tests</li></ul></td>
+                                <th scope="row">AC2 — Accessibility and usability</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Design clear, accessible interfaces: r2.fr heading hierarchy rebuilt, Yao.bzh responsive menu, usability criteria applied to EcoGest UM.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-r2"><i class="fa-solid fa-briefcase"></i> r2.fr (internship)</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-yao"><i class="fa-solid fa-video"></i> Yao.bzh (internship)</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Design</td>
-                                <td><ul><li>Confusing code</li><li>Everything in one file</li></ul></td>
-                                <td class="my-level"><ul><li>Architecture needs work</li><li>Disorganized Git</li></ul></td>
-                                <td><ul><li>Clean architecture</li><li>Documented code</li></ul></td>
-                                <td><ul><li>Architecture diagrams</li><li>Modular code</li></ul></td>
+                                <th scope="row">AC3 — Design</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Structure code in layers: EcoGest UM MVC architecture (router, controllers, models, views) and Gutenberg blocks built with an MVC structure at R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-r2"><i class="fa-solid fa-briefcase"></i> r2.fr (internship)</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Testing</td>
-                                <td><ul><li>No tests</li><li>Bugs unseen</li></ul></td>
-                                <td class="my-level"><ul><li>Partial tests</li><li>No automation</li></ul></td>
-                                <td><ul><li>Full tests</li><li>Analyzed & Automated</li></ul></td>
-                                <td><ul><li>Test reports</li><li>CI/CD Pipeline</li></ul></td>
+                                <th scope="row">AC4 — Testing</th>
+                                <td class="but-level"><span class="lvl lvl-wip">In progress</span></td>
+                                <td class="but-what">Automated tests on Parquet and acceptance testing in staging before every release at R2. Next step: measure coverage and run tests in continuous integration.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="https://github.com/NoanHeinry/parquet-nba" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Parquet source code</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Internship methods</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Competency 2: Optimize</h3>
-                    <span class="but-subtitle">Select appropriate algorithms (Semester 3)</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Competency 2: Optimise</h3>
+                        <span class="but-score">4 in progress</span>
+                    </div>
+                    <span class="but-subtitle">Select suitable algorithms for a given problem</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>CL</th>
-                                <th class="col-non-acquis">Not Acquired</th>
-                                <th class="col-en-cours">In Progress</th>
-                                <th class="col-acquis">Acquired</th>
-                                <th class="col-preuves">Proofs</th>
-                            </tr>
+                            <tr><th scope="col">Learning outcome</th><th scope="col">Level</th><th scope="col">What I can do</th><th scope="col">Proof</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Data Structures</td>
-                                <td class="my-level"><ul><li>Wrong structure</li><li>Duplicated data</li></ul></td>
-                                <td><ul><li>Choice coherent but unjustified</li></ul></td>
-                                <td><ul><li>Comparison done</li><li>Memory/Perf optimization</li></ul></td>
-                                <td><ul><li>README Analysis</li><li>Code snippets</li></ul></td>
+                                <th scope="row">AC1 — Data structures</th>
+                                <td class="but-level"><span class="lvl lvl-wip">In progress</span></td>
+                                <td class="but-what">Pick the structure that fits the use: Game of Life grid representation, SQLite cache for NBA data in Parquet.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-life"><i class="fa-solid fa-dna"></i> Game of Life</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Algorithms</td>
-                                <td><ul><li>Wrong results</li><li>Random solution</li></ul></td>
-                                <td class="my-level"><ul><li>Working but slow</li><li>Minor optimizations</li></ul></td>
-                                <td><ul><li>Choice based on constraints</li><li>Big-O analysis</li></ul></td>
-                                <td><ul><li>Benchmarks</li><li>Algo diagram</li></ul></td>
+                                <th scope="row">AC2 — Algorithms</th>
+                                <td class="but-level"><span class="lvl lvl-wip">In progress</span></td>
+                                <td class="but-what">Server-side pagination for 1,800+ projects on Spot: search and navigation became instant. Next step: formalise complexity analysis.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (internship)</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Algo Security</td>
-                                <td><ul><li>Unchecked data</li><li>Exploitable crashes</li></ul></td>
-                                <td class="my-level"><ul><li>Partial filtering</li><li>Partial error handling</li></ul></td>
-                                <td><ul><li>Full verification</li><li>Anti-injection/overflow</li></ul></td>
-                                <td><ul><li>Attack tests</li><li>Logs</li></ul></td>
+                                <th scope="row">AC3 — Security</th>
+                                <td class="but-level"><span class="lvl lvl-wip">In progress</span></td>
+                                <td class="but-what">Secure authentication on EcoGest UM: hashed passwords, role-specific sessions.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Eco-design</td>
-                                <td class="my-level"><ul><li>Wasted resources</li><li>No impact thought</li></ul></td>
-                                <td><ul><li>Unjustified optimizations</li><li>Impact mentioned later</li></ul></td>
-                                <td><ul><li>Optimized by design</li><li>Resource efficient</li></ul></td>
-                                <td><ul><li>Consumption profiling</li><li>Eco-report</li></ul></td>
+                                <th scope="row">AC4 — Eco-design</th>
+                                <td class="but-level"><span class="lvl lvl-wip">In progress</span></td>
+                                <td class="but-what">Keep resource use low: SQLite cache to avoid repeated API calls in Parquet, server-side pagination at R2, a portfolio with no framework or build step.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (internship)</a></li>
+                                        <li><a class="proof" href="https://github.com/NoanHeinry/HeinryNoan.github.io" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> This portfolio</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Competency 3: Administer</h3>
-                    <span class="but-subtitle">Deploy network services</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Competency 3: Administer</h3>
+                        <span class="but-score">2 acquired · 1 in progress</span>
+                    </div>
+                    <span class="but-subtitle">Deploy services in a network architecture</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>CL</th>
-                                <th class="col-non-acquis">Not Acquired</th>
-                                <th class="col-en-cours">In Progress</th>
-                                <th class="col-acquis">Acquired</th>
-                                <th class="col-preuves">Proofs</th>
-                            </tr>
+                            <tr><th scope="col">Learning outcome</th><th scope="col">Level</th><th scope="col">What I can do</th><th scope="col">Proof</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Communicating Apps</td>
-                                <td><ul><li>No communication</li><li>Wrong protocol</li></ul></td>
-                                <td class="my-level"><ul><li>Unstable</li><li>Protocol unjustified</li></ul></td>
-                                <td><ul><li>Reliable communication</li><li>Adapted protocol</li></ul></td>
-                                <td><ul><li>Wireshark / Postman</li><li>Exchange diagram</li></ul></td>
+                                <th scope="row">AC1 — Communicating applications</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Custom REST API between WordPress and React for Spot (headless architecture), Parquet Python server that queries an external API and serves data to the browser.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (internship)</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Deployment</td>
-                                <td><ul><li>Not deployed</li><li>Bad network config</li></ul></td>
-                                <td class="my-level"><ul><li>Functional but unstable</li><li>Local access only</li></ul></td>
-                                <td><ul><li>Stable online service</li><li>Structured deploy (Docker)</li></ul></td>
-                                <td><ul><li>Dockerfile</li><li>Install manual</li></ul></td>
+                                <th scope="row">AC2 — Deployment</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Continuous deployment with GitHub Actions and rsync to Kinsta, local, staging and production environments at R2; this portfolio published with GitHub Pages; Docker containers in lab work.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Internship methods</a></li>
+                                        <li><a class="proof" href="https://github.com/NoanHeinry/HeinryNoan.github.io" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> This portfolio</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Service Security</td>
-                                <td><ul><li>Open ports</li><li>Cleartext</li></ul></td>
-                                <td class="my-level"><ul><li>Basic Auth</li><li>Partial firewall</li></ul></td>
-                                <td><ul><li>Precise permissions</li><li>TLS/HTTPS</li></ul></td>
-                                <td><ul><li>Nmap report</li><li>SSL Certs</li></ul></td>
+                                <th scope="row">AC3 — Service security</th>
+                                <td class="but-level"><span class="lvl lvl-wip">In progress</span></td>
+                                <td class="but-what">EcoGest UM deployed on a configured Linux virtual machine (users, permissions); controlled access to staging environments during the internship. Next step: harden a server (firewall, HTTPS).</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> EcoGest UM slides</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> R2 internship</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Competency 4: Manage Data</h3>
-                    <span class="but-subtitle">Optimize a DB, interact and secure</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Competency 4: Manage data</h3>
+                        <span class="but-score">4 acquired</span>
+                    </div>
+                    <span class="but-subtitle">Optimise a database, connect it to an application and secure it</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>CL</th>
-                                <th class="col-non-acquis">Not Acquired</th>
-                                <th class="col-en-cours">In Progress</th>
-                                <th class="col-acquis">Acquired</th>
-                                <th class="col-preuves">Proofs</th>
-                            </tr>
+                            <tr><th scope="col">Learning outcome</th><th scope="col">Level</th><th scope="col">What I can do</th><th scope="col">Proof</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — DB Design</td>
-                                <td><ul><li>Wrong relations</li><li>Redundancy</li></ul></td>
-                                <td><ul><li>Correct model</li><li>Partial normalization</li></ul></td>
-                                <td class="my-level"><ul><li>Normalized model</li><li>Integrity constraints</li></ul></td>
-                                <td><ul><li>CDM / LDM</li><li>SQL Script</li></ul></td>
+                                <th scope="row">AC1 — Database design</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Conceptual and logical models of the EcoGest UM database, of which I did the largest share; content types and ACF fields modelled at R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-yao"><i class="fa-solid fa-video"></i> Yao.bzh (internship)</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC2 — SQL</td>
-                                <td><ul><li>Wrong queries</li><li>Failed joins</li></ul></td>
-                                <td><ul><li>Correct but slow</li><li>Advanced functions unclear</li></ul></td>
-                                <td class="my-level"><ul><li>Efficient queries</li><li>Mastered aggregations</li></ul></td>
-                                <td><ul><li>Query comparison</li><li>Results</li></ul></td>
+                                <th scope="row">AC2 — SQL</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">MySQL queries for EcoGest UM bookings, inventory and dashboards; SQLite queries for the Parquet cache.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-parquet"><i class="fa-solid fa-basketball"></i> Parquet</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC3 — App Connection</td>
-                                <td><ul><li>No DB link</li><li>Queries in UI</li></ul></td>
-                                <td><ul><li>Connection OK</li><li>Confusing arch</li></ul></td>
-                                <td class="my-level"><ul><li>Clean Arch (DAO/ORM)</li><li>External config (.env)</li></ul></td>
-                                <td><ul><li>DAO Code</li><li>Arch diagram</li></ul></td>
+                                <th scope="row">AC3 — Application access</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Data access isolated in EcoGest UM MVC models; JSON REST API routes and command-line CSV import (WP-CLI) at R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-spot"><i class="fa-solid fa-gauge-high"></i> Spot (internship)</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC4 — DB Security</td>
-                                <td><ul><li>Cleartext pwd</li><li>SQL Injections possible</li></ul></td>
-                                <td><ul><li>Prepared statements (part)</li><li>Partial roles</li></ul></td>
-                                <td class="my-level"><ul><li>Prepared statements</li><li>Rights management</li></ul></td>
-                                <td><ul><li>Injection tests</li><li>Role config</li></ul></td>
+                                <th scope="row">AC4 — Data security</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Hashed passwords, separate sessions and permissions for the three EcoGest UM roles: student, teacher and head of department.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Competency 5: Lead Project</h3>
-                    <span class="but-subtitle">Project management and business needs</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Competency 5: Manage projects</h3>
+                        <span class="but-score">3 acquired · 1 in progress</span>
+                    </div>
+                    <span class="but-subtitle">Run a project according to client and user business needs</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>CL</th>
-                                <th class="col-non-acquis">Not Acquired</th>
-                                <th class="col-en-cours">In Progress</th>
-                                <th class="col-acquis">Acquired</th>
-                                <th class="col-preuves">Proofs</th>
-                            </tr>
+                            <tr><th scope="col">Learning outcome</th><th scope="col">Level</th><th scope="col">What I can do</th><th scope="col">Proof</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Needs</td>
-                                <td><ul><li>Misunderstood</li><li>Off topic</li></ul></td>
-                                <td><ul><li>Global understanding</li><li>Unverified assumptions</li></ul></td>
-                                <td class="my-level"><ul><li>Clear expectations</li><li>Client validation</li></ul></td>
-                                <td><ul><li>User stories</li><li>Meeting notes</li></ul></td>
+                                <th scope="row">AC1 — Needs</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Needs analysis for the three EcoGest UM user groups; client requests clarified with project managers at R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> EcoGest UM slides</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> R2 internship</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Planning</td>
-                                <td><ul><li>No organization</li><li>Deadlines missed</li></ul></td>
-                                <td class="my-level"><ul><li>Poor maintenance</li><li>Slow reaction</li></ul></td>
-                                <td><ul><li>Up to date planning</li><li>Transparent tracking</li></ul></td>
-                                <td><ul><li>Trello / Jira</li><li>Gantt</li></ul></td>
+                                <th scope="row">AC2 — Planning</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Tickets prioritised and tracked on Monday.com during the internship; short iterations and task tracking on EcoGest UM (agile method).</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Internship methods</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Communication</td>
-                                <td><ul><li>No info sent</li><li>Misunderstandings</li></ul></td>
-                                <td class="my-level"><ul><li>Unclear info</li><li>Incomplete minutes</li></ul></td>
-                                <td><ul><li>Regular comms</li><li>Adapted to audience</li></ul></td>
-                                <td><ul><li>Meeting minutes</li><li>Slides</li></ul></td>
+                                <th scope="row">AC3 — Communication</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">EcoGest UM presentation with slides, MorpHalla final report and internship report, discussions with non-technical people at R2.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> EcoGest UM slides</a></li>
+                                        <li><a class="proof" href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> MorpHalla report</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Quality</td>
-                                <td><ul><li>No verification</li><li>No feedback</li></ul></td>
-                                <td class="my-level"><ul><li>Check w/o method</li><li>ignored improvements</li></ul></td>
-                                <td><ul><li>Measured conformity</li><li>Concrete improvements</li></ul></td>
-                                <td><ul><li>Quality report</li><li>Metrics analysis</li></ul></td>
+                                <th scope="row">AC4 — Quality</th>
+                                <td class="but-level"><span class="lvl lvl-wip">In progress</span></td>
+                                <td class="but-what">Acceptance testing in staging before each release and SEO refactoring of r2.fr. Next step: track quality metrics over time.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="mission-r2"><i class="fa-solid fa-briefcase"></i> r2.fr (internship)</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Internship methods</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
 
-                <div class="but-section">
-                    <h3>Competency 6: Collaborate</h3>
-                    <span class="but-subtitle">IT Teamwork</span>
+                <section class="but-section">
+                    <div class="but-head">
+                        <h3>Competency 6: Collaborate</h3>
+                        <span class="but-score">4 acquired</span>
+                    </div>
+                    <span class="but-subtitle">Work in an IT team</span>
                     <table class="but-table">
                         <thead>
-                            <tr>
-                                <th>CL</th>
-                                <th class="col-non-acquis">Not Acquired</th>
-                                <th class="col-en-cours">In Progress</th>
-                                <th class="col-acquis">Acquired</th>
-                            </tr>
+                            <tr><th scope="col">Learning outcome</th><th scope="col">Level</th><th scope="col">What I can do</th><th scope="col">Proof</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>AC1 — Positioning</td>
-                                <td><ul><li>Absent from meetings</li><li>Decisions ignored</li></ul></td>
-                                <td><ul><li>Isolated tasks</li><li>Hard to adapt</li></ul></td>
-                                <td class="my-level"><ul><li>Global understanding</li><li>Respects framework</li></ul></td>
+                                <th scope="row">AC1 — Role in the team</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Find my place in a team: database design in the four-person EcoGest UM team, developer in the R2 tech team.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> R2 internship</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC2 — Team Comms</td>
-                                <td class="my-level"><ul><li>Silent problems</li><li>Ignored messages</li></ul></td>
-                                <td><ul><li>Irregular</li><li>Unclear info</li></ul></td>
-                                <td><ul><li>Useful sharing</li><li>Active contribution</li></ul></td>
+                                <th scope="row">AC2 — Team communication</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Team meetings and Slack discussions with project managers and the creative team for eleven weeks; shared work with Git and GitHub.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> R2 internship</a></li>
+                                        <li><a class="proof" href="#projects" data-open="projects" data-focus="proj-ecogest"><i class="fa-solid fa-leaf"></i> EcoGest UM</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC3 — Personal Org</td>
-                                <td><ul><li>Delays</li><li>Unfinished tasks</li></ul></td>
-                                <td class="my-level"><ul><li>Deadlines sometimes met</li><li>Lacks coherence</li></ul></td>
-                                <td><ul><li>Efficient planning</li><li>Deadlines respected</li></ul></td>
+                                <th scope="row">AC3 — Organisation</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Handling my own tickets at the pace of client requests; organised Git branches and releases (staging, then production).</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage" data-focus="stage-methods"><i class="fa-solid fa-screwdriver-wrench"></i> Internship methods</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td>AC4 — Attitude</td>
-                                <td><ul><li>Ignored remarks</li><li>Disruptive</li></ul></td>
-                                <td class="my-level"><ul><li>Lacks initiative</li><li>Variable implication</li></ul></td>
-                                <td><ul><li>Constructive</li><li>Responsible</li></ul></td>
+                                <th scope="row">AC4 — Attitude</th>
+                                <td class="but-level"><span class="lvl lvl-ok">Acquired</span></td>
+                                <td class="but-what">Autonomy and initiative on three live platforms, open to my supervisor’s feedback.</td>
+                                <td class="but-proofs">
+                                    <ul class="proof-list">
+                                        <li><a class="proof" href="#stage" data-open="stage"><i class="fa-solid fa-briefcase"></i> R2 internship</a></li>
+                                    </ul>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
             </div>
         </div>
 
