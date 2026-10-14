@@ -534,7 +534,7 @@
         Object.keys(windowTitles).forEach(function (win) { add(windowTitles[win], win, aliases[win]); });
 
         const rules = [
-            ['#projects .project-item', 'projects', 'h3', 'p'],
+            ['#projects .project-row', 'projects', 'h3', '.project-desc'],
             ['#stage .stage-mission', 'stage', 'h3', 'p'],
             ['#skills .skill-card', 'skills', 'span', ''],
             ['#skills .skill-category', 'skills', 'h3', ''],
@@ -634,7 +634,7 @@
                 function (el) { return el.textContent.replace(/\s+/g, ' ').trim() === m.label; }
             );
             if (target) {
-                const block = target.closest('.skill-card, .project-item, .stage-mission, .but-section, .action-card, .skill-category') || target;
+                const block = target.closest('.skill-card, .project-row, .project-item, .stage-mission, .but-section, .action-card, .skill-category') || target;
                 setTimeout(function () {
                     block.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
                     block.classList.remove('search-hit');

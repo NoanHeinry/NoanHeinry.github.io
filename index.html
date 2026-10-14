@@ -175,7 +175,7 @@
             </div>
         </div>
 
-        <div id="projects" class="window" role="dialog" aria-labelledby="projects-title" style="width: 800px;">
+        <div id="projects" class="window" role="dialog" aria-labelledby="projects-title" style="width: 820px;">
             <div class="title-bar">
                 <div class="title-text" id="projects-title">projects_explorer.exe</div>
                 <div class="window-controls">
@@ -188,188 +188,68 @@
                 </div>
             </div>
             <div class="window-content">
-                <div class="project-grid">
-                    <div class="project-item project-featured">
-                        <img class="project-shot" src="images/parquet.jpg" alt="Capture de Parquet : la page des matchs du jour avec les scores en direct et le classement" width="880" height="556" loading="lazy" decoding="async">
-                        <div class="project-body">
+                <div class="project-list">
+                    <article class="project-row">
+                        <div class="project-visual"><img src="images/parquet.jpg" alt="Capture de Parquet : la page des matchs du jour avec les scores en direct et le classement" width="880" height="556" loading="lazy" decoding="async"></div>
+                        <div class="project-info">
                             <p class="project-meta"><span class="project-badge">Nouveau</span> Projet personnel, 2026</p>
-                            <h3><i class="fa-solid fa-basketball"></i> Parquet</h3>
-                            <p>Un tableau de bord NBA en direct doublé d'une encyclopédie, en français. Scores en temps réel, box scores, fil des actions, carte des tirs, et une fiche pour les 30 franchises et plus de 5&nbsp;000 joueurs depuis 1946.</p>
-                            <ul class="project-points">
-                                <li>Serveur Python sans framework, cache SQLite avec repli sur les données en cas de coupure</li>
-                                <li>Interface en JavaScript (modules ES) et graphiques SVG dessinés à la main</li>
-                                <li>Tests unitaires lancés automatiquement par GitHub Actions</li>
-                            </ul>
-                            <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>JavaScript</li><li>SQLite</li><li>SVG</li></ul>
-                            <a href="https://github.com/NoanHeinry/parquet-nba" target="_blank" rel="noopener noreferrer" class="btn">
-                                <i class="fa-brands fa-github"></i> Voir le code sur GitHub
-                            </a>
+                            <h3>Parquet</h3>
+                            <p class="project-desc">Tableau de bord NBA en direct doublé d'une encyclopédie, en français : scores en temps réel, box scores, carte des tirs, fiches des 30 franchises et de plus de 5&nbsp;000 joueurs. Serveur Python avec cache SQLite, graphiques SVG faits main et tests automatisés.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>JavaScript</li><li>SQLite</li><li>SVG</li></ul>
+                                <a href="https://github.com/NoanHeinry/parquet-nba" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-brands fa-github"></i> Code source</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-item">
-                        <p class="project-meta">Projet universitaire, 2025</p>
-                        <h3><i class="fa-solid fa-gamepad"></i> MorpHalla, un morpion</h3>
-                        <p>Jeu de morpion pour deux joueurs avec une interface JavaFX : choix des noms et du premier joueur, scores sauvegardés d'une partie à l'autre, visuels et sons créés pour l'occasion.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>Java</li><li>JavaFX</li><li>FXML</li><li>CSS</li></ul>
-                        <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                            Présentation
-                        </a>
-                    </div>
-                    <div class="project-item">
-                        <p class="project-meta"><span class="project-badge">Jouable</span> Projet personnel</p>
-                        <h3><i class="fa-solid fa-dna"></i> Jeu de la vie</h3>
-                        <p>L'automate cellulaire de Conway, d'abord codé en Python avec Pygame, puis adapté en JavaScript pour être jouable ici même.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>Pygame</li><li>JavaScript</li></ul>
-                        <button type="button" class="btn" onclick="openWindow('life')">
-                            <i class="fa-solid fa-play"></i> Jouer
-                        </button>
-                    </div>
-                    <div class="project-item">
-                        <p class="project-meta">Projet universitaire en équipe de 4, 2025</p>
-                        <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
-                        <p>Plateforme web de l'université pour donner une seconde vie aux objets : étudiants, enseignants et chefs de département les échangent, les réservent et gèrent un inventaire commun. Connexion sécurisée et tableau de bord propre à chaque rôle.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>PHP</li><li>MVC</li><li>MySQL</li><li>Apache</li></ul>
-                        <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                            Présentation
-                        </a>
-                    </div>
-                    <div class="project-item project-upcoming">
-                        <p class="project-meta"><span class="project-badge">À venir</span> Projet universitaire</p>
-                        <h3><i class="fa-solid fa-vr-cardboard"></i> TrachVR</h3>
-                        <p>Simulation d'une opération de trachéotomie en réalité virtuelle, modélisée sous Blender et développée avec Unity.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>Unity</li><li>Blender</li><li>VR</li></ul>
-                        <span class="btn btn-disabled" aria-disabled="true">Bientôt disponible</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="stage" class="window" role="dialog" aria-labelledby="stage-title" style="width: 850px;">
-            <div class="title-bar">
-                <div class="title-text" id="stage-title">internship_r2.log</div>
-                <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Réduire"><i
-                            class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Agrandir"
-                        aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Fermer" onclick="closeWindow('stage')"><i
-                            class="fa-solid fa-xmark"></i></button>
-                </div>
-            </div>
-            <div class="window-content">
-                <div class="stage-header">
-                    <h2>R2 Digital Agency — Stage de 2ème année</h2>
-                    <p class="tagline">Développement, refonte et optimisation d'applications web</p>
-                    <div class="stage-chips">
-                        <span class="stage-chip"><i class="fa-solid fa-location-dot"></i> Rennes</span>
-                        <span class="stage-chip"><i class="fa-solid fa-calendar"></i> 20 avril → 3 juillet 2026</span>
-                        <span class="stage-chip"><i class="fa-solid fa-hourglass-half"></i> 11 semaines</span>
-                        <span class="stage-chip"><i class="fa-solid fa-code"></i> Pôle Tech / Dev</span>
-                    </div>
-                </div>
-
-                <p>R2 est une agence créative et digitale (Paris & Rennes, ~30 collaborateurs) spécialisée en stratégie
-                    de marque, production vidéo et numérique. Intégré au pôle développement aux côtés de mon maître de
-                    stage, j'ai assuré la maintenance évolutive, l'optimisation et le développement de nouvelles
-                    fonctionnalités sur trois plateformes web, en autonomie et au rythme des tickets clients.</p>
-
-                <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
-                <div class="project-grid stage-missions">
-                    <div class="project-item stage-mission">
-                        <h3><i class="fa-solid fa-gauge-high"></i> Spot — ERP interne</h3>
-                        <p>Application de gestion de plus de 1 800 projets, en architecture Headless (WordPress +
-                            React).</p>
-                        <ul class="stage-results">
-                            <li>Pagination côté serveur via une API REST sur-mesure : recherche et navigation devenues
-                                instantanées</li>
-                            <li>Module d'inventaire du matériel en React (CPT, statuts, attribution aux collaborateurs)
-                            </li>
-                            <li>Commande WP-CLI d'import massif d'appareils depuis un CSV</li>
-                        </ul>
-                    </div>
-                    <div class="project-item stage-mission">
-                        <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Site de l'agence</h3>
-                        <p>Site vitrine WordPress, principal outil de communication de R2.</p>
-                        <ul class="stage-results">
-                            <li>Nouveaux blocs Gutenberg sur-mesure (ACF Blocks, architecture MVC)</li>
-                            <li>Refonte de la page Work : filtres par expertise, chargement « Voir plus », grille
-                                d'images 1:1</li>
-                            <li>Refactorisation SEO / accessibilité de la hiérarchie des titres</li>
-                        </ul>
-                    </div>
-                    <div class="project-item stage-mission">
-                        <h3><i class="fa-solid fa-video"></i> Yao.bzh — Site associatif</h3>
-                        <p>Vitrine d'une association bretonne d'accompagnement de jeunes entrepreneurs.</p>
-                        <ul class="stage-results">
-                            <li>Section « Interviews » : Custom Post Type + champs ACF, administrable par l'association
-                            </li>
-                            <li>Page d'archive avec lecture vidéo en modale (JavaScript)</li>
-                            <li>Menu responsive corrigé, mise en production et purge du cache serveur</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-layer-group"></i> Stack technique</h3>
-                    <div class="skill-grid">
-                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span>
+                    </article>
+                    <article class="project-row">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-dna"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta"><span class="project-badge">Jouable</span> Projet personnel</p>
+                            <h3>Jeu de la vie</h3>
+                            <p class="project-desc">L'automate cellulaire de Conway, d'abord codé en Python avec Pygame, puis adapté en JavaScript pour être jouable ici même.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>Pygame</li><li>JavaScript</li></ul>
+                                <button type="button" class="btn" onclick="openWindow('life')"><i class="fa-solid fa-play"></i> Jouer</button>
+                            </div>
                         </div>
-                        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-                        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
-                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span>
+                    </article>
+                    <article class="project-row">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta">Projet universitaire, 2025</p>
+                            <h3>MorpHalla, un morpion</h3>
+                            <p class="project-desc">Jeu de morpion pour deux joueurs avec une interface JavaFX : choix des noms et du premier joueur, scores sauvegardés d'une partie à l'autre, visuels et sons créés pour l'occasion.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Java</li><li>JavaFX</li><li>FXML</li><li>CSS</li></ul>
+                                <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-file-pdf"></i> Présentation</a>
+                            </div>
                         </div>
-                        <div class="skill-card"><i class="devicon-sass-original colored"></i><span>SCSS</span></div>
-                        <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub
-                                Actions</span></div>
-                    </div>
+                    </article>
+                    <article class="project-row">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta">Projet universitaire en équipe de 4, 2025</p>
+                            <h3>EcoGest UM</h3>
+                            <p class="project-desc">Plateforme web de l'université pour donner une seconde vie aux objets : étudiants, enseignants et chefs de département les échangent, les réservent et gèrent un inventaire commun. Connexion sécurisée et tableau de bord propre à chaque rôle.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>PHP</li><li>MVC</li><li>MySQL</li><li>Apache</li></ul>
+                                <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-file-pdf"></i> Présentation</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-row is-upcoming">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-vr-cardboard"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta"><span class="project-badge">À venir</span> Projet universitaire</p>
+                            <h3>TrachVR</h3>
+                            <p class="project-desc">Simulation d'une opération de trachéotomie en réalité virtuelle, modélisée sous Blender et développée avec Unity.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Unity</li><li>Blender</li><li>VR</li></ul>
+                                <span class="btn btn-disabled" aria-disabled="true">Bientôt disponible</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Méthodes & outils</h3>
-                <div class="stage-chips">
-                    <span class="stage-chip">Git / GitHub (branches preprod → main)</span>
-                    <span class="stage-chip">CI/CD GitHub Actions + rsync</span>
-                    <span class="stage-chip">Hébergement Kinsta</span>
-                    <span class="stage-chip">Composer, npm / Yarn</span>
-                    <span class="stage-chip">WP-CLI</span>
-                    <span class="stage-chip">Monday.com (tickets)</span>
-                    <span class="stage-chip">Slack</span>
-                    <span class="stage-chip">Recette en préproduction</span>
-                </div>
-
-                <h3><i class="fa-solid fa-graduation-cap"></i> Compétences du BUT mobilisées</h3>
-                <ul class="stage-comps">
-                    <li><span class="stage-comp-tag">C1</span>
-                        <div><strong>Réaliser</strong><span>Intégration front-end responsive (SCSS, React), blocs
-                                Gutenberg, modale vidéo.</span></div>
-                    </li>
-                    <li><span class="stage-comp-tag">C2</span>
-                        <div><strong>Optimiser</strong><span>Pagination côté serveur pour 1 800 projets, traitements
-                                asynchrones (WP-Cron).</span></div>
-                    </li>
-                    <li><span class="stage-comp-tag">C3</span>
-                        <div><strong>Administrer</strong><span>Déploiement continu (GitHub Actions, rsync) vers Kinsta,
-                                gestion du cache serveur.</span></div>
-                    </li>
-                    <li><span class="stage-comp-tag">C4</span>
-                        <div><strong>Gérer des données</strong><span>Modélisation de CPT et champs ACF, routes d'API
-                                REST en JSON, import CSV.</span></div>
-                    </li>
-                    <li><span class="stage-comp-tag">C5</span>
-                        <div><strong>Conduire</strong><span>Analyse des besoins via tickets Monday.com, environnements
-                                local / préprod / prod.</span></div>
-                    </li>
-                    <li><span class="stage-comp-tag">C6</span>
-                        <div><strong>Collaborer</strong><span>Travail avec les chefs de projet et le pôle création,
-                                points d'équipe, Slack.</span></div>
-                    </li>
-                </ul>
-
-                <h3><i class="fa-solid fa-seedling"></i> Ce que le stage m'a apporté</h3>
-                <p>Je suis passé d'une approche scolaire, avec un code conçu de manière isolée, à une méthodologie
-                    professionnelle : versioning rigoureux, environnements distincts, déploiement automatisé, suivi des
-                    tickets et priorisation. J'ai approfondi le cœur de WordPress (API REST, WP-Cron, WP-CLI) et
-                    découvert l'architecture Headless avec React.</p>
             </div>
         </div>
 

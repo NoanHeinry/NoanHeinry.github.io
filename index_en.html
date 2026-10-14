@@ -143,7 +143,7 @@
             </div>
         </div>
 
-        <div id="projects" class="window" role="dialog" aria-labelledby="projects-title" style="width: 800px;">
+        <div id="projects" class="window" role="dialog" aria-labelledby="projects-title" style="width: 820px;">
             <div class="title-bar">
                 <div class="title-text" id="projects-title">projects_explorer.exe</div>
                 <div class="window-controls">
@@ -153,153 +153,68 @@
                 </div>
             </div>
             <div class="window-content">
-                <div class="project-grid">
-                    <div class="project-item project-featured">
-                        <img class="project-shot" src="images/parquet.jpg" alt="Parquet screenshot: today's games page with live scores and standings" width="880" height="556" loading="lazy" decoding="async">
-                        <div class="project-body">
+                <div class="project-list">
+                    <article class="project-row">
+                        <div class="project-visual"><img src="images/parquet.jpg" alt="Parquet screenshot: today's games page with live scores and standings" width="880" height="556" loading="lazy" decoding="async"></div>
+                        <div class="project-info">
                             <p class="project-meta"><span class="project-badge">New</span> Personal project, 2026</p>
-                            <h3><i class="fa-solid fa-basketball"></i> Parquet</h3>
-                            <p>A live NBA dashboard and encyclopedia, in French. Real-time scores, box scores, play-by-play, shot charts, and a profile for all 30 franchises and more than 5,000 players since 1946.</p>
-                            <ul class="project-points">
-                                <li>Framework-free Python server with an SQLite cache that falls back to stored data when a source is down</li>
-                                <li>JavaScript interface (ES modules) and hand-drawn SVG charts</li>
-                                <li>Unit tests run automatically with GitHub Actions</li>
-                            </ul>
-                            <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>JavaScript</li><li>SQLite</li><li>SVG</li></ul>
-                            <a href="https://github.com/NoanHeinry/parquet-nba" target="_blank" rel="noopener noreferrer" class="btn">
-                                <i class="fa-brands fa-github"></i> View the code on GitHub
-                            </a>
+                            <h3>Parquet</h3>
+                            <p class="project-desc">A live NBA dashboard and encyclopedia, in French: real-time scores, box scores, shot charts, and profiles for all 30 franchises and more than 5,000 players. Python server with an SQLite cache, hand-drawn SVG charts and automated tests.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>JavaScript</li><li>SQLite</li><li>SVG</li></ul>
+                                <a href="https://github.com/NoanHeinry/parquet-nba" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-brands fa-github"></i> Source code</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-item">
-                        <p class="project-meta">University project, 2025</p>
-                        <h3><i class="fa-solid fa-gamepad"></i> MorpHalla, a tic-tac-toe game</h3>
-                        <p>A two-player tic-tac-toe game with a JavaFX interface: player names and who starts, scores saved between games, and custom-made visuals and sounds.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>Java</li><li>JavaFX</li><li>FXML</li><li>CSS</li></ul>
-                        <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                            Presentation
-                        </a>
-                    </div>
-                    <div class="project-item">
-                        <p class="project-meta"><span class="project-badge">Playable</span> Personal project</p>
-                        <h3><i class="fa-solid fa-dna"></i> Game of Life</h3>
-                        <p>Conway's cellular automaton, first coded in Python with Pygame, then ported to JavaScript so you can play it right here.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>Pygame</li><li>JavaScript</li></ul>
-                        <button type="button" class="btn" onclick="openWindow('life')">
-                            <i class="fa-solid fa-play"></i> Play
-                        </button>
-                    </div>
-                    <div class="project-item">
-                        <p class="project-meta">University team project (4 people), 2025</p>
-                        <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
-                        <p>The university's web platform for giving objects a second life: students, teachers and heads of department exchange and reserve them and manage a shared inventory. Secure login and a dashboard tailored to each role.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>PHP</li><li>MVC</li><li>MySQL</li><li>Apache</li></ul>
-                        <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                            Presentation
-                        </a>
-                    </div>
-                    <div class="project-item project-upcoming">
-                        <p class="project-meta"><span class="project-badge">Upcoming</span> University project</p>
-                        <h3><i class="fa-solid fa-vr-cardboard"></i> TrachVR</h3>
-                        <p>A virtual reality simulation of a tracheotomy procedure, modelled in Blender and built with Unity.</p>
-                        <ul class="project-tags" aria-label="Technologies"><li>Unity</li><li>Blender</li><li>VR</li></ul>
-                        <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="stage" class="window" role="dialog" aria-labelledby="stage-title" style="width: 850px;">
-            <div class="title-bar">
-                <div class="title-text" id="stage-title">internship_r2.log</div>
-                <div class="window-controls">
-                    <button type="button" class="win-btn" data-action="minimize" aria-label="Minimize"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button" class="win-btn" data-action="maximize" aria-label="Maximize" aria-pressed="false"><i class="fa-regular fa-square"></i></button>
-                    <button type="button" class="close-btn" aria-label="Close" onclick="closeWindow('stage')"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-            </div>
-            <div class="window-content">
-                <div class="stage-header">
-                    <h2>R2 Digital Agency — 2nd-year internship</h2>
-                    <p class="tagline">Development, redesign and optimisation of web applications</p>
-                    <div class="stage-chips">
-                        <span class="stage-chip"><i class="fa-solid fa-location-dot"></i> Rennes, France</span>
-                        <span class="stage-chip"><i class="fa-solid fa-calendar"></i> April 20 → July 3, 2026</span>
-                        <span class="stage-chip"><i class="fa-solid fa-hourglass-half"></i> 11 weeks</span>
-                        <span class="stage-chip"><i class="fa-solid fa-code"></i> Tech / Dev team</span>
-                    </div>
-                </div>
-
-                <p>R2 is a creative and digital agency (Paris & Rennes, ~30 people) specialised in brand strategy, video production and digital. As part of the development team alongside my supervisor, I handled feature development, optimisation and maintenance on three web platforms, working autonomously through client tickets.</p>
-
-                <h3><i class="fa-solid fa-list-check"></i> Missions</h3>
-                <div class="project-grid stage-missions">
-                        <div class="project-item stage-mission">
-                            <h3><i class="fa-solid fa-gauge-high"></i> Spot — Internal ERP</h3>
-                            <p>Management app for 1,800+ projects, built on a Headless architecture (WordPress + React).</p>
-                            <ul class="stage-results">
-                                <li>Server-side pagination through a custom REST API: search and browsing became instant</li>
-                                <li>Hardware inventory module in React (custom post type, statuses, assignment to staff)</li>
-                                <li>WP-CLI command for bulk device import from CSV</li>
-                            </ul>
+                    </article>
+                    <article class="project-row">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-dna"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta"><span class="project-badge">Playable</span> Personal project</p>
+                            <h3>Game of Life</h3>
+                            <p class="project-desc">Conway's cellular automaton, first coded in Python with Pygame, then ported to JavaScript so you can play it right here.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Python</li><li>Pygame</li><li>JavaScript</li></ul>
+                                <button type="button" class="btn" onclick="openWindow('life')"><i class="fa-solid fa-play"></i> Play</button>
+                            </div>
                         </div>
-                        <div class="project-item stage-mission">
-                            <h3><i class="fa-solid fa-briefcase"></i> r2.fr — Agency website</h3>
-                            <p>WordPress showcase site, R2's main communication tool.</p>
-                            <ul class="stage-results">
-                                <li>New custom Gutenberg blocks (ACF Blocks, MVC structure)</li>
-                                <li>Work page redesign: expertise filters, "Load more", strict 1:1 image grid</li>
-                                <li>SEO / accessibility refactoring of heading hierarchy</li>
-                            </ul>
+                    </article>
+                    <article class="project-row">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta">University project, 2025</p>
+                            <h3>MorpHalla, a tic-tac-toe game</h3>
+                            <p class="project-desc">A two-player tic-tac-toe game with a JavaFX interface: player names and who starts, scores saved between games, and custom-made visuals and sounds.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Java</li><li>JavaFX</li><li>FXML</li><li>CSS</li></ul>
+                                <a href="documents/Morphalla.pdf" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-file-pdf"></i> Presentation</a>
+                            </div>
                         </div>
-                        <div class="project-item stage-mission">
-                            <h3><i class="fa-solid fa-video"></i> Yao.bzh — Non-profit website</h3>
-                            <p>Website of a Breton association supporting young entrepreneurs.</p>
-                            <ul class="stage-results">
-                                <li>"Interviews" section: custom post type + ACF fields, managed by the association itself</li>
-                                <li>Archive page with video playback in a modal (JavaScript)</li>
-                                <li>Responsive menu fixes, production release and server cache purge</li>
-                            </ul>
+                    </article>
+                    <article class="project-row">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta">University team project (4 people), 2025</p>
+                            <h3>EcoGest UM</h3>
+                            <p class="project-desc">The university's web platform for giving objects a second life: students, teachers and heads of department exchange and reserve them and manage a shared inventory. Secure login and a dashboard tailored to each role.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>PHP</li><li>MVC</li><li>MySQL</li><li>Apache</li></ul>
+                                <a href="documents/EcoGestUM.pdf" target="_blank" rel="noopener noreferrer" class="btn"><i class="fa-solid fa-file-pdf"></i> Presentation</a>
+                            </div>
                         </div>
+                    </article>
+                    <article class="project-row is-upcoming">
+                        <div class="project-visual is-icon" aria-hidden="true"><i class="fa-solid fa-vr-cardboard"></i></div>
+                        <div class="project-info">
+                            <p class="project-meta"><span class="project-badge">Upcoming</span> University project</p>
+                            <h3>TrachVR</h3>
+                            <p class="project-desc">A virtual reality simulation of a tracheotomy procedure, modelled in Blender and built with Unity.</p>
+                            <div class="project-foot">
+                                <ul class="project-tags" aria-label="Technologies"><li>Unity</li><li>Blender</li><li>VR</li></ul>
+                                <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-layer-group"></i> Tech stack</h3>
-                    <div class="skill-grid">
-                        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
-                        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-                        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
-                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-                        <div class="skill-card"><i class="devicon-sass-original colored"></i><span>SCSS</span></div>
-                        <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-                        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
-                    </div>
-                </div>
-
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Methods & tools</h3>
-                <div class="stage-chips">
-                        <span class="stage-chip">Git / GitHub (preprod → main branches)</span>
-                        <span class="stage-chip">CI/CD with GitHub Actions + rsync</span>
-                        <span class="stage-chip">Kinsta hosting</span>
-                        <span class="stage-chip">Composer, npm / Yarn</span>
-                        <span class="stage-chip">WP-CLI</span>
-                        <span class="stage-chip">Monday.com (tickets)</span>
-                        <span class="stage-chip">Slack</span>
-                        <span class="stage-chip">Staging QA</span>
-                </div>
-
-                <h3><i class="fa-solid fa-graduation-cap"></i> Degree competencies applied</h3>
-                <ul class="stage-comps">
-                        <li><span class="stage-comp-tag">C1</span><div><strong>Realize</strong><span>Responsive front-end (SCSS, React), Gutenberg blocks, video modal.</span></div></li>
-                        <li><span class="stage-comp-tag">C2</span><div><strong>Optimize</strong><span>Server-side pagination for 1,800 projects, background jobs (WP-Cron).</span></div></li>
-                        <li><span class="stage-comp-tag">C3</span><div><strong>Administer</strong><span>Continuous deployment (GitHub Actions, rsync) to Kinsta, server cache management.</span></div></li>
-                        <li><span class="stage-comp-tag">C4</span><div><strong>Manage Data</strong><span>Custom post types and ACF fields, JSON REST API routes, CSV import.</span></div></li>
-                        <li><span class="stage-comp-tag">C5</span><div><strong>Lead Project</strong><span>Requirements through Monday.com tickets, local / staging / production environments.</span></div></li>
-                        <li><span class="stage-comp-tag">C6</span><div><strong>Collaborate</strong><span>Work with project managers and the design team, team meetings, Slack.</span></div></li>
-                </ul>
-
-                <h3><i class="fa-solid fa-seedling"></i> What I learned</h3>
-                <p>I moved from a school approach, writing code in isolation, to a professional workflow: rigorous versioning, separate environments, automated deployment, ticket tracking and prioritisation. I deepened my knowledge of WordPress internals (REST API, WP-Cron, WP-CLI) and discovered Headless architecture with React.</p>
             </div>
         </div>
 
