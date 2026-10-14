@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page introuvable - NoanOS</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#1a0b2e" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0b2e'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd93f9'%3EN%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Page autonome : styles intégrés pour fonctionner quelle que soit l'adresse demandée -->
+    <style>
+        :root {
+            --surface: #17121f;
+            --card: #1e1829;
+            --border: #2f2742;
+            --border-strong: #463a60;
+            --text: #ede9f6;
+            --text-2: #c3bbd4;
+            --text-3: #9d94b3;
+            --accent: #b99af8;
+            --accent-2: #8aa8ff;
+            --accent-soft: rgba(185, 154, 248, 0.14);
+            --accent-line: rgba(185, 154, 248, 0.38);
+            --accent-ink: #1b1030;
+            --bad: #ff8080;
+            --ok: #63db8f;
+            --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: grid;
+            place-items: center;
+            padding: 24px 16px;
+            background:
+                radial-gradient(120% 80% at 85% 110%, rgba(42, 23, 69, 0.9) 0%, transparent 60%),
+                linear-gradient(160deg, #08050e 0%, #1a1028 55%, #2a1745 100%);
+            color: var(--text);
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(185, 154, 248, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(185, 154, 248, 0.06) 1px, transparent 1px);
+            background-size: 56px 56px;
+            -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 75%);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 75%);
+        }
+
+        .window {
+            position: relative;
+            width: min(560px, 100%);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--surface);
+            border: 1px solid var(--accent-line);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55), 0 0 40px rgba(185, 154, 248, 0.14);
+        }
+
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 42px;
+            padding: 7px 10px 7px 16px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            font-family: var(--mono);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--accent-ink);
+        }
+
+        .dots { display: flex; gap: 6px; }
+        .dots span { width: 12px; height: 12px; border-radius: 50%; background: rgba(27, 16, 48, 0.2); }
+        .dots span:last-child { background: #e5484d; }
+
+        .content { padding: 28px 28px 30px; }
+
+        .code {
+            margin: 0 0 4px;
+            font-family: var(--mono);
+            font-size: 0.875rem;
+            color: var(--bad);
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        p { margin: 0 0 14px; color: var(--text-2); }
+
+        .log {
+            margin: 18px 0 22px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: #0c0912;
+            border: 1px solid var(--border);
+            font-family: var(--mono);
+            font-size: 0.8125rem;
+            color: var(--text-3);
+            overflow-wrap: anywhere;
+        }
+
+        .log div + div { margin-top: 4px; }
+        .log .err { color: var(--bad); }
+        .log .ok { color: var(--ok); }
+        .log b { font-weight: 500; color: var(--text); }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background: var(--accent);
+            color: var(--accent-ink);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: #c9b0fc; }
+
+        .btn-ghost {
+            background: transparent;
+            border-color: var(--accent-line);
+            color: var(--accent);
+        }
+
+        .btn-ghost:hover { background: var(--accent-soft); }
+
+        .btn:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+
+        .en { margin-top: 18px; font-size: 0.875rem; color: var(--text-3); }
+
+        @media (max-width: 480px) {
+            .content { padding: 22px 18px 24px; }
+            .btn { flex: 1 1 100%; }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="window" role="main">
+        <div class="title-bar">
+            <span>error_404.log</span>
+            <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        </div>
+        <div class="content">
+            <p class="code">Erreur 404</p>
+            <h1>Fichier introuvable</h1>
+            <p>Cette page n'existe pas ou a été déplacée. Le reste du portfolio, lui, fonctionne très bien.</p>
+            <div class="log" aria-hidden="true">
+                <div>&gt; open <b id="path">/page</b></div>
+                <div class="err">&gt; erreur : aucun fichier à cette adresse</div>
+                <div class="ok">&gt; suggestion : retour au bureau</div>
+            </div>
+            <div class="actions">
+                <a class="btn" id="home" href="/">Retour au bureau</a>
+                <a class="btn btn-ghost" id="home-en" href="/index_en.html">English version</a>
+            </div>
+            <p class="en" lang="en">Page not found: this address does not exist or has moved.</p>
+        </div>
+    </main>
+
+    <script>
+        // Le site peut être servi à la racine (noanheinry.github.io) ou dans un sous-dossier (page de projet GitHub)
+        (function () {
+            var match = location.pathname.match(/^\/heinrynoan\.github\.io\//i);
+            var base = match ? match[0] : '/';
+            document.getElementById('home').href = base;
+            document.getElementById('home-en').href = base + 'index_en.html';
+            var path = location.pathname;
+            try { path = decodeURIComponent(path); } catch (e) { /* adresse mal encodée : affichée telle quelle */ }
+            document.getElementById('path').textContent = path;
+        })();
+    </script>
+</body>
+
+</html>
