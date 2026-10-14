@@ -1,6 +1,8 @@
 # NoanOS — Portfolio de Noan Heinry
 
-Portfolio en ligne au style « système d'exploitation » : **https://noanheinry.github.io/HeinryNoan.github.io/**
+Portfolio en ligne au style « système d'exploitation » : **https://noanheinry.github.io/**
+
+> Le dépôt s'appelle `NoanHeinry.github.io` : GitHub Pages publie donc le site directement à la racine de `noanheinry.github.io`.
 
 ## Contenu
 
